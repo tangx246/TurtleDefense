@@ -172,6 +172,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TopdownCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 4730375400578717142, guid: c6900400b8f66f54c8ba77451b40f333, type: 3}
+      propertyPath: orthographic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -338,7 +342,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527153275}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67ce0d16c85261244a816ab73063770f, type: 3}
   m_Name: 

@@ -1,18 +1,47 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Turtle : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public NavMeshAgent agent;
+
+    private void Awake()
     {
-        
+        agent = GetComponent<NavMeshAgent>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-        
+        // Search for all TurtleEscapers, and then path towards them
+        TurtleEscaper[] turtleEscapers = FindObjectsByType<TurtleEscaper>(FindObjectsSortMode.None);
+
+        // If there are no TurtleEscapers, then log an error and return
+        if (turtleEscapers.Length == 0)
+        {
+            Debug.LogError("No TurtleEscapers found!");
+            return;
+        }
+
+        // Find the closest point to the closest TurtleEscaper
+        Vector3 closestPoint = transform.position;
+        float closestDistance = Mathf.Infinity;
+        foreach (TurtleEscaper turtleEscaper in turtleEscapers)
+        {
+            var collider = turtleEscaper.GetComponentInChildren<Collider>();
+            var point = collider.ClosestPoint(transform.position);
+            float distance = Vector3.Distance(transform.position, point);
+            if (distance < closestDistance)
+            {
+                closestPoint = point;
+                closestDistance = distance;
+            }
+        }
+
+        // Push closestPoint into the destination a bit
+        closestPoint += (closestPoint - transform.position).normalized * 0.5f;
+
+        // Set the destination to the closest point
+        agent.SetDestination(closestPoint);
+        Debug.DrawLine(transform.position, closestPoint, Color.red, 3f);
     }
 }

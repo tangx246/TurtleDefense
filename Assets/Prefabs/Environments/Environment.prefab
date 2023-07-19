@@ -239,6 +239,10 @@ PrefabInstance:
       value: sandTile (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4293b02fcfa6924428975755282a8094, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4293b02fcfa6924428975755282a8094, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -315,6 +319,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4293b02fcfa6924428975755282a8094, type: 3}
       propertyPath: m_Name
       value: sandTile (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4293b02fcfa6924428975755282a8094, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4293b02fcfa6924428975755282a8094, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -395,6 +403,10 @@ PrefabInstance:
       value: sandTile
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4293b02fcfa6924428975755282a8094, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4293b02fcfa6924428975755282a8094, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -471,6 +483,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4293b02fcfa6924428975755282a8094, type: 3}
       propertyPath: m_Name
       value: sandTile (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4293b02fcfa6924428975755282a8094, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4293b02fcfa6924428975755282a8094, type: 3}
       propertyPath: m_StaticEditorFlags

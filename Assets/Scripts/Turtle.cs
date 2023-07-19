@@ -13,7 +13,7 @@ public class Turtle : MonoBehaviour
     void Start()
     {
         // Search for all TurtleEscapers, and then path towards them
-        TurtleEscaper[] turtleEscapers = FindObjectsByType<TurtleEscaper>(FindObjectsSortMode.None);
+        TurtleDestroyer[] turtleEscapers = FindObjectsByType<TurtleDestroyer>(FindObjectsSortMode.None);
 
         // If there are no TurtleEscapers, then log an error and return
         if (turtleEscapers.Length == 0)
@@ -25,8 +25,13 @@ public class Turtle : MonoBehaviour
         // Find the closest point to the closest TurtleEscaper
         Vector3 closestPoint = transform.position;
         float closestDistance = Mathf.Infinity;
-        foreach (TurtleEscaper turtleEscaper in turtleEscapers)
+        foreach (TurtleDestroyer turtleEscaper in turtleEscapers)
         {
+            if (!turtleEscaper.isActiveAndEnabled || turtleEscaper.isTrap)
+            {
+                continue;
+            }
+
             var collider = turtleEscaper.GetComponentInChildren<Collider>();
             var point = collider.ClosestPoint(transform.position);
             float distance = Vector3.Distance(transform.position, point);

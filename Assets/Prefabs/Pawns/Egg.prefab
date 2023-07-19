@@ -48,6 +48,7 @@ MonoBehaviour:
   waitTimeSeconds: 2
   hatchAnimationTimeSeconds: 0.458
   turtlePrefab: {fileID: 3746791571032653551, guid: 8fa93295abe4cf84b875410b50ba4b6f, type: 3}
+  eggHatchPrefab: {fileID: 1286731886819401398, guid: bf20688105aeebb4f934ed4d4026f26e, type: 3}
 --- !u!1 &2763038796038039169
 GameObject:
   m_ObjectHideFlags: 0

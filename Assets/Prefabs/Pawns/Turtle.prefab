@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6526739335335169563}
   - component: {fileID: 968733526451446802}
   - component: {fileID: 2380633553240276192}
+  - component: {fileID: 6306049003478997121}
   m_Layer: 6
   m_Name: Turtle
   m_TagString: Untagged
@@ -70,6 +71,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
+--- !u!114 &6306049003478997121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3746791571032653551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2694e07a4807914dbdb79ef26563e72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  navMeshAgent: {fileID: 0}
+  animator: {fileID: 0}
+  animatorSpeedVariable: speed
+  speedMultiplier: 1
+  animatorSpeedVariableHash: 0
 --- !u!1 &5610717134438229035
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,6 +289,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 2abac11f5a6d1fd41bab2d98130bb9f7, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ce0c83b2c5ff27f4ea78d6df25afdeee, type: 2}
     - target: {fileID: 6553707392208827409, guid: 2abac11f5a6d1fd41bab2d98130bb9f7, type: 3}
       propertyPath: m_Layer
       value: 6

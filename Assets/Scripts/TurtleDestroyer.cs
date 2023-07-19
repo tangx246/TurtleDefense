@@ -11,6 +11,6 @@ public class TurtleDestroyer : MonoBehaviour
             return;
         }
         Debug.Log($"TurtleDestroyer triggered on {other.gameObject}");
-        Destroy(other.gameObject);
+        Destroy(other.gameObject.transform.parent.gameObject);
     }
 }

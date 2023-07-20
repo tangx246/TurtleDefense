@@ -26,6 +26,11 @@ public class Player : MonoBehaviour
     public int rockCount = 0;
     public TMP_Text rockText;
 
+    [Header("Oil Spill")]
+    public GameObject oilSpillPrefab;
+    public int oilSpillCount = 0;
+    public TMP_Text oilSpillText;
+
     [Header("Debug")]
     [SerializeField] private GameObject trapOnCursor = null;
     [SerializeField] private Trap currentTrapType = Trap.None;
@@ -48,6 +53,11 @@ public class Player : MonoBehaviour
                 trapOnCursor.transform.position = hitPoint;
             }
         }
+    }
+
+    public void StartPlacingOilSpill()
+    {
+        StartPlacingThing(ref oilSpillCount, oilSpillPrefab, Trap.OilSpill);
     }
 
     public void StartPlacingRock()
@@ -111,6 +121,10 @@ public class Player : MonoBehaviour
                     rockCount--;
                     prefab = rockPrefab;
                     break;
+                case Trap.OilSpill:
+                    oilSpillCount--;
+                    prefab = oilSpillPrefab;
+                    break;
                 default:
                     Debug.LogError("Unhandled trap type");
                     return;
@@ -141,6 +155,10 @@ public class Player : MonoBehaviour
         if (rock != null)
             rock.enabled = true;
 
+        var oilspill = go.GetComponentInChildren<OilSpill>();
+        if (oilspill != null)
+            oilspill.enabled = true;
+
         currentTrapType = Trap.None;
     }
 
@@ -150,6 +168,7 @@ public class Player : MonoBehaviour
         pushboxText.text = pushboxCount.ToString();
         towerText.text = towerCount.ToString();
         rockText.text = rockCount.ToString();
+        oilSpillText.text = oilSpillCount.ToString();
     }
 
     private enum Trap 
@@ -158,6 +177,7 @@ public class Player : MonoBehaviour
         Pit,
         Pushbox,
         Tower,
-        Rock
+        Rock,
+        OilSpill
     }
 }

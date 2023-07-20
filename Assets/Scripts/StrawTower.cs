@@ -1,6 +1,5 @@
 using DG.Tweening;
 using System.Collections;
-using System.Threading.Tasks;
 using UnityEngine;
 
 public class StrawTower : MonoBehaviour
@@ -14,7 +13,6 @@ public class StrawTower : MonoBehaviour
 
     private void Start()
     {
-        //InvokeRepeating("Shoot", shootRate, shootRate);
         StartCoroutine(ShootCoroutine());
     }
 

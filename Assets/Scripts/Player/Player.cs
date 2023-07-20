@@ -15,6 +15,11 @@ public class Player : MonoBehaviour
     public int pushboxCount = 0;
     public TMP_Text pushboxText;
 
+    [Header("Tower")]
+    public GameObject towerPrefab;
+    public int towerCount = 0;
+    public TMP_Text towerText;
+
     [Header("Debug")]
     [SerializeField] private GameObject trapOnCursor = null;
     [SerializeField] private Trap currentTrapType = Trap.None;
@@ -37,6 +42,11 @@ public class Player : MonoBehaviour
                 trapOnCursor.transform.position = hitPoint;
             }
         }
+    }
+
+    public void StartPlacingTower()
+    {
+        StartPlacingThing(ref towerCount, towerPrefab, Trap.Tower);
     }
 
     public void StartPlacingPushbox()
@@ -74,6 +84,10 @@ public class Player : MonoBehaviour
                     pushboxCount--;
                     prefab = pushboxPrefab;
                     break;
+                case Trap.Tower:
+                    towerCount--;
+                    prefab = towerPrefab;
+                    break;
                 default:
                     Debug.LogError("Unhandled trap type");
                     return;
@@ -96,6 +110,10 @@ public class Player : MonoBehaviour
         if (pushbox != null)
             pushbox.enabled = true;
 
+        var tower = go.GetComponentInChildren<StrawTower>();
+        if (tower != null)
+            tower.enabled = true;
+
         currentTrapType = Trap.None;
     }
 
@@ -103,12 +121,14 @@ public class Player : MonoBehaviour
     {
         pitTrapText.text = pitTrapCount.ToString();
         pushboxText.text = pushboxCount.ToString();
+        towerText.text = towerCount.ToString();
     }
 
     private enum Trap 
     { 
         None,
         Pit,
-        Pushbox
+        Pushbox,
+        Tower
     }
 }

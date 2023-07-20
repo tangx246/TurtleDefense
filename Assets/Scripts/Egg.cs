@@ -14,9 +14,8 @@ public class Egg : MonoBehaviour
         animation = GetComponentInChildren<Animation>();
     }
 
-    void Start()
+    public void StartEggHatching()
     {
-        // Wait for waitTime seconds and then spawn the turtle
         Invoke("SpawnTurtle", waitTimeSeconds);
         Invoke("PlayHatchAnimation", waitTimeSeconds - hatchAnimationTimeSeconds);
     }

@@ -82,6 +82,13 @@ public class Player : MonoBehaviour
 
     public void PlaceCurrentTrap()
     {
+        var eggs = FindObjectsByType<Egg>(FindObjectsSortMode.None);
+        foreach (var egg in eggs)
+        {
+            if (egg)
+                egg.StartEggHatching();
+        }
+
         if (currentTrapType != Trap.None)
         {
             Debug.Log("Placing trap");

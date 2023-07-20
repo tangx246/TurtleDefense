@@ -10,6 +10,12 @@ public class Player : MonoBehaviour
     public int pitTrapCount = 1;
     public TMP_Text pitTrapText;
 
+    [Header("Pushbox")]
+    public GameObject pushboxPrefab;
+    public int pushboxCount = 0;
+    public TMP_Text pushboxText;
+
+    [Header("Debug")]
     [SerializeField] private GameObject trapOnCursor = null;
     [SerializeField] private Trap currentTrapType = Trap.None;
 
@@ -33,12 +39,22 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void StartPlacingPushbox()
+    {
+        StartPlacingThing(ref pushboxCount, pushboxPrefab, Trap.Pushbox);
+    }
+
     public void StartPlacingPitTrap()
     {
-        if (pitTrapCount > 0)
+        StartPlacingThing(ref pitTrapCount, pitTrapPrefab, Trap.Pit);
+    }
+
+    private void StartPlacingThing(ref int trapCount, GameObject trapPrefab, Trap trapType)
+    {
+        if (trapCount > 0)
         {
-            trapOnCursor = Instantiate(pitTrapPrefab);
-            currentTrapType = Trap.Pit;
+            trapOnCursor = Instantiate(trapPrefab);
+            currentTrapType = trapType;
         }
     }
 
@@ -47,13 +63,22 @@ public class Player : MonoBehaviour
         if (currentTrapType != Trap.None)
         {
             Debug.Log("Placing trap");
+            GameObject prefab;
             switch (currentTrapType)
             {
                 case Trap.Pit:
                     pitTrapCount--;
+                    prefab = pitTrapPrefab;
                     break;
+                case Trap.Pushbox:
+                    pushboxCount--;
+                    prefab = pushboxPrefab;
+                    break;
+                default:
+                    Debug.LogError("Unhandled trap type");
+                    return;
             }
-            var trap = Instantiate(pitTrapPrefab, trapOnCursor.transform.position, trapOnCursor.transform.rotation);
+            var trap = Instantiate(prefab, trapOnCursor.transform.position, trapOnCursor.transform.rotation);
             ActivateTrap(trap);
             Destroy(trapOnCursor);
             trapOnCursor = null;
@@ -63,18 +88,27 @@ public class Player : MonoBehaviour
 
     private void ActivateTrap(GameObject go)
     {
-        go.GetComponentInChildren<TurtleDestroyer>().enabled = true;
+        var turtleDestroyer = go.GetComponentInChildren<TurtleDestroyer>();
+        if (turtleDestroyer != null)
+            turtleDestroyer.enabled = true;
+
+        var pushbox = go.GetComponentInChildren<Pushbox>();
+        if (pushbox != null)
+            pushbox.enabled = true;
+
         currentTrapType = Trap.None;
     }
 
     private void UpdateUI()
     {
         pitTrapText.text = pitTrapCount.ToString();
+        pushboxText.text = pushboxCount.ToString();
     }
 
     private enum Trap 
     { 
         None,
-        Pit
+        Pit,
+        Pushbox
     }
 }

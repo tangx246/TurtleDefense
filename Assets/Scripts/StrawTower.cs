@@ -10,10 +10,17 @@ public class StrawTower : MonoBehaviour
     public GameObject projectile;
     public LayerMask turtleMask;
     public GameObject aimer;
+    public GameObject rangeGuide;
+
+    private void Awake()
+    {
+        rangeGuide.transform.localScale = new Vector3(radius*2, radius*2, radius*2);
+    }
 
     private void Start()
     {
         StartCoroutine(ShootCoroutine());
+        Destroy(rangeGuide);
     }
 
     private IEnumerator ShootCoroutine()

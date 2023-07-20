@@ -76,6 +76,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushStrength: 3.5
   pushDuration: 0.5
+  turtleMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &8730333283591554367
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,7 +14,8 @@ public class Turtle : MonoBehaviour
 
     private void OnDestroy()
     {
-        gameManager.TurtleDestroyed();
+        if (gameManager != null)
+            gameManager.TurtleDestroyed();
     }
 
     void Start()

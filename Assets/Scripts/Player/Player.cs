@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Player : MonoBehaviour
 {
@@ -19,6 +20,11 @@ public class Player : MonoBehaviour
     public GameObject towerPrefab;
     public int towerCount = 0;
     public TMP_Text towerText;
+
+    [Header("Rock")]
+    public GameObject rockPrefab;
+    public int rockCount = 0;
+    public TMP_Text rockText;
 
     [Header("Debug")]
     [SerializeField] private GameObject trapOnCursor = null;
@@ -44,6 +50,11 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void StartPlacingRock()
+    {
+        StartPlacingThing(ref rockCount, rockPrefab, Trap.Rock);
+    }
+
     public void StartPlacingTower()
     {
         StartPlacingThing(ref towerCount, towerPrefab, Trap.Tower);
@@ -63,6 +74,7 @@ public class Player : MonoBehaviour
     {
         if (trapCount > 0)
         {
+            Destroy(trapOnCursor);
             trapOnCursor = Instantiate(trapPrefab);
             currentTrapType = trapType;
         }
@@ -87,6 +99,10 @@ public class Player : MonoBehaviour
                 case Trap.Tower:
                     towerCount--;
                     prefab = towerPrefab;
+                    break;
+                case Trap.Rock:
+                    rockCount--;
+                    prefab = rockPrefab;
                     break;
                 default:
                     Debug.LogError("Unhandled trap type");
@@ -114,6 +130,10 @@ public class Player : MonoBehaviour
         if (tower != null)
             tower.enabled = true;
 
+        var rock = go.GetComponentInChildren<NavMeshObstacle>();
+        if (rock != null)
+            rock.enabled = true;
+
         currentTrapType = Trap.None;
     }
 
@@ -122,6 +142,7 @@ public class Player : MonoBehaviour
         pitTrapText.text = pitTrapCount.ToString();
         pushboxText.text = pushboxCount.ToString();
         towerText.text = towerCount.ToString();
+        rockText.text = rockCount.ToString();
     }
 
     private enum Trap 
@@ -129,6 +150,7 @@ public class Player : MonoBehaviour
         None,
         Pit,
         Pushbox,
-        Tower
+        Tower,
+        Rock
     }
 }

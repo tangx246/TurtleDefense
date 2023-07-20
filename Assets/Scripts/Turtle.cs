@@ -4,10 +4,17 @@ using UnityEngine.AI;
 public class Turtle : MonoBehaviour
 {
     public NavMeshAgent agent;
+    public GameManager gameManager;
 
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        gameManager = FindFirstObjectByType<GameManager>();
+    }
+
+    private void OnDestroy()
+    {
+        gameManager.TurtleDestroyed();
     }
 
     void Start()

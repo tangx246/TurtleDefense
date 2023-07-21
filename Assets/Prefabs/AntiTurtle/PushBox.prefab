@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d5e36a99dcdaae4883424868027224a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pushStrength: 5
+  pushStrength: 15
   pushDuration: 0.5
   turtleMask:
     serializedVersion: 2

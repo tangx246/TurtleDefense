@@ -74,6 +74,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
   gameManager: {fileID: 0}
+  audioClips: {fileID: 0}
 --- !u!114 &6306049003478997121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,7 +205,7 @@ MonoBehaviour:
     m_keys:
     - death
     m_values:
-    - {fileID: 8300000, guid: a7a626139f661ef42b313867946a4b4e, type: 3}
+    - {fileID: 8300000, guid: 1ad6c474e57296a4287b34915606e9e4, type: 3}
   audioClipPlayed:
     m_PersistentCalls:
       m_Calls: []

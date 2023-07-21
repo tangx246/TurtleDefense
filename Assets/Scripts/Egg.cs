@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityTools;
 
 public class Egg : MonoBehaviour
 {
@@ -6,12 +7,14 @@ public class Egg : MonoBehaviour
     public float hatchAnimationTimeSeconds = 0.458f;
     public GameObject turtlePrefab;
     public GameObject eggHatchPrefab;
+    public AudioClips audioClips;
 
     private new Animation animation;
 
     private void Awake()
     {
         animation = GetComponentInChildren<Animation>();
+        audioClips = GetComponentInChildren<AudioClips>();
     }
 
     public void StartEggHatching()
@@ -33,5 +36,6 @@ public class Egg : MonoBehaviour
     private void PlayHatchAnimation()
     {
         animation.Play(PlayMode.StopAll);
+        audioClips.PlayClip("wobble");
     }
 }

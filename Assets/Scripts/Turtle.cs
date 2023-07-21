@@ -1,19 +1,24 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityTools;
 
 public class Turtle : MonoBehaviour
 {
     public NavMeshAgent agent;
     public GameManager gameManager;
+    public AudioClips audioClips;
 
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         gameManager = FindFirstObjectByType<GameManager>();
+        audioClips = GetComponent<AudioClips>();
     }
 
     private void OnDestroy()
     {
+        audioClips.PlayClip("death", true);
+
         if (gameManager != null)
             gameManager.TurtleDestroyed();
     }

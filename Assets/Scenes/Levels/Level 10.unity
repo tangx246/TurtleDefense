@@ -1024,6 +1024,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 167115735716043372, guid: dcb3e511c5c58484fb0b3eefbc443a93, type: 3}
+      propertyPath: m_text
+      value: The evil turtles are now extinct. The world has been saved!
+      objectReference: {fileID: 0}
     - target: {fileID: 289516124982011274, guid: dcb3e511c5c58484fb0b3eefbc443a93, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1055,6 +1059,10 @@ PrefabInstance:
     - target: {fileID: 553599559754299147, guid: dcb3e511c5c58484fb0b3eefbc443a93, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 975001541492651139, guid: dcb3e511c5c58484fb0b3eefbc443a93, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1147335998144655850, guid: dcb3e511c5c58484fb0b3eefbc443a93, type: 3}
       propertyPath: rockCount
@@ -1352,6 +1360,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4633448895939240310, guid: dcb3e511c5c58484fb0b3eefbc443a93, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6216090537888605752, guid: dcb3e511c5c58484fb0b3eefbc443a93, type: 3}
       propertyPath: m_Name
       value: ManagersAndPlayer
@@ -1445,7 +1457,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3038528046214043907, guid: dcb3e511c5c58484fb0b3eefbc443a93, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcb3e511c5c58484fb0b3eefbc443a93, type: 3}

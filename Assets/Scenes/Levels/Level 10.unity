@@ -1062,7 +1062,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 975001541492651139, guid: dcb3e511c5c58484fb0b3eefbc443a93, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1147335998144655850, guid: dcb3e511c5c58484fb0b3eefbc443a93, type: 3}
       propertyPath: rockCount
@@ -1362,7 +1362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4633448895939240310, guid: dcb3e511c5c58484fb0b3eefbc443a93, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6216090537888605752, guid: dcb3e511c5c58484fb0b3eefbc443a93, type: 3}
       propertyPath: m_Name

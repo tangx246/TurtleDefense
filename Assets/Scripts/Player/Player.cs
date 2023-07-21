@@ -110,8 +110,6 @@ public class Player : MonoBehaviour
 
     public void PlaceCurrentTrap()
     {
-        StartEggHatching();
-
         if (currentTrapType != Trap.None)
         {
             Debug.Log("Placing trap");

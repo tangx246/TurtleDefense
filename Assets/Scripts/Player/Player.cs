@@ -98,7 +98,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void PlaceCurrentTrap()
+    public void StartEggHatching()
     {
         var eggs = FindObjectsByType<Egg>(FindObjectsSortMode.None);
         foreach (var egg in eggs)
@@ -106,6 +106,11 @@ public class Player : MonoBehaviour
             if (egg)
                 egg.StartEggHatching();
         }
+    }
+
+    public void PlaceCurrentTrap()
+    {
+        StartEggHatching();
 
         if (currentTrapType != Trap.None)
         {

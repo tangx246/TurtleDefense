@@ -50,7 +50,7 @@ MonoBehaviour:
   shootRate: 1
   radius: 5
   projectileSpeed: 20
-  projectile: {fileID: 919132149155446097, guid: 2abac11f5a6d1fd41bab2d98130bb9f7, type: 3}
+  projectile: {fileID: 919132149155446097, guid: 549248b47fd9b93439458f136d329cd1, type: 3}
   turtleMask:
     serializedVersion: 2
     m_Bits: 64

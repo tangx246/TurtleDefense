@@ -42,9 +42,12 @@ public class StrawTower : MonoBehaviour
                 var tween = bullet.transform.DOMove(turtle.transform.position, timeToTurtle);
 
                 yield return new WaitForSeconds(timeToTurtle);
-                tween?.Kill();
-                Destroy(bullet?.gameObject);
-                Destroy(turtle?.gameObject);
+                if (tween != null)
+                    tween.Kill();
+                if (bullet != null) 
+                    Destroy(bullet.gameObject);
+                if (turtle != null)
+                    Destroy(turtle.gameObject);
             }
         }
     }

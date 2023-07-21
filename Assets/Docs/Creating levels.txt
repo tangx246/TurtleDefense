@@ -1,0 +1,17 @@
+- Duplicate a Level scene (e.g. Level 1)
+- Delete the Environment prefab in the scene
+- Create a new Environment prefab (e.g. Environment 3) in Prefabs/Environments
+- CREATE THE LEVEL
+-- Jam things into the Environment prefab
+-- Put eggs and traps in the scene
+-- Add TurtleEscapers wherever you want the turtles to escape to (e.g. shorelines). Resize, duplicate as necessary
+-- For controlling resources that the player has to complete the level, select the ManagersAndPlayer->Player. Modify trap count in the Player component
+
+When done...
+- Open the Environment prefab
+- Select all ground tiles (i.e. tiles that you can place traps on) and set their layer to "Ground"
+- Set Static for all children
+- Select the top level Environment GameObject
+- In the NavMeshSurface click "Bake"
+
+When everything is done, add the Scene to File->Build Settings. Levels should be in ascending order from top to bottom

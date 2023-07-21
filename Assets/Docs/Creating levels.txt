@@ -9,6 +9,7 @@
 -- Adjust camera so it doesn't look like shit. 
 --- The position can be changed by moving ManagersAndPlayer->Player->TopdownCamera->CameraTarget
 --- Aim can be adjusted by selecting ManagersAndPlayer->Player->TopdownCamera->Virtual Camera and editing the Aim property of the CinemachineVirtualCamera component
+-- Activate all traps placed in the level. Basically, select it, and try to find disabled components. Probably on the top level GameObject
 
 When done...
 - Open the Environment prefab

@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: bb6df670812a32746aea2cbf42574700, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18138967, g: 0.22701253, b: 0.30738127, a: 1}
+  m_IndirectSpecularColor: {r: 0.32641622, g: 0.576172, b: 0.84863365, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -461,10 +461,7 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 7084565426494346778, guid: c2b74ae17bce1a343b098cffd9d24967, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9179533902535024797, guid: c2b74ae17bce1a343b098cffd9d24967, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2b74ae17bce1a343b098cffd9d24967, type: 3}
 --- !u!1 &1605816896
 GameObject:
@@ -869,6 +866,26 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3679326045327377895, guid: dcb3e511c5c58484fb0b3eefbc443a93, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135833073681728123, guid: dcb3e511c5c58484fb0b3eefbc443a93, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135833073681728123, guid: dcb3e511c5c58484fb0b3eefbc443a93, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135833073681728123, guid: dcb3e511c5c58484fb0b3eefbc443a93, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135833073681728123, guid: dcb3e511c5c58484fb0b3eefbc443a93, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135833073681728123, guid: dcb3e511c5c58484fb0b3eefbc443a93, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}

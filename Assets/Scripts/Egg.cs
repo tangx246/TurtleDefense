@@ -1,3 +1,5 @@
+using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityTools;
 
@@ -8,6 +10,7 @@ public class Egg : MonoBehaviour
     public GameObject turtlePrefab;
     public GameObject eggHatchPrefab;
     public AudioClips audioClips;
+    public TMP_Text timerText;
 
     private new Animation animation;
 
@@ -15,12 +18,25 @@ public class Egg : MonoBehaviour
     {
         animation = GetComponentInChildren<Animation>();
         audioClips = GetComponentInChildren<AudioClips>();
+        timerText.text = waitTimeSeconds.ToString("F1");
     }
 
     public void StartEggHatching()
     {
         Invoke("SpawnTurtle", waitTimeSeconds);
         Invoke("PlayHatchAnimation", waitTimeSeconds - hatchAnimationTimeSeconds);
+
+        StartCoroutine(StartCountdownTimer());
+    }
+
+    private IEnumerator StartCountdownTimer()
+    {
+        while(waitTimeSeconds > 0)
+        {
+            timerText.text = waitTimeSeconds.ToString("F1");
+            waitTimeSeconds = Mathf.Max(waitTimeSeconds - 0.1f, 0);
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 
     void SpawnTurtle()

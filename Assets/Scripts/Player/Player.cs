@@ -90,6 +90,14 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void RotateCurrentTrap()
+    {
+        if (currentTrapType != Trap.None)
+        {
+            trapOnCursor.transform.Rotate(new Vector3(0, 90f, 0));
+        }
+    }
+
     public void PlaceCurrentTrap()
     {
         var eggs = FindObjectsByType<Egg>(FindObjectsSortMode.None);

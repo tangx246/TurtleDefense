@@ -21,6 +21,7 @@ func loadLevel(level: Level):
 	for shoreline : ShoreLine in get_tree().get_nodes_in_group("ShoreLine"):
 		shoreline.turtle_escaped.connect(victoryFailureCondition.turtle_escaped)
 	victoryFailureCondition.turtles_alive = get_tree().get_nodes_in_group("Egg").size()
+	victoryFailureCondition.reset()
 
 	trapCounts.traps = level.trapCounts
 	trapCounts.do_button_visibility_checks()

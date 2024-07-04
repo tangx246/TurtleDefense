@@ -15,12 +15,14 @@ script = ExtResource("1_r2n3w")
 movement_speed = 2.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 shape = SubResource("CapsuleShape3D_e4iha")
 
 [node name="Turtle2" parent="RigidBody3D" instance=ExtResource("1_4wj1e")]
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="RigidBody3D"]
+path_desired_distance = 0.2
+target_desired_distance = 0.2
 avoidance_enabled = true
 height = 0.4
 radius = 0.2

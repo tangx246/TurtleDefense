@@ -43,6 +43,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3307, 0.05, 0.122015)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.324141, 0.05, 0.642176)
 
 [node name="ShoreLine" parent="." instance=ExtResource("2_tesya")]
-transform = Transform3D(12.193, 0, 0, 0, 1, 0, 0, 0, 1, 0.559384, 0.05, -3.92591)
-
-[editable path="ShoreLine"]
+transform = Transform3D(12, 0, 0, 0, 1, 0, 0, 0, 1, 0.559384, 0.05, -3.92591)

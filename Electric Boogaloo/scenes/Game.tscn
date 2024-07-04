@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://l0nwp737je10"]
+[gd_scene load_steps=8 format=3 uid="uid://l0nwp737je10"]
 
 [ext_resource type="Script" path="res://scenes/LevelLoader.gd" id="1_5431n"]
 [ext_resource type="Script" path="res://scenes/Environment.gd" id="1_i6w6l"]
@@ -6,6 +6,7 @@
 [ext_resource type="Resource" uid="uid://bef7xiylutt4i" path="res://resources/level/0.tres" id="2_wpo1m"]
 [ext_resource type="Script" path="res://addons/topdown_item_placer/place_item_button.gd" id="3_6oegu"]
 [ext_resource type="Resource" uid="uid://c2kyq4q1txs6p" path="res://resources/PlacedItem/traps/pit.tres" id="4_yfdf4"]
+[ext_resource type="AudioStream" uid="uid://nwaq4gow1b0p" path="res://assets/sounds/music/8bit Bossa.ogg" id="7_xul4c"]
 
 [node name="Game" type="Node3D"]
 
@@ -48,6 +49,10 @@ script = ExtResource("2_2u724")
 [node name="LevelLoader" type="Node3D" parent="."]
 script = ExtResource("1_5431n")
 levels = Array[Resource("res://resources/level/level.gd")]([ExtResource("2_wpo1m")])
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_xul4c")
+autoplay = true
 
 [connection signal="pressed_item" from="UI/HFlowContainer/Pit Trap" to="UI/TopdownItemPlacer" method="place_item_requested"]
 [connection signal="placed_item" from="UI/TopdownItemPlacer" to="Environment" method="on_placed_item"]

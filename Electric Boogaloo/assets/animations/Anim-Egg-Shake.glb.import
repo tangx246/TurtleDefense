@@ -3,13 +3,13 @@
 importer="animation_library"
 importer_version=1
 type="AnimationLibrary"
-uid="uid://cbbv1k7w0vef1"
-path="res://.godot/imported/Anim-turle-walk.glb-03950eecf8c317d9655cc5440acf9253.res"
+uid="uid://sfeaqqem4y4j"
+path="res://.godot/imported/Anim-Egg-Shake.glb-00f0bb1a00731d317d9f876d496c8c46.res"
 
 [deps]
 
-source_file="res://assets/animations/Anim-turle-walk.glb"
-dest_files=["res://.godot/imported/Anim-turle-walk.glb-03950eecf8c317d9655cc5440acf9253.res"]
+source_file="res://assets/animations/Anim-Egg-Shake.glb"
+dest_files=["res://.godot/imported/Anim-Egg-Shake.glb-00f0bb1a00731d317d9f876d496c8c46.res"]
 
 [params]
 
@@ -31,10 +31,10 @@ animation/remove_immutable_tracks=false
 import_script/path=""
 _subresources={
 "animations": {
-"Walk": {
+"Shake": {
 "save_to_file/enabled": true,
 "save_to_file/keep_custom_tracks": true,
-"save_to_file/path": "res://assets/animations/Walk.res",
+"save_to_file/path": "res://assets/animations/Shake.res",
 "settings/loop_mode": 1,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,

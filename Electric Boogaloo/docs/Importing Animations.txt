@@ -1,0 +1,23 @@
+For all animation files
+- Select the animation .glb file
+- In Import dock
+-- Import as: Animation Library
+-- Deselect "Remove Immutable Tracks"
+- In Import Settings (double click on .glb file)
+- Under each animation under AnimationPlayer in import Settings
+-- Select appropriate Loop Mode
+- Under Actions
+-- Set Animation Save Paths
+-- Click on the Animation itself
+-- Ensure "Keep Custom Track" is on
+- Reimport
+
+Add the animation to its appropriate AnimationPlayer
+- Select the scene that the animation is for
+- Disable AnimationTree
+- Click on AnimationPlayer
+- Click on "Animation" -> Manage Animations
+- Load Library -> Search for the AnimationLibrary file
+- OK
+- Replay Animation for sanity
+- Reenable AnimationTree

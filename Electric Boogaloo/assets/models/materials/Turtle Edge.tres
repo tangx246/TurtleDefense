@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://myg1vahgotdc"]
+
+[resource]
+resource_name = "Turtle Edge"
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.309606, 0.428985, 1.92523e-07, 1)
+roughness = 0.05

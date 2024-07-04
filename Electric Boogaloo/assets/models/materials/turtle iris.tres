@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://by4oo0872bfj0"]
+
+[resource]
+resource_name = "turtle iris"
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.906332, 0.507473, 0.209091, 1)
+roughness = 0.14

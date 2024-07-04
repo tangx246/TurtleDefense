@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cc5nxnqgaelgx"]
+
+[resource]
+resource_name = "Angry Eyebrows"
+cull_mode = 2
+diffuse_mode = 3
+albedo_color = Color(0, 0, 0, 1)
+metallic = 0.9
+metallic_specular = 0.51
+roughness = 0.53

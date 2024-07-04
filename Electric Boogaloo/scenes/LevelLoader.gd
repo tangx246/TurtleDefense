@@ -4,7 +4,7 @@ extends Node3D
 @onready var environment : NavigationRegion3D = %Environment
 @onready var trapCounts : TrapCounts = %TrapCounts
 
-var currentLevelIndex : int = 0
+@export var currentLevelIndex : int = 0
 
 func _ready():
 	loadLevel(levels[currentLevelIndex])

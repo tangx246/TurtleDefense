@@ -81,7 +81,7 @@ autoplay = true
 unique_name_in_owner = true
 script = ExtResource("8_rh0gq")
 
-[node name="VictoryFailureConditions" type="Node" parent="."]
+[node name="VictoryFailureConditions" type="Node" parent="." groups=["VictoryFailureConditions"]]
 unique_name_in_owner = true
 script = ExtResource("9_uei18")
 

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://7y5as1tht5lw"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_gor8i"]
+size = Vector2(10, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a5ywr"]
+size = Vector3(10, 0.1, 10)
+
+[sub_resource type="Environment" id="Environment_t7v8e"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_wnbg6"]
+
+[node name="0" type="Node3D"]
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_gor8i")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
+shape = SubResource("BoxShape3D_a5ywr")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.903351, -0.203982, 0.377291, 0, 0.879666, 0.475592, -0.428902, -0.429626, 0.794647, 1.68294, 1.9177, 3.0806)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_t7v8e")
+camera_attributes = SubResource("CameraAttributesPractical_wnbg6")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.708069, 0.706144, 0, -0.706144, 0.708069, 0, 0, 0)

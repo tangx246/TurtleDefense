@@ -10,3 +10,7 @@ func on_placed_item(item : PlacedItem, global_pos : Vector3, global_rot : Vector
 		instantiated.global_position = global_pos
 		instantiated.global_rotation = global_rot
 	
+func start_egg_hatching():
+	for egg in get_tree().get_nodes_in_group("Egg"):
+		var timer : Timer = egg.get_node(^"%Timer")
+		timer.start()

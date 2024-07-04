@@ -18,7 +18,7 @@ func use(item: PlacedItem):
 			update_counts()
 
 func _button_visibility_check(button: PlacedItemButton):
-	button.visible = get_count(button.item) > 0
+	button.get_parent().visible = get_count(button.item) > 0
 	
 func do_button_visibility_checks():
 	var buttons : Array[Node] = get_tree().get_nodes_in_group("PlacedItemButton")

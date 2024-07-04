@@ -28,5 +28,5 @@ func do_button_visibility_checks():
 func update_counts():
 	var buttons : Array[Node] = get_tree().get_nodes_in_group("PlacedItemButton")
 	for button : PlacedItemButton in buttons:
-		var count : Label = button.get_node("%Count")
+		var count : Label = button.get_parent().get_node("Count")
 		count.text = str(get_count(button.item))

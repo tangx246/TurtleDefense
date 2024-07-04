@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cuncrh4qgna86"]
+[gd_scene load_steps=5 format=3 uid="uid://cuncrh4qgna86"]
 
 [ext_resource type="PackedScene" uid="uid://dhf18esgb7rm" path="res://assets/models/Turtle.glb" id="1_dnms5"]
+[ext_resource type="PackedScene" uid="uid://dyb6x4xtelhw2" path="res://assets/models/Egg.glb" id="2_vb3h6"]
+[ext_resource type="PackedScene" uid="uid://coung64a8bdux" path="res://assets/ParticleEffects/EggBreaking.tscn" id="3_sr4gq"]
 
 [sub_resource type="Environment" id="Environment_8ff27"]
 background_mode = 2
@@ -10,10 +12,14 @@ ambient_light_color = Color(0.984695, 0.988285, 0.880348, 1)
 [node name="Krista\'sTestScene" type="Node3D"]
 
 [node name="Turtle2" parent="." instance=ExtResource("1_dnms5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0252796, 0, 0.140947)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.755, 0, 0.141)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_8ff27")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.822938, -0.51749, -0.234472, 0, -0.412707, 0.910864, -0.568131, -0.749585, -0.339632, 0, 0, 0)
+
+[node name="Egg2" parent="." instance=ExtResource("2_vb3h6")]
+
+[node name="EggBreaking" parent="." instance=ExtResource("3_sr4gq")]

@@ -6,4 +6,5 @@
 [resource]
 script = ExtResource("1_0jseh")
 preview_scene = ExtResource("1_xj6io")
+placed_scene = ExtResource("1_xj6io")
 name = "Pit Trap"

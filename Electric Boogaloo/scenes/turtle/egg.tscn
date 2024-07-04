@@ -2,20 +2,15 @@
 
 [ext_resource type="Script" path="res://scenes/turtle/egg.gd" id="1_pkd54"]
 [ext_resource type="PackedScene" uid="uid://clpsa4yewpfsn" path="res://scenes/turtle/turtle.tscn" id="2_8ire4"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_bwx6u"]
+[ext_resource type="PackedScene" uid="uid://dyb6x4xtelhw2" path="res://assets/models/Egg.glb" id="3_q6j5c"]
 
 [node name="Egg" type="Node3D" groups=["Egg"]]
 script = ExtResource("1_pkd54")
 turtle = ExtResource("2_8ire4")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.5, 0)
-mesh = SubResource("CapsuleMesh_bwx6u")
-
 [node name="CountdownText" type="Label3D" parent="."]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.34206, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.62346, 0)
 billboard = 1
 text = "5.0"
 
@@ -23,5 +18,7 @@ text = "5.0"
 unique_name_in_owner = true
 wait_time = 3.0
 one_shot = true
+
+[node name="Egg2" parent="." instance=ExtResource("3_q6j5c")]
 
 [connection signal="timeout" from="Timer" to="." method="hatch"]

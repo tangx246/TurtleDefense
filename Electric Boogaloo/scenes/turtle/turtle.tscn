@@ -1,9 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://clpsa4yewpfsn"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_87qdl"]
+[ext_resource type="PackedScene" uid="uid://dhf18esgb7rm" path="res://assets/models/Turtle.glb" id="1_4wj1e"]
 
 [node name="Turtle" type="Node3D"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-mesh = SubResource("CapsuleMesh_87qdl")
+[node name="Turtle2" parent="." instance=ExtResource("1_4wj1e")]

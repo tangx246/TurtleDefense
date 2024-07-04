@@ -3,6 +3,7 @@ extends Node3D
 @export var levels : Array[Level]
 @onready var environment : NavigationRegion3D = %Environment
 @onready var trapCounts : TrapCounts = %TrapCounts
+@onready var victoryFailureCondition : VictoryFailureConditions = %VictoryFailureConditions
 
 @export var currentLevelIndex : int = 0
 
@@ -17,6 +18,9 @@ func loadLevel(level: Level):
 	var newEnv = level.environment.instantiate()
 	environment.add_child(newEnv)
 	environment.bake_navigation_mesh()
+	for shoreline : ShoreLine in get_tree().get_nodes_in_group("ShoreLine"):
+		shoreline.turtle_escaped.connect(victoryFailureCondition.turtle_escaped)
+	victoryFailureCondition.turtles_alive = get_tree().get_nodes_in_group("Egg").size()
 
 	trapCounts.traps = level.trapCounts
 	trapCounts.do_button_visibility_checks()

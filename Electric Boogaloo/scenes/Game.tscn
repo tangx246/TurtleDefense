@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://l0nwp737je10"]
+[gd_scene load_steps=11 format=3 uid="uid://l0nwp737je10"]
 
 [ext_resource type="Script" path="res://scenes/LevelLoader.gd" id="1_5431n"]
 [ext_resource type="Script" path="res://scenes/Environment.gd" id="1_i6w6l"]
@@ -8,6 +8,7 @@
 [ext_resource type="Resource" uid="uid://c2kyq4q1txs6p" path="res://resources/PlacedItem/traps/pit.tres" id="4_yfdf4"]
 [ext_resource type="AudioStream" uid="uid://nwaq4gow1b0p" path="res://assets/sounds/music/8bit Bossa.ogg" id="7_xul4c"]
 [ext_resource type="Script" path="res://scenes/TrapCounts.gd" id="8_rh0gq"]
+[ext_resource type="Script" path="res://scenes/VictoryFailureConditions.gd" id="9_uei18"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_4gw0b"]
 agent_height = 0.2
@@ -79,6 +80,10 @@ autoplay = true
 [node name="TrapCounts" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("8_rh0gq")
+
+[node name="VictoryFailureConditions" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("9_uei18")
 
 [connection signal="pressed" from="UI/HBoxContainer/Start Game" to="Environment" method="start_egg_hatching"]
 [connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer/Pit Trap" to="UI/TopdownItemPlacer" method="place_item_requested"]

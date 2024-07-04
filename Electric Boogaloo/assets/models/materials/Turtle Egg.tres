@@ -2,5 +2,12 @@
 
 [resource]
 resource_name = "Turtle Egg"
-albedo_color = Color(0.825357, 0.906332, 0.580949, 1)
-roughness = 0.5
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.944884, 0.938559, 0.62285, 1)
+metallic = 0.47
+roughness = 0.4
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false

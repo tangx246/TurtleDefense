@@ -1,13 +1,9 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://cbiclj744rhxv"]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dgspqfyxjmjr7"]
 
 [resource]
 resource_name = "Turtle Egg"
 diffuse_mode = 3
 specular_mode = 1
-albedo_color = Color(0.944884, 0.938559, 0.62285, 1)
+albedo_color = Color(0.945098, 0.937255, 0.623529, 1)
 metallic = 0.47
 roughness = 0.4
-billboard_mode = 3
-particles_anim_h_frames = 1
-particles_anim_v_frames = 1
-particles_anim_loop = false

@@ -33,7 +33,7 @@ _subresources={
 "materials": {
 "Turtle Egg": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/models/materials/Turtle Egg.tres"
+"use_external/path": "res://assets/models/Turtle Egg.tres"
 }
 }
 }

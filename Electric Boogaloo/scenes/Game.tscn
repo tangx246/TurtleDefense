@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://l0nwp737je10"]
+[gd_scene load_steps=10 format=3 uid="uid://l0nwp737je10"]
 
 [ext_resource type="Script" path="res://scenes/LevelLoader.gd" id="1_5431n"]
 [ext_resource type="Script" path="res://scenes/Environment.gd" id="1_i6w6l"]
@@ -9,10 +9,15 @@
 [ext_resource type="AudioStream" uid="uid://nwaq4gow1b0p" path="res://assets/sounds/music/8bit Bossa.ogg" id="7_xul4c"]
 [ext_resource type="Script" path="res://scenes/TrapCounts.gd" id="8_rh0gq"]
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_4gw0b"]
+agent_height = 0.2
+agent_radius = 0.4
+
 [node name="Game" type="Node3D"]
 
-[node name="Environment" type="Node3D" parent="."]
+[node name="Environment" type="NavigationRegion3D" parent="."]
 unique_name_in_owner = true
+navigation_mesh = SubResource("NavigationMesh_4gw0b")
 script = ExtResource("1_i6w6l")
 
 [node name="UI" type="Control" parent="."]

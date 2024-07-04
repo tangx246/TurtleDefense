@@ -1,7 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://clpsa4yewpfsn"]
+[gd_scene load_steps=4 format=3 uid="uid://clpsa4yewpfsn"]
 
 [ext_resource type="PackedScene" uid="uid://dhf18esgb7rm" path="res://assets/models/Turtle.glb" id="1_4wj1e"]
+[ext_resource type="Script" path="res://scenes/turtle/turtle.gd" id="1_r2n3w"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_e4iha"]
+radius = 0.2
+height = 0.4
 
 [node name="Turtle" type="Node3D"]
 
-[node name="Turtle2" parent="." instance=ExtResource("1_4wj1e")]
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+mass = 5.0
+script = ExtResource("1_r2n3w")
+movement_speed = 2.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
+shape = SubResource("CapsuleShape3D_e4iha")
+
+[node name="Turtle2" parent="RigidBody3D" instance=ExtResource("1_4wj1e")]
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="RigidBody3D"]
+avoidance_enabled = true
+height = 0.4
+radius = 0.2

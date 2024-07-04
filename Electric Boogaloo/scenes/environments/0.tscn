@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://7y5as1tht5lw"]
+[gd_scene load_steps=7 format=3 uid="uid://7y5as1tht5lw"]
 
 [ext_resource type="PackedScene" uid="uid://chyg2agr1samy" path="res://scenes/turtle/egg.tscn" id="1_4all7"]
+[ext_resource type="PackedScene" uid="uid://nlm2ppnbkpbd" path="res://scenes/environments/shoreLine.tscn" id="2_tesya"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_gor8i"]
 size = Vector2(10, 10)
@@ -40,3 +41,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3307, 0.05, 0.122015)
 
 [node name="Egg3" parent="." instance=ExtResource("1_4all7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.324141, 0.05, 0.642176)
+
+[node name="ShoreLine" parent="." instance=ExtResource("2_tesya")]
+transform = Transform3D(12.193, 0, 0, 0, 1, 0, 0, 0, 1, 0.559384, 0.05, -3.92591)
+
+[editable path="ShoreLine"]

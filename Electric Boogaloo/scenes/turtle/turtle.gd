@@ -1,4 +1,5 @@
-extends RigidBody3D
+class_name MovementAgent
+extends CharacterBody3D
 
 @export var movement_speed: float = 4.0
 @onready var navigation_agent: NavigationAgent3D = get_node("NavigationAgent3D")
@@ -31,4 +32,5 @@ func _physics_process(delta):
 		_on_velocity_computed(new_velocity)
 
 func _on_velocity_computed(safe_velocity: Vector3):
-	linear_velocity = safe_velocity
+	velocity = safe_velocity
+	move_and_slide()

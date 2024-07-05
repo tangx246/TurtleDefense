@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PlacedItem" load_steps=4 format=3 uid="uid://bedbcfpmdf7n1"]
+
+[ext_resource type="PackedScene" uid="uid://dc7hcl1twdmxr" path="res://scenes/traps/oil spill.tscn" id="1_17qwg"]
+[ext_resource type="PackedScene" uid="uid://vb5enso3qswl" path="res://scenes/Placeholder.tscn" id="2_pw0hm"]
+[ext_resource type="Script" path="res://addons/topdown_item_placer/PlacedItem.gd" id="3_g2e4h"]
+
+[resource]
+script = ExtResource("3_g2e4h")
+preview_scene = ExtResource("2_pw0hm")
+placed_scene = ExtResource("1_17qwg")
+name = ""

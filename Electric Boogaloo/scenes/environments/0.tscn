@@ -15,10 +15,10 @@ size = Vector3(10, 0.1, 10)
 
 [node name="0" type="Node3D"]
 
-[node name="Floor" type="MeshInstance3D" parent="."]
+[node name="Floor" type="MeshInstance3D" parent="." groups=["navigation_mesh_source_group"]]
 mesh = SubResource("PlaneMesh_gor8i")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Floor"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor" groups=["navigation_mesh_source_group"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
 shape = SubResource("BoxShape3D_a5ywr")

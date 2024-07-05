@@ -1,22 +1,24 @@
-[gd_scene load_steps=11 format=3 uid="uid://l0nwp737je10"]
+[gd_scene load_steps=12 format=3 uid="uid://l0nwp737je10"]
 
 [ext_resource type="Script" path="res://scenes/LevelLoader.gd" id="1_5431n"]
 [ext_resource type="Script" path="res://scenes/Environment.gd" id="1_i6w6l"]
 [ext_resource type="Script" path="res://addons/topdown_item_placer/topdown_item_placer.gd" id="2_2u724"]
 [ext_resource type="Resource" uid="uid://bef7xiylutt4i" path="res://resources/level/0.tres" id="2_wpo1m"]
 [ext_resource type="Script" path="res://addons/topdown_item_placer/place_item_button.gd" id="3_6oegu"]
+[ext_resource type="Resource" uid="uid://d2ch1tgq77t7f" path="res://resources/PlacedItem/traps/rock.tres" id="4_3taqo"]
 [ext_resource type="Resource" uid="uid://c2kyq4q1txs6p" path="res://resources/PlacedItem/traps/pit.tres" id="4_yfdf4"]
 [ext_resource type="AudioStream" uid="uid://nwaq4gow1b0p" path="res://assets/sounds/music/8bit Bossa.ogg" id="7_xul4c"]
 [ext_resource type="Script" path="res://scenes/TrapCounts.gd" id="8_rh0gq"]
 [ext_resource type="Script" path="res://scenes/VictoryFailureConditions.gd" id="9_uei18"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_4gw0b"]
+geometry_parsed_geometry_type = 1
 agent_height = 0.2
 agent_radius = 0.4
 
 [node name="Game" type="Node3D"]
 
-[node name="Environment" type="NavigationRegion3D" parent="."]
+[node name="Environment" type="NavigationRegion3D" parent="." groups=["Environment"]]
 unique_name_in_owner = true
 navigation_mesh = SubResource("NavigationMesh_4gw0b")
 script = ExtResource("1_i6w6l")
@@ -64,6 +66,21 @@ size_flags_horizontal = 4
 text = "0
 "
 
+[node name="VBoxContainer2" type="VBoxContainer" parent="UI/HBoxContainer"]
+layout_mode = 2
+
+[node name="Rock" type="Button" parent="UI/HBoxContainer/VBoxContainer2" groups=["PlacedItemButton"]]
+layout_mode = 2
+text = "Rock"
+script = ExtResource("3_6oegu")
+item = ExtResource("4_3taqo")
+
+[node name="Count" type="Label" parent="UI/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "0
+"
+
 [node name="TopdownItemPlacer" type="Control" parent="UI"]
 layout_mode = 3
 anchors_preset = 0
@@ -87,4 +104,5 @@ script = ExtResource("9_uei18")
 
 [connection signal="pressed" from="UI/HBoxContainer/Start Game" to="Environment" method="start_egg_hatching"]
 [connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer/Pit Trap" to="UI/TopdownItemPlacer" method="place_item_requested"]
+[connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer2/Rock" to="UI/TopdownItemPlacer" method="place_item_requested"]
 [connection signal="placed_item" from="UI/TopdownItemPlacer" to="Environment" method="on_placed_item"]

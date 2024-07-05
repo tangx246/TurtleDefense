@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PlacedItem" load_steps=4 format=3 uid="uid://d2ch1tgq77t7f"]
+
+[ext_resource type="PackedScene" uid="uid://dy00o25dh55w6" path="res://scenes/traps/rock.tscn" id="1_rbuxl"]
+[ext_resource type="Script" path="res://addons/topdown_item_placer/PlacedItem.gd" id="1_sp6x6"]
+[ext_resource type="PackedScene" uid="uid://vb5enso3qswl" path="res://scenes/Placeholder.tscn" id="2_qp477"]
+
+[resource]
+script = ExtResource("1_sp6x6")
+preview_scene = ExtResource("2_qp477")
+placed_scene = ExtResource("1_rbuxl")
+name = ""

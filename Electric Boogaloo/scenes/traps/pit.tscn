@@ -11,10 +11,10 @@ script = ExtResource("1_61s33")
 [node name="Placeholder" parent="." instance=ExtResource("1_cfes3")]
 transform = Transform3D(1, 0, 0, 0, 0.182236, 0, 0, 0, 1, 0, 0, 0)
 
-[node name="Area3D" type="Area3D" parent="Placeholder"]
+[node name="Area3D" type="Area3D" parent="."]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Placeholder/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("BoxShape3D_84bvv")
 
-[connection signal="body_entered" from="Placeholder/Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

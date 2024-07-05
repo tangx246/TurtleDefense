@@ -1,12 +1,12 @@
 [gd_scene load_steps=4 format=3 uid="uid://b1awsxvmgvcye"]
 
+[ext_resource type="Script" path="res://scenes/traps/TurtleKiller.gd" id="1_61s33"]
 [ext_resource type="PackedScene" uid="uid://vb5enso3qswl" path="res://scenes/Placeholder.tscn" id="1_cfes3"]
-[ext_resource type="Script" path="res://scenes/traps/pit.gd" id="1_fltno"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_84bvv"]
 
 [node name="Pit" type="Node3D"]
-script = ExtResource("1_fltno")
+script = ExtResource("1_61s33")
 
 [node name="Placeholder" parent="." instance=ExtResource("1_cfes3")]
 transform = Transform3D(1, 0, 0, 0, 0.182236, 0, 0, 0, 1, 0, 0, 0)

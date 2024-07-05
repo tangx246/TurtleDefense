@@ -8,4 +8,4 @@
 script = ExtResource("1_sp6x6")
 preview_scene = ExtResource("2_qp477")
 placed_scene = ExtResource("1_rbuxl")
-name = ""
+name = "Rock"

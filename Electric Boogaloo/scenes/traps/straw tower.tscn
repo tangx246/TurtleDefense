@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://br4v375ykxwat"]
+
+[ext_resource type="Script" path="res://scenes/traps/straw tower.gd" id="1_yo3oc"]
+[ext_resource type="PackedScene" uid="uid://vb5enso3qswl" path="res://scenes/Placeholder.tscn" id="2_8h1m7"]
+[ext_resource type="Script" path="res://scenes/traps/TurtleKiller.gd" id="3_1f1fv"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ob3ib"]
+radius = 3.0
+
+[node name="Straw Tower" type="Node3D"]
+script = ExtResource("1_yo3oc")
+
+[node name="Placeholder" parent="." instance=ExtResource("2_8h1m7")]
+
+[node name="Area3D" type="Area3D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("SphereShape3D_ob3ib")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="TurtleKiller" type="Node3D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("3_1f1fv")
+
+[connection signal="timeout" from="Timer" to="." method="fire_straw"]

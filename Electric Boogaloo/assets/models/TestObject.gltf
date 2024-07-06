@@ -1,0 +1,185 @@
+{
+    "asset": {
+        "copyright": "(C)2024 CS_Dev01",
+        "generator": "maya2glTF main fbbc95e5dc4d",
+        "version": "2.0"
+    },
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0,
+    "nodes": [
+        {
+            "name": "Test_Object",
+            "mesh": 0
+        }
+    ],
+    "meshes": [
+        {
+            "name": "Test_ObjectShape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 1,
+                        "POSITION": 2,
+                        "TANGENT": 3,
+                        "TEXCOORD_0": 4
+                    },
+                    "indices": 0,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "name": "lambert1",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    1.0
+                ],
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            }
+        }
+    ],
+    "accessors": [
+        {
+            "name": "Test_ObjectShape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 324,
+            "max": [
+                167
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "Test_ObjectShape#0/vertices/NORMAL",
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 168,
+            "max": [
+                1.0,
+                1.0,
+                0.9284768104553224
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                -1.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Test_ObjectShape#0/vertices/POSITION",
+            "bufferView": 1,
+            "byteOffset": 2016,
+            "componentType": 5126,
+            "count": 168,
+            "max": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                -1.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Test_ObjectShape#0/vertices/TANGENT",
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 168,
+            "max": [
+                1.0,
+                0.9284767508506776,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -0.37139078974723818,
+                -0.9284767508506776,
+                -1.0,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Test_ObjectShape#0/vertices/TEXCOORD_0",
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 168,
+            "max": [
+                0.9370034337043762,
+                0.9980079531669616
+            ],
+            "min": [
+                0.0018702660454437137,
+                0.001991986995562911
+            ],
+            "type": "VEC2"
+        }
+    ],
+    "bufferViews": [
+        {
+            "name": "TestObject/data/indices-2",
+            "buffer": 0,
+            "byteOffset": 8064,
+            "byteLength": 648,
+            "target": 34963
+        },
+        {
+            "name": "TestObject/data/vertices-12",
+            "buffer": 0,
+            "byteOffset": 2688,
+            "byteLength": 4032,
+            "byteStride": 12,
+            "target": 34962
+        },
+        {
+            "name": "TestObject/data/vertices-16",
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 2688,
+            "byteStride": 16,
+            "target": 34962
+        },
+        {
+            "name": "TestObject/data/vertices-8",
+            "buffer": 0,
+            "byteOffset": 6720,
+            "byteLength": 1344,
+            "byteStride": 8,
+            "target": 34962
+        }
+    ],
+    "buffers": [
+        {
+            "name": "TestObject/data",
+            "byteLength": 8712,
+            "uri": "TestObject0.bin"
+        }
+    ]
+}

@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://ciovh5c40l5s2"]
+[gd_scene load_steps=2 format=3 uid="uid://ciovh5c40l5s2"]
+
+[ext_resource type="PackedScene" uid="uid://ci57jbgymbcl8" path="res://assets/models/TestObject.gltf" id="1_6o4av"]
 
 [node name="Caleb\'s Test Scene" type="Node3D"]
+
+[node name="TestObject" parent="." instance=ExtResource("1_6o4av")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00671351, 0, 0.0122886)

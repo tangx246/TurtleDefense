@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://l0nwp737je10"]
+[gd_scene load_steps=16 format=3 uid="uid://l0nwp737je10"]
 
 [ext_resource type="Script" path="res://scenes/LevelLoader.gd" id="1_5431n"]
 [ext_resource type="Script" path="res://scenes/Environment.gd" id="1_i6w6l"]
@@ -13,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://nwaq4gow1b0p" path="res://assets/sounds/music/8bit Bossa.ogg" id="7_xul4c"]
 [ext_resource type="Script" path="res://scenes/TrapCounts.gd" id="8_rh0gq"]
 [ext_resource type="Script" path="res://scenes/VictoryFailureConditions.gd" id="9_uei18"]
+[ext_resource type="Script" path="res://scenes/VictoryDefeatUi.gd" id="9_ui8ai"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_4gw0b"]
 geometry_parsed_geometry_type = 1
@@ -143,8 +144,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("9_ui8ai")
 
 [node name="VictoryVBoxContainer" type="VBoxContainer" parent="UI/VictoryDefeat"]
+unique_name_in_owner = true
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -169,6 +172,7 @@ size_flags_horizontal = 4
 text = "Next level"
 
 [node name="DefeatVBoxContainer" type="VBoxContainer" parent="UI/VictoryDefeat"]
+unique_name_in_owner = true
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -192,7 +196,28 @@ layout_mode = 2
 size_flags_horizontal = 4
 text = "Try again"
 
+[node name="GameCompletePanel" type="VBoxContainer" parent="UI/VictoryDefeat"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.5
+offset_top = -20.0
+offset_right = 24.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="UI/VictoryDefeat/GameCompletePanel"]
+layout_mode = 2
+text = "The evil turtles are now extinct! The world has been saved :D"
+
 [node name="LevelLoader" type="Node3D" parent="."]
+unique_name_in_owner = true
 script = ExtResource("1_5431n")
 levels = Array[Resource("res://resources/level/level.gd")]([ExtResource("2_wpo1m")])
 
@@ -215,9 +240,5 @@ script = ExtResource("9_uei18")
 [connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer4/Push Box" to="UI/TopdownItemPlacer" method="place_item_requested"]
 [connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer5/Straw Tower" to="UI/TopdownItemPlacer" method="place_item_requested"]
 [connection signal="placed_item" from="UI/TopdownItemPlacer" to="Environment" method="on_placed_item"]
-[connection signal="defeat" from="VictoryFailureConditions" to="UI/VictoryDefeat" method="set_visible" binds= [true]]
-[connection signal="defeat" from="VictoryFailureConditions" to="UI/VictoryDefeat/VictoryVBoxContainer" method="set_visible" binds= [false]]
-[connection signal="defeat" from="VictoryFailureConditions" to="UI/VictoryDefeat/DefeatVBoxContainer" method="set_visible" binds= [true]]
-[connection signal="victory" from="VictoryFailureConditions" to="UI/VictoryDefeat" method="set_visible" binds= [true]]
-[connection signal="victory" from="VictoryFailureConditions" to="UI/VictoryDefeat/VictoryVBoxContainer" method="set_visible" binds= [true]]
-[connection signal="victory" from="VictoryFailureConditions" to="UI/VictoryDefeat/DefeatVBoxContainer" method="set_visible" binds= [false]]
+[connection signal="pressed" from="UI/VictoryDefeat/VictoryVBoxContainer/Button" to="LevelLoader" method="nextLevel"]
+[connection signal="pressed" from="UI/VictoryDefeat/DefeatVBoxContainer/Button" to="LevelLoader" method="loadCurrentLevel"]

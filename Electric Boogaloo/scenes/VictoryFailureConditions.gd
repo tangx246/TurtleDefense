@@ -2,8 +2,7 @@ class_name VictoryFailureConditions
 extends Node
 
 @export var turtles_alive : int
-signal victory
-signal defeat
+signal game_end(victory : bool)
 
 const tag : StringName = "VictoryFailureConditions"
 
@@ -17,12 +16,12 @@ func turtle_escaped():
 		return
 	
 	print("Failure")
-	defeat.emit()
+	game_end.emit(false)
 	locked = true
 	
 func all_turtles_killed():
 	print("Victory")
-	victory.emit()
+	game_end.emit(true)
 	locked = true
 
 func reset():

@@ -1,3 +1,4 @@
+class_name LevelLoader
 extends Node3D
 
 @export var levels : Array[Level]
@@ -9,7 +10,17 @@ extends Node3D
 @export var currentLevelIndex : int = 0
 
 func _ready():
+	loadCurrentLevel()
+
+func nextLevel():
+	currentLevelIndex = currentLevelIndex + 1
+	loadCurrentLevel()
+	
+func loadCurrentLevel():
 	loadLevel(levels[currentLevelIndex])
+	
+func hasNextLevel() -> bool:
+	return currentLevelIndex < levels.size() - 1
 
 func loadLevel(level: Level):
 	for child in environment.get_children():

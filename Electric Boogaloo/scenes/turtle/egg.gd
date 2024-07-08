@@ -2,6 +2,7 @@ class_name Egg
 extends Node3D
 
 @export var turtle : PackedScene
+@export var eggCrack : PackedScene
 @onready var text : Label3D = %CountdownText
 @onready var timer : Timer = %Timer
 
@@ -18,6 +19,11 @@ func hatch():
 	parent.add_child(instantiated)
 	instantiated.global_position = global_position
 	instantiated.global_rotation = global_rotation
+	
+	var eggCrackEffect : Node3D = eggCrack.instantiate()
+	parent.add_child(eggCrackEffect)
+	eggCrackEffect.global_position = global_position
+	eggCrackEffect.global_rotation = global_rotation
 	
 	parent.remove_child(self)
 	queue_free()

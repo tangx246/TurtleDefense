@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://clpsa4yewpfsn"]
+[gd_scene load_steps=5 format=3 uid="uid://clpsa4yewpfsn"]
 
 [ext_resource type="PackedScene" uid="uid://dhf18esgb7rm" path="res://assets/models/Turtle.glb" id="1_4wj1e"]
 [ext_resource type="Script" path="res://scenes/turtle/turtle.gd" id="1_r2n3w"]
+[ext_resource type="AnimationLibrary" uid="uid://cbbv1k7w0vef1" path="res://assets/animations/Anim-Turtle-Walk.glb" id="3_5oc6c"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7xuvy"]
 size = Vector3(0.3, 0.4, 0.3)
@@ -26,3 +27,12 @@ path_height_offset = 0.2
 avoidance_enabled = true
 height = 0.4
 radius = 0.2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MovementAgent"]
+deterministic = true
+root_node = NodePath("../Turtle2")
+libraries = {
+"Anim-Turtle-Walk": ExtResource("3_5oc6c")
+}
+
+[connection signal="ready" from="." to="MovementAgent/AnimationPlayer" method="play" binds= [&"Anim-Turtle-Walk/Walk"]]

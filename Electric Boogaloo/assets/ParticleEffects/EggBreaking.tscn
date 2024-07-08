@@ -39,7 +39,7 @@ trail_lifetime = 0.1
 process_material = ExtResource("1_0wnsb")
 draw_pass_1 = ExtResource("4_q2rar")
 
-[connection signal="finished" from="." to="." method="queue_free"]
+;[connection signal="finished" from="." to="." method="queue_free"]
 [connection signal="ready" from="." to="." method="set_emitting" binds= [true]]
 [connection signal="ready" from="." to="EggBreaking2" method="set_emitting" binds= [true]]
 [connection signal="ready" from="." to="EggBreaking3" method="set_emitting" binds= [true]]

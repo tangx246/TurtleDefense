@@ -1,7 +1,7 @@
 class_name LevelLoader
 extends Node3D
 
-@export var levels : Array[Level]
+@export var levels : Levels
 @onready var environment : NavigationRegion3D = %Environment
 @onready var trapCounts : TrapCounts = %TrapCounts
 @onready var victoryFailureCondition : VictoryFailureConditions = %VictoryFailureConditions
@@ -17,10 +17,10 @@ func nextLevel():
 	loadCurrentLevel()
 	
 func loadCurrentLevel():
-	loadLevel(levels[currentLevelIndex])
+	loadLevel(levels.levels[currentLevelIndex])
 	
 func hasNextLevel() -> bool:
-	return currentLevelIndex < levels.size() - 1
+	return currentLevelIndex < levels.levels.size() - 1
 
 func loadLevel(level: Level):
 	for child in environment.get_children():

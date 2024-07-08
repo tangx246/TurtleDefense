@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://scenes/LevelLoader.gd" id="1_5431n"]
 [ext_resource type="Script" path="res://scenes/Environment.gd" id="1_i6w6l"]
 [ext_resource type="Script" path="res://addons/topdown_item_placer/topdown_item_placer.gd" id="2_2u724"]
-[ext_resource type="Resource" uid="uid://bef7xiylutt4i" path="res://resources/level/0.tres" id="2_wpo1m"]
 [ext_resource type="Script" path="res://addons/topdown_item_placer/place_item_button.gd" id="3_6oegu"]
 [ext_resource type="Resource" uid="uid://d2ch1tgq77t7f" path="res://resources/PlacedItem/traps/rock.tres" id="4_3taqo"]
 [ext_resource type="Resource" uid="uid://c2kyq4q1txs6p" path="res://resources/PlacedItem/traps/pit.tres" id="4_yfdf4"]
@@ -14,6 +13,7 @@
 [ext_resource type="Script" path="res://scenes/TrapCounts.gd" id="8_rh0gq"]
 [ext_resource type="Script" path="res://scenes/VictoryFailureConditions.gd" id="9_uei18"]
 [ext_resource type="Script" path="res://scenes/VictoryDefeatUi.gd" id="9_ui8ai"]
+[ext_resource type="Resource" uid="uid://bawc1ivob6x2u" path="res://resources/level/levels.tres" id="11_dlvsh"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_4gw0b"]
 geometry_parsed_geometry_type = 1
@@ -219,7 +219,7 @@ text = "The evil turtles are now extinct! The world has been saved :D"
 [node name="LevelLoader" type="Node3D" parent="."]
 unique_name_in_owner = true
 script = ExtResource("1_5431n")
-levels = Array[Resource("res://resources/level/level.gd")]([ExtResource("2_wpo1m")])
+levels = ExtResource("11_dlvsh")
 
 [node name="BGM" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_xul4c")

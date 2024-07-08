@@ -13,7 +13,7 @@
 	- Quick load the associated level
 	- Add and set the appropriate number of traps the user is allowed for this level
 	
-- Under Game.tscn
-	- To add the level to the "list of levels", select the LevelLoader and add it to the Levels array
-	- To test it out temporarily, set "Current Level Index" to the level and then Run Project (F5)
+- Edit levels.tres
+	- To add the level to the "list of levels", select the levels resource and add it to the Levels array
+	- To test it out temporarily, set "Current Level Index" in Game.tscn's LevelLoader to the level and then Run Project (F5)
 	- Set the level number back

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://deto248tcxslw"
-path="res://.godot/imported/OilPuddleIcon.png-dc46e815745ff794d90313fdffc6d041.ctex"
+uid="uid://bd2pkhxyii1n"
+path="res://.godot/imported/RockIcon.png-aae4f1fbd2f1e8fd7c05e2342691bfcb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/TrapIcons/OilPuddleIcon.png"
-dest_files=["res://.godot/imported/OilPuddleIcon.png-dc46e815745ff794d90313fdffc6d041.ctex"]
+source_file="res://assets/UI/TrapIcons/RockIcon.png"
+dest_files=["res://.godot/imported/RockIcon.png-aae4f1fbd2f1e8fd7c05e2342691bfcb.ctex"]
 
 [params]
 

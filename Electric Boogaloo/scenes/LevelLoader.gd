@@ -35,7 +35,7 @@ func loadLevel(level: Level):
 	victoryFailureCondition.turtles_alive = get_tree().get_nodes_in_group("Egg").size()
 	victoryFailureCondition.reset()
 
-	trapCounts.traps = level.trapCounts
+	trapCounts.setTrapCount(level.trapCounts)
 	trapCounts.do_button_visibility_checks()
 	trapCounts.update_counts()
 

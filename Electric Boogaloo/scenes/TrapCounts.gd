@@ -1,21 +1,28 @@
 class_name TrapCounts
 extends Node
 
-## PlacecItem to int expected
-@export var traps : Array[TrapCount]
+## PlacedItem to int expected
+var trapCount : Dictionary
+
+func setTrapCount(traps : Array[TrapCount]):
+	trapCount = {}
+	for trap in traps:
+		trapCount[trap.trap] = trap.count
 
 func get_count(item: PlacedItem) -> int:
-	for trap in traps:
-		if trap.trap == item:
-			return trap.count
-			
-	return 0
+	var count = trapCount.get(item)
+	if count == null:
+		count = 0
+		
+	return count
 
 func use(item: PlacedItem):
-	for trap in traps:
-		if trap.trap == item:
-			trap.count = trap.count - 1
-			update_counts()
+	var count = trapCount.get(item)
+	if count == null:
+		return
+	else:
+		trapCount[item] = count - 1
+		update_counts()
 
 func _button_visibility_check(button: PlacedItemButton):
 	button.get_parent().visible = get_count(button.item) > 0

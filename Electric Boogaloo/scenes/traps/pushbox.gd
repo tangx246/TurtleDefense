@@ -5,7 +5,7 @@ extends Node3D
 
 var trigger : bool = false
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if trigger:
 		var overlappingBodies = area.get_overlapping_bodies()
 		for overlappingBody in overlappingBodies:

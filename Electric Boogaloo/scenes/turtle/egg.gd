@@ -7,7 +7,7 @@ extends Node3D
 @onready var timer : Timer = %Timer
 @onready var anim : AnimationPlayer = %AnimationPlayer
 
-func _process(delta : float):
+func _process(_delta):
 	if timer.is_stopped():
 		text.text = "%.1f" % timer.wait_time
 	else:

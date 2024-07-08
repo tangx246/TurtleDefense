@@ -4,6 +4,7 @@ extends Node3D
 @onready var environment : NavigationRegion3D = %Environment
 @onready var trapCounts : TrapCounts = %TrapCounts
 @onready var victoryFailureCondition : VictoryFailureConditions = %VictoryFailureConditions
+@onready var victoryDefeatUi : Control = %VictoryDefeat
 
 @export var currentLevelIndex : int = 0
 
@@ -26,3 +27,5 @@ func loadLevel(level: Level):
 	trapCounts.traps = level.trapCounts
 	trapCounts.do_button_visibility_checks()
 	trapCounts.update_counts()
+
+	victoryDefeatUi.visible = false

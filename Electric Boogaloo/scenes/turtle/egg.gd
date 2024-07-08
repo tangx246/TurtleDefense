@@ -5,12 +5,15 @@ extends Node3D
 @export var eggCrack : PackedScene
 @onready var text : Label3D = %CountdownText
 @onready var timer : Timer = %Timer
+@onready var anim : AnimationPlayer = %AnimationPlayer
 
 func _process(delta : float):
 	if timer.is_stopped():
 		text.text = "%.1f" % timer.wait_time
 	else:
 		text.text = "%.1f" % timer.time_left
+		if timer.time_left < 0.5 and not anim.is_playing():
+			anim.play(&"Anim-Egg-Shake/Shake")
 
 func hatch():
 	var parent = get_parent()

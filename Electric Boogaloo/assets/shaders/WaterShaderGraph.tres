@@ -67,7 +67,7 @@ uniform sampler2D Voronoi : filter_linear_mipmap;
 
 void fragment() {
 // ColorConstant:2
-	vec4 n_out2p0 = vec4(0.086275, 0.305882, 0.513726, 1.000000);
+	vec4 n_out2p0 = vec4(0.086274, 0.305882, 0.513726, 1.000000);
 
 
 // FloatConstant:9
@@ -136,7 +136,6 @@ void fragment() {
 
 }
 "
-graph_offset = Vector2(-773.489, 234.827)
 modes/diffuse = 3
 modes/specular = 1
 nodes/fragment/2/node = SubResource("VisualShaderNodeColorConstant_pyasd")

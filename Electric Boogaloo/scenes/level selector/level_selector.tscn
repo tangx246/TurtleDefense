@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dhc0hlwiervw7"]
+[gd_scene load_steps=5 format=3 uid="uid://dhc0hlwiervw7"]
 
 [ext_resource type="Script" path="res://scenes/level selector/LevelContainer.gd" id="1_ki30r"]
 [ext_resource type="Resource" uid="uid://bawc1ivob6x2u" path="res://resources/level/levels.tres" id="2_o14oj"]
 [ext_resource type="PackedScene" uid="uid://dlgsv773i5bt" path="res://scenes/level selector/level_displayer.tscn" id="3_3g0r2"]
+[ext_resource type="AudioStream" uid="uid://cmgf1tuy65usn" path="res://assets/sounds/music/sailor_waltz_with_water_effects_c64_style.ogg" id="4_ag3lw"]
 
 [node name="LevelSelector" type="Panel"]
 anchors_preset = 15
@@ -51,3 +52,7 @@ layout_mode = 2
 
 [node name="LevelDisplayer5" parent="LevelContainer" instance=ExtResource("3_3g0r2")]
 layout_mode = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ag3lw")
+autoplay = true

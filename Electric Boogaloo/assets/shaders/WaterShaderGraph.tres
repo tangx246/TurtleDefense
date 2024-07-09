@@ -13,6 +13,7 @@ default_value = 0.15
 
 [sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_yexq6"]
 parameter_name = "Voronoi"
+texture_filter = 4
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_pbe8n"]
 
@@ -60,7 +61,7 @@ code = "shader_type spatial;
 render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_toon, specular_toon;
 
 uniform float WaveSpeed = 0.15000000596046;
-uniform sampler2D Voronoi;
+uniform sampler2D Voronoi : filter_linear_mipmap;
 
 
 
@@ -135,7 +136,7 @@ void fragment() {
 
 }
 "
-graph_offset = Vector2(-531.78, -4.61324)
+graph_offset = Vector2(-773.489, 234.827)
 modes/diffuse = 3
 modes/specular = 1
 nodes/fragment/2/node = SubResource("VisualShaderNodeColorConstant_pyasd")

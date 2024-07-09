@@ -1,15 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://chyg2agr1samy"]
+[gd_scene load_steps=7 format=3 uid="uid://chyg2agr1samy"]
 
 [ext_resource type="Script" path="res://scenes/turtle/egg.gd" id="1_pkd54"]
 [ext_resource type="PackedScene" uid="uid://clpsa4yewpfsn" path="res://scenes/turtle/turtle.tscn" id="2_8ire4"]
 [ext_resource type="PackedScene" uid="uid://coung64a8bdux" path="res://assets/ParticleEffects/EggBreaking.tscn" id="3_h1np0"]
 [ext_resource type="PackedScene" uid="uid://dyb6x4xtelhw2" path="res://assets/models/Egg.glb" id="3_q6j5c"]
+[ext_resource type="AudioStream" uid="uid://d0c0lto7j2ueg" path="res://assets/sounds/sfx/EggWarning.ogg" id="4_g8aoe"]
 [ext_resource type="AnimationLibrary" uid="uid://sfeaqqem4y4j" path="res://assets/animations/Anim-Egg-Shake.glb" id="5_6uv2l"]
 
 [node name="Egg" type="Node3D" groups=["Egg"]]
 script = ExtResource("1_pkd54")
 turtle = ExtResource("2_8ire4")
 eggCrack = ExtResource("3_h1np0")
+eggHatchSound = ExtResource("4_g8aoe")
 
 [node name="CountdownText" type="Label3D" parent="."]
 unique_name_in_owner = true

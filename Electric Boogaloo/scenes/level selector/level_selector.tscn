@@ -42,3 +42,12 @@ layout_mode = 2
 
 [node name="LevelDisplayer2" parent="LevelContainer" instance=ExtResource("3_3g0r2")]
 layout_mode = 2
+
+[node name="LevelDisplayer3" parent="LevelContainer" instance=ExtResource("3_3g0r2")]
+layout_mode = 2
+
+[node name="LevelDisplayer4" parent="LevelContainer" instance=ExtResource("3_3g0r2")]
+layout_mode = 2
+
+[node name="LevelDisplayer5" parent="LevelContainer" instance=ExtResource("3_3g0r2")]
+layout_mode = 2

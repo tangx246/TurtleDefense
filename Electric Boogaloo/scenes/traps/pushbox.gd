@@ -9,7 +9,7 @@ func _physics_process(_delta):
 	if trigger:
 		var overlappingBodies = area.get_overlapping_bodies()
 		for overlappingBody in overlappingBodies:
-			if overlappingBody.get_parent().is_in_group("Turtle"):
+			if overlappingBody.get_parent() is Turtle:
 				var turtleBody : MovementAgent = overlappingBody
 				var tween = create_tween()
 				tween.tween_property(turtleBody, "position", position + basis * Vector3.BACK * 5, 0.2)
@@ -22,5 +22,5 @@ func _on_area_3d_body_entered(body):
 		return
 
 	var bodyParent : Node3D = body.get_parent()
-	if bodyParent.is_in_group("Turtle"):
+	if bodyParent is Turtle:
 		trigger = true

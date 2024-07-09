@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Turtle Defense"
-run/main_scene="res://scenes/Game.tscn"
+run/main_scene="res://scenes/level selector/level_selector.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+LevelLoadRequest="*res://scenes/level selector/level_load_request.gd"
 
 [display]
 

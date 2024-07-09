@@ -10,6 +10,9 @@ extends Node3D
 @export var currentLevelIndex : int = 0
 
 func _ready():
+	if LevelLoadRequest.level != null:
+		currentLevelIndex = levels.levels.find(LevelLoadRequest.level)
+		LevelLoadRequest.level = null
 	loadCurrentLevel()
 
 func nextLevel():

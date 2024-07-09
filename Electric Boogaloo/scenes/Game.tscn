@@ -166,10 +166,19 @@ grow_vertical = 2
 layout_mode = 2
 text = "The evil turtles have been eradicated! But our job is not done"
 
-[node name="Button" type="Button" parent="UI/VictoryDefeat/VictoryVBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/VictoryDefeat/VictoryVBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="UI/VictoryDefeat/VictoryVBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Next level"
+
+[node name="Button2" type="Button" parent="UI/VictoryDefeat/VictoryVBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Level Selector"
 
 [node name="DefeatVBoxContainer" type="VBoxContainer" parent="UI/VictoryDefeat"]
 unique_name_in_owner = true
@@ -191,10 +200,19 @@ grow_vertical = 2
 layout_mode = 2
 text = "An evil turtle has escaped into the world! We are doomed!"
 
-[node name="Button" type="Button" parent="UI/VictoryDefeat/DefeatVBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/VictoryDefeat/DefeatVBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="UI/VictoryDefeat/DefeatVBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Try again"
+
+[node name="Button2" type="Button" parent="UI/VictoryDefeat/DefeatVBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Level Selector"
 
 [node name="GameCompletePanel" type="VBoxContainer" parent="UI/VictoryDefeat"]
 unique_name_in_owner = true
@@ -215,6 +233,15 @@ grow_vertical = 2
 [node name="Label" type="Label" parent="UI/VictoryDefeat/GameCompletePanel"]
 layout_mode = 2
 text = "The evil turtles are now extinct! The world has been saved :D"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/VictoryDefeat/GameCompletePanel"]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="UI/VictoryDefeat/GameCompletePanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Level Selector"
 
 [node name="LevelLoader" type="Node3D" parent="."]
 unique_name_in_owner = true
@@ -240,5 +267,8 @@ script = ExtResource("9_uei18")
 [connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer4/Push Box" to="UI/TopdownItemPlacer" method="place_item_requested"]
 [connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer5/Straw Tower" to="UI/TopdownItemPlacer" method="place_item_requested"]
 [connection signal="placed_item" from="UI/TopdownItemPlacer" to="Environment" method="on_placed_item"]
-[connection signal="pressed" from="UI/VictoryDefeat/VictoryVBoxContainer/Button" to="LevelLoader" method="nextLevel"]
-[connection signal="pressed" from="UI/VictoryDefeat/DefeatVBoxContainer/Button" to="LevelLoader" method="loadCurrentLevel"]
+[connection signal="pressed" from="UI/VictoryDefeat/VictoryVBoxContainer/HBoxContainer/Button" to="LevelLoader" method="nextLevel"]
+[connection signal="pressed" from="UI/VictoryDefeat/VictoryVBoxContainer/HBoxContainer/Button2" to="UI/VictoryDefeat" method="load_level_selector"]
+[connection signal="pressed" from="UI/VictoryDefeat/DefeatVBoxContainer/HBoxContainer/Button" to="LevelLoader" method="loadCurrentLevel"]
+[connection signal="pressed" from="UI/VictoryDefeat/DefeatVBoxContainer/HBoxContainer/Button2" to="UI/VictoryDefeat" method="load_level_selector"]
+[connection signal="pressed" from="UI/VictoryDefeat/GameCompletePanel/HBoxContainer/Button" to="UI/VictoryDefeat" method="load_level_selector"]

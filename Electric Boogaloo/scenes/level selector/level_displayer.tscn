@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlgsv773i5bt"]
+
+[ext_resource type="Script" path="res://scenes/level selector/level_displayer.gd" id="1_vgjnp"]
+[ext_resource type="Resource" uid="uid://bawc1ivob6x2u" path="res://resources/level/levels.tres" id="2_43nbs"]
+[ext_resource type="PackedScene" uid="uid://l0nwp737je10" path="res://scenes/Game.tscn" id="3_25cao"]
+
+[node name="LevelDisplayer" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_vgjnp")
+levels = ExtResource("2_43nbs")
+gameScene = ExtResource("3_25cao")
+
+[node name="Name" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.5
+offset_top = -15.5
+offset_right = 42.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Level One"
+
+[connection signal="pressed" from="Name" to="." method="launch_level"]

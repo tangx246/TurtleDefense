@@ -15,5 +15,3 @@
 	
 - Edit levels.tres
 	- To add the level to the "list of levels", select the levels.tres resource and add it to the Levels array
-	- To test it out temporarily, set "Current Level Index" in Game.tscn's LevelLoader to the level and then Run Project (F5)
-	- Set the level number back

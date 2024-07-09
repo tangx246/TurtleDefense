@@ -21,6 +21,6 @@ func _on_area_3d_body_entered(body):
 	if !active:
 		return
 
-	var bodyParent : Node3D = body.get_parent()
-	if bodyParent is Turtle:
+	var bodyParent : Node3D = body.get_parent() as Turtle
+	if bodyParent:
 		trigger = true

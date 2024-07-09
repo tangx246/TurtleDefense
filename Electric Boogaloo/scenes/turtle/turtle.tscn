@@ -1,17 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://clpsa4yewpfsn"]
+[gd_scene load_steps=8 format=3 uid="uid://clpsa4yewpfsn"]
 
+[ext_resource type="Script" path="res://scenes/turtle/movement_agent.gd" id="1_0fv47"]
 [ext_resource type="PackedScene" uid="uid://dhf18esgb7rm" path="res://assets/models/Turtle.glb" id="1_4wj1e"]
 [ext_resource type="Script" path="res://scenes/turtle/turtle.gd" id="1_r2n3w"]
+[ext_resource type="AudioStream" uid="uid://d240q21nd6akv" path="res://assets/sounds/sfx/TurtleDying.ogg" id="2_bsgd5"]
 [ext_resource type="AnimationLibrary" uid="uid://cbbv1k7w0vef1" path="res://assets/animations/Anim-Turtle-Walk.glb" id="3_5oc6c"]
+[ext_resource type="AudioStream" uid="uid://djfpwuhg8r4rk" path="res://assets/sounds/sfx/TurtleDying2.ogg" id="3_uro0e"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7xuvy"]
 size = Vector3(0.3, 0.4, 0.3)
 
 [node name="Turtle" type="Node3D" groups=["Turtle"]]
+script = ExtResource("1_r2n3w")
+turtleDeathSounds = Array[AudioStream]([ExtResource("2_bsgd5"), ExtResource("3_uro0e")])
 
 [node name="MovementAgent" type="CharacterBody3D" parent="."]
 unique_name_in_owner = true
-script = ExtResource("1_r2n3w")
+script = ExtResource("1_0fv47")
 movement_speed = 2.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MovementAgent"]

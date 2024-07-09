@@ -1,12 +1,10 @@
-class_name MovementAgent
-extends CharacterBody3D
+class_name Turtle
+extends Node3D
 
-@export var movement_speed: float = 4.0
-@onready var navigation_agent: NavigationAgent3D = get_node("NavigationAgent3D")
+@export var turtleDeathSounds : Array[AudioStream]
+@onready var agent : MovementAgent = %MovementAgent
 
-func _ready() -> void:
-	navigation_agent.velocity_computed.connect(Callable(_on_velocity_computed))
-	
+func _ready():
 	var shortestDistance : float = INF
 	var closestShoreline : Node3D
 	for shoreline : Node3D in get_tree().get_nodes_in_group("ShoreLine"):
@@ -15,22 +13,16 @@ func _ready() -> void:
 			shortestDistance = distance
 			closestShoreline = shoreline
 			
-	set_movement_target(closestShoreline.global_position)
+	agent.set_movement_target(closestShoreline.global_position)
 
-func set_movement_target(movement_target: Vector3):
-	navigation_agent.set_target_position(movement_target)
-
-func _physics_process(_delta):
-	if navigation_agent.is_navigation_finished():
-		return
-
-	var next_path_position: Vector3 = navigation_agent.get_next_path_position()
-	var new_velocity: Vector3 = global_position.direction_to(next_path_position) * movement_speed
-	if navigation_agent.avoidance_enabled:
-		navigation_agent.set_velocity(new_velocity)
-	else:
-		_on_velocity_computed(new_velocity)
-
-func _on_velocity_computed(safe_velocity: Vector3):
-	velocity = safe_velocity
-	move_and_slide()
+func kill():
+	var victoryFailureConditions : VictoryFailureConditions = get_tree().get_first_node_in_group(VictoryFailureConditions.tag)
+	victoryFailureConditions.kill_turtle()
+	queue_free()
+	
+	var player = AudioStreamPlayer3D.new()
+	player.finished.connect(func(): player.queue_free())
+	get_parent().add_child(player)
+	player.global_position = global_position
+	player.stream = turtleDeathSounds[randi_range(0, turtleDeathSounds.size() - 1)]
+	player.play()

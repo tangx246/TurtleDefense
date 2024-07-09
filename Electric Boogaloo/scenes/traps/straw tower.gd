@@ -1,11 +1,10 @@
 extends Node3D
 
 @onready var area : Area3D = %Area3D
-@onready var turtleKiller : TurtleKiller = %TurtleKiller
 
 func fire_straw():
 	var closestDistance : float = INF
-	var closestTurtle : Node3D
+	var closestTurtle : Turtle
 	for body in area.get_overlapping_bodies():
 		var bodyParent = body.get_parent()
 		if bodyParent.is_in_group("Turtle"):
@@ -15,4 +14,4 @@ func fire_straw():
 				closestTurtle = bodyParent
 		
 	if closestTurtle:
-		turtleKiller.kill_turtle(closestTurtle)
+		closestTurtle.kill()

@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://b44fmacvlcu31"]
+
+[ext_resource type="Shader" uid="uid://c12ifaqkn2hey" path="res://assets/shaders/WaterShaderGraph.tres" id="1_h5fkt"]
+[ext_resource type="Texture2D" uid="uid://lrruljdk4y3r" path="res://assets/shaders/WaterVoronoi.tres" id="2_gerfh"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_h5fkt")
+shader_parameter/WaveSpeed = 0.15
+shader_parameter/Voronoi = ExtResource("2_gerfh")

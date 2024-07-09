@@ -1,0 +1,15 @@
+[gd_resource type="NoiseTexture2D" load_steps=3 format=3 uid="uid://lrruljdk4y3r"]
+
+[ext_resource type="FastNoiseLite" uid="uid://dd2d2de6vvnp" path="res://assets/shaders/WaterCellularNoise.tres" id="1_bymou"]
+
+[sub_resource type="Gradient" id="Gradient_1k6i1"]
+offsets = PackedFloat32Array(0, 0.428298, 0.435946, 0.629063, 0.646272, 0.778203, 0.787763, 0.860421, 0.868069, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1, 0.393085, 0.393086, 0.393085, 1, 0.393086, 0.393085, 0.393085, 1, 0.625597, 0.625597, 0.625597, 1, 0.625597, 0.625597, 0.625597, 1, 0.781545, 0.781545, 0.781545, 1, 0.783523, 0.783523, 0.783523, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+
+[resource]
+width = 1024
+height = 1024
+seamless = true
+seamless_blend_skirt = 0.202
+color_ramp = SubResource("Gradient_1k6i1")
+noise = ExtResource("1_bymou")

@@ -1,8 +1,29 @@
-[gd_scene load_steps=2 format=3 uid="uid://ciovh5c40l5s2"]
+[gd_scene load_steps=5 format=3 uid="uid://ciovh5c40l5s2"]
 
 [ext_resource type="PackedScene" uid="uid://ci57jbgymbcl8" path="res://assets/models/TestObject.gltf" id="1_6o4av"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4i83c"]
+sky_top_color = Color(0.643592, 0.5865, 0.85, 1)
+sky_horizon_color = Color(0.490196, 0.447059, 0.647059, 1)
+ground_bottom_color = Color(0.42272, 0.361402, 0.607982, 1)
+ground_horizon_color = Color(0.490196, 0.447059, 0.647059, 1)
+sun_angle_max = 38.89
+
+[sub_resource type="Sky" id="Sky_xse5m"]
+sky_material = SubResource("ProceduralSkyMaterial_4i83c")
+
+[sub_resource type="Environment" id="Environment_e5w07"]
+background_mode = 2
+sky = SubResource("Sky_xse5m")
+ambient_light_source = 3
+ambient_light_color = Color(0.454524, 0.454524, 0.454524, 1)
+ambient_light_sky_contribution = 0.72
+reflected_light_source = 2
+
 [node name="Caleb\'s Test Scene" type="Node3D"]
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_e5w07")
+
 [node name="TestObject" parent="." instance=ExtResource("1_6o4av")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00671351, 0, 0.0122886)
+transform = Transform3D(0.890808, 0, -0.454379, 0, 1, 0, 0.454379, 0, 0.890808, 0.00671351, 0, 0.0122886)

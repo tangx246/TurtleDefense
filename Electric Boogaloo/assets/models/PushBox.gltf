@@ -1,0 +1,713 @@
+{
+    "asset": {
+        "copyright": "(C)2024 CS_Dev01",
+        "generator": "maya2glTF main fbbc95e5dc4d",
+        "version": "2.0"
+    },
+    "scenes": [
+        {
+            "nodes": [
+                9,
+                0
+            ]
+        }
+    ],
+    "scene": 0,
+    "nodes": [
+        {
+            "name": "Root",
+            "children": [
+                3,
+                1
+            ],
+            "translation": [
+                200.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                -0.1791101396083832,
+                -0.6840464472770691,
+                0.1791101396083832,
+                0.6840464472770691
+            ]
+        },
+        {
+            "name": "PushLid:SSC",
+            "children": [
+                2
+            ],
+            "translation": [
+                203.19456481933598,
+                0.0,
+                99.74964141845705
+            ]
+        },
+        {
+            "name": "PushLid",
+            "rotation": [
+                0.1791101396083832,
+                0.6840464472770691,
+                -0.1791101396083832,
+                0.6840464472770691
+            ]
+        },
+        {
+            "name": "Spring_main:SSC",
+            "children": [
+                4
+            ],
+            "translation": [
+                147.41567993164066,
+                28.72956657409668,
+                99.74964141845705
+            ]
+        },
+        {
+            "name": "Spring_main",
+            "children": [
+                7,
+                5
+            ],
+            "rotation": [
+                0.1791101396083832,
+                0.6840464472770691,
+                -0.1791101396083832,
+                0.6840464472770691
+            ]
+        },
+        {
+            "name": "Spring_Front:SSC",
+            "children": [
+                6
+            ],
+            "translation": [
+                1.0200653076171876,
+                3.4039900302886965,
+                58.39492416381836
+            ]
+        },
+        {
+            "name": "Spring_Front"
+        },
+        {
+            "name": "Spring_Back:SSC",
+            "children": [
+                8
+            ],
+            "translation": [
+                0.0,
+                0.30494633316993716,
+                -72.38471984863281
+            ]
+        },
+        {
+            "name": "Spring_Back"
+        },
+        {
+            "name": "Push_Box",
+            "mesh": 0,
+            "skin": 0
+        }
+    ],
+    "meshes": [
+        {
+            "name": "Push_BoxShape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "JOINTS_0": 1,
+                        "JOINTS_1": 2,
+                        "NORMAL": 3,
+                        "POSITION": 4,
+                        "TANGENT": 5,
+                        "TEXCOORD_0": 6,
+                        "WEIGHTS_0": 7,
+                        "WEIGHTS_1": 8
+                    },
+                    "indices": 0,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "skins": [
+        {
+            "name": "Push_BoxShape",
+            "inverseBindMatrices": 9,
+            "joints": [
+                0,
+                4,
+                8,
+                6,
+                2
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "name": "lambert5",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    1.0
+                ],
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            }
+        }
+    ],
+    "animations": [
+        {
+            "name": "SpringBox_Launch",
+            "channels": [
+                {
+                    "sampler": 0,
+                    "target": {
+                        "node": 1,
+                        "path": "translation"
+                    }
+                },
+                {
+                    "sampler": 1,
+                    "target": {
+                        "node": 2,
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": 2,
+                    "target": {
+                        "node": 3,
+                        "path": "translation"
+                    }
+                },
+                {
+                    "sampler": 3,
+                    "target": {
+                        "node": 4,
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": 4,
+                    "target": {
+                        "node": 7,
+                        "path": "translation"
+                    }
+                },
+                {
+                    "sampler": 5,
+                    "target": {
+                        "node": 8,
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": 6,
+                    "target": {
+                        "node": 5,
+                        "path": "translation"
+                    }
+                },
+                {
+                    "sampler": 7,
+                    "target": {
+                        "node": 6,
+                        "path": "rotation"
+                    }
+                }
+            ],
+            "samplers": [
+                {
+                    "input": 10,
+                    "interpolation": "LINEAR",
+                    "output": 11
+                },
+                {
+                    "input": 10,
+                    "interpolation": "LINEAR",
+                    "output": 12
+                },
+                {
+                    "input": 10,
+                    "interpolation": "LINEAR",
+                    "output": 13
+                },
+                {
+                    "input": 10,
+                    "interpolation": "LINEAR",
+                    "output": 14
+                },
+                {
+                    "input": 10,
+                    "interpolation": "LINEAR",
+                    "output": 15
+                },
+                {
+                    "input": 10,
+                    "interpolation": "LINEAR",
+                    "output": 16
+                },
+                {
+                    "input": 10,
+                    "interpolation": "LINEAR",
+                    "output": 17
+                },
+                {
+                    "input": 10,
+                    "interpolation": "LINEAR",
+                    "output": 18
+                }
+            ]
+        }
+    ],
+    "accessors": [
+        {
+            "name": "Push_BoxShape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 2190,
+            "max": [
+                989
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "Push_BoxShape#0/vertices/JOINTS_0",
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 990,
+            "max": [
+                4,
+                3,
+                2,
+                4
+            ],
+            "min": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Push_BoxShape#0/vertices/JOINTS_1",
+            "bufferView": 1,
+            "byteOffset": 7920,
+            "componentType": 5123,
+            "count": 990,
+            "max": [
+                4,
+                0,
+                0,
+                0
+            ],
+            "min": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Push_BoxShape#0/vertices/NORMAL",
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 990,
+            "max": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                -1.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Push_BoxShape#0/vertices/POSITION",
+            "bufferView": 2,
+            "byteOffset": 11880,
+            "componentType": 5126,
+            "count": 990,
+            "max": [
+                200.0,
+                200.0,
+                200.0
+            ],
+            "min": [
+                -0.000009047999810718466,
+                -0.0000817320033092983,
+                6.600000119760807e-7
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Push_BoxShape#0/vertices/TANGENT",
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 990,
+            "max": [
+                1.0,
+                1.0,
+                0.7207071185112,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                -1.0,
+                -1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Push_BoxShape#0/vertices/TEXCOORD_0",
+            "bufferView": 1,
+            "byteOffset": 15840,
+            "componentType": 5126,
+            "count": 990,
+            "max": [
+                0.9980080127716065,
+                0.9981208443641664
+            ],
+            "min": [
+                0.0019920319318771364,
+                0.05854475498199463
+            ],
+            "type": "VEC2"
+        },
+        {
+            "name": "Push_BoxShape#0/vertices/WEIGHTS_0",
+            "bufferView": 3,
+            "byteOffset": 15840,
+            "componentType": 5126,
+            "count": 990,
+            "max": [
+                1.0,
+                0.499930739402771,
+                0.05564325302839279,
+                0.047260139137506488
+            ],
+            "min": [
+                0.500069260597229,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Push_BoxShape#0/vertices/WEIGHTS_1",
+            "bufferView": 3,
+            "byteOffset": 31680,
+            "componentType": 5126,
+            "count": 990,
+            "max": [
+                0.03982781991362572,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "min": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Push_BoxShape/skin/IBM",
+            "bufferView": 4,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 5,
+            "max": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.4900785982608795,
+                1.0,
+                0.0,
+                0.0,
+                0.8716782331466675,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                200.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0,
+                -1.0,
+                0.0,
+                0.0,
+                0.8716782331466675,
+                0.0,
+                0.0,
+                0.0,
+                -0.4900785982608795,
+                0.0,
+                0.0,
+                -101.27042388916016,
+                -100.69219970703124,
+                -177.1202850341797,
+                1.0
+            ],
+            "type": "MAT4"
+        },
+        {
+            "name": "SpringBox_Launch/anim/frames",
+            "bufferView": 5,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 20,
+            "max": [
+                0.7916666865348816
+            ],
+            "min": [
+                0.0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "PushLid/anim/SpringBox_Launch/T",
+            "bufferView": 6,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 20,
+            "max": [
+                484.4484252929688,
+                -0.000008725000043341425,
+                99.74964141845705
+            ],
+            "min": [
+                203.194580078125,
+                -360.0436706542969,
+                99.74964141845705
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "PushLid/anim/SpringBox_Launch/R",
+            "bufferView": 7,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 20,
+            "max": [
+                0.662057638168335,
+                0.6840464472770691,
+                -0.1791101396083832,
+                0.6840464472770691
+            ],
+            "min": [
+                0.1791101396083832,
+                0.2483540028333664,
+                -0.662057638168335,
+                0.2483540028333664
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Spring_main/anim/SpringBox_Launch/T",
+            "bufferView": 6,
+            "byteOffset": 240,
+            "componentType": 5126,
+            "count": 20,
+            "max": [
+                1191.4376220703126,
+                43.45067596435547,
+                99.74964141845705
+            ],
+            "min": [
+                147.41567993164066,
+                -601.0563354492188,
+                99.74964141845705
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Spring_main/anim/SpringBox_Launch/R",
+            "bufferView": 7,
+            "byteOffset": 320,
+            "componentType": 5126,
+            "count": 20,
+            "max": [
+                0.707054078578949,
+                0.6840464472770691,
+                -0.1791101396083832,
+                0.6840464472770691
+            ],
+            "min": [
+                0.1791101396083832,
+                -0.1283799111843109,
+                -0.707054078578949,
+                -0.1283799111843109
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Spring_Back/anim/SpringBox_Launch/T",
+            "bufferView": 6,
+            "byteOffset": 480,
+            "componentType": 5126,
+            "count": 20,
+            "max": [
+                0.0,
+                52.360595703125,
+                47.0119514465332
+            ],
+            "min": [
+                0.0,
+                -41.2023811340332,
+                -117.31360626220705
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Spring_Back/anim/SpringBox_Launch/R",
+            "bufferView": 7,
+            "byteOffset": 640,
+            "componentType": 5126,
+            "count": 20,
+            "max": [
+                0.4726950526237488,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0,
+                0.0,
+                0.8812260627746582
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Spring_Front/anim/SpringBox_Launch/T",
+            "bufferView": 6,
+            "byteOffset": 720,
+            "componentType": 5126,
+            "count": 20,
+            "max": [
+                1.0200653076171876,
+                3.4039900302886965,
+                199.013916015625
+            ],
+            "min": [
+                1.0200653076171876,
+                -212.3485107421875,
+                -28.85881805419922
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Spring_Front/anim/SpringBox_Launch/R",
+            "bufferView": 7,
+            "byteOffset": 960,
+            "componentType": 5126,
+            "count": 20,
+            "max": [
+                0.6180852651596069,
+                0.009620323777198792,
+                0.003623723983764649,
+                1.0
+            ],
+            "min": [
+                -0.023346353322267537,
+                -0.009864121675491332,
+                -0.008504856377840042,
+                0.7860491275787354
+            ],
+            "type": "VEC4"
+        }
+    ],
+    "bufferViews": [
+        {
+            "name": "PushBox/data/indices-2",
+            "buffer": 0,
+            "byteOffset": 97680,
+            "byteLength": 4380,
+            "target": 34963
+        },
+        {
+            "name": "PushBox/data/vertices-8",
+            "buffer": 0,
+            "byteOffset": 73840,
+            "byteLength": 23760,
+            "byteStride": 8,
+            "target": 34962
+        },
+        {
+            "name": "PushBox/data/vertices-12",
+            "buffer": 0,
+            "byteOffset": 50080,
+            "byteLength": 23760,
+            "byteStride": 12,
+            "target": 34962
+        },
+        {
+            "name": "PushBox/data/vertices-16",
+            "buffer": 0,
+            "byteOffset": 1600,
+            "byteLength": 47520,
+            "byteStride": 16,
+            "target": 34962
+        },
+        {
+            "name": "PushBox/data/generic-64",
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 320
+        },
+        {
+            "name": "PushBox/data/generic-4",
+            "buffer": 0,
+            "byteOffset": 97600,
+            "byteLength": 80
+        },
+        {
+            "name": "PushBox/data/generic-12",
+            "buffer": 0,
+            "byteOffset": 49120,
+            "byteLength": 960
+        },
+        {
+            "name": "PushBox/data/generic-16",
+            "buffer": 0,
+            "byteOffset": 320,
+            "byteLength": 1280
+        }
+    ],
+    "buffers": [
+        {
+            "name": "PushBox/data",
+            "byteLength": 102060,
+            "uri": "PushBox0.bin"
+        }
+    ]
+}

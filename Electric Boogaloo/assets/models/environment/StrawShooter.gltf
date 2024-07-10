@@ -1,0 +1,185 @@
+{
+    "asset": {
+        "copyright": "(C)2024 CS_Dev01",
+        "generator": "maya2glTF main fbbc95e5dc4d",
+        "version": "2.0"
+    },
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0,
+    "nodes": [
+        {
+            "name": "Straw_Shooter",
+            "mesh": 0
+        }
+    ],
+    "meshes": [
+        {
+            "name": "Straw_ShooterShape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 1,
+                        "POSITION": 2,
+                        "TANGENT": 3,
+                        "TEXCOORD_0": 4
+                    },
+                    "indices": 0,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "name": "lambert9",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    1.0
+                ],
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            }
+        }
+    ],
+    "accessors": [
+        {
+            "name": "Straw_ShooterShape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 528,
+            "max": [
+                367
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "Straw_ShooterShape#0/vertices/NORMAL",
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 368,
+            "max": [
+                0.9775986075401306,
+                0.9238803386688232,
+                0.923880696296692
+            ],
+            "min": [
+                -0.9996999502182008,
+                -0.9238787889480592,
+                -0.923880696296692
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Straw_ShooterShape#0/vertices/POSITION",
+            "bufferView": 1,
+            "byteOffset": 4416,
+            "componentType": 5126,
+            "count": 368,
+            "max": [
+                18.68689727783203,
+                18.686899185180665,
+                18.68689727783203
+            ],
+            "min": [
+                -29.03738784790039,
+                -18.68691062927246,
+                -18.68689727783203
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Straw_ShooterShape#0/vertices/TANGENT",
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 368,
+            "max": [
+                0.9807853698730468,
+                0.9999560117721558,
+                0.9238802790641784,
+                1.0
+            ],
+            "min": [
+                -0.980785310268402,
+                -0.3826874792575836,
+                -0.9999560117721558,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Straw_ShooterShape#0/vertices/TEXCOORD_0",
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 368,
+            "max": [
+                0.7260434031486511,
+                0.981132984161377
+            ],
+            "min": [
+                0.04923632740974426,
+                0.7679972648620606
+            ],
+            "type": "VEC2"
+        }
+    ],
+    "bufferViews": [
+        {
+            "name": "StrawShooter/data/indices-2",
+            "buffer": 0,
+            "byteOffset": 17664,
+            "byteLength": 1056,
+            "target": 34963
+        },
+        {
+            "name": "StrawShooter/data/vertices-12",
+            "buffer": 0,
+            "byteOffset": 5888,
+            "byteLength": 8832,
+            "byteStride": 12,
+            "target": 34962
+        },
+        {
+            "name": "StrawShooter/data/vertices-16",
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 5888,
+            "byteStride": 16,
+            "target": 34962
+        },
+        {
+            "name": "StrawShooter/data/vertices-8",
+            "buffer": 0,
+            "byteOffset": 14720,
+            "byteLength": 2944,
+            "byteStride": 8,
+            "target": 34962
+        }
+    ],
+    "buffers": [
+        {
+            "name": "StrawShooter/data",
+            "byteLength": 18720,
+            "uri": "StrawShooter0.bin"
+        }
+    ]
+}

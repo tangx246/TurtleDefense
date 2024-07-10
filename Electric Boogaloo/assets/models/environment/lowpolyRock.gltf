@@ -1,0 +1,185 @@
+{
+    "asset": {
+        "copyright": "(C)2024 CS_Dev01",
+        "generator": "maya2glTF main fbbc95e5dc4d",
+        "version": "2.0"
+    },
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0,
+    "nodes": [
+        {
+            "name": "lowpoly_Rock",
+            "mesh": 0
+        }
+    ],
+    "meshes": [
+        {
+            "name": "lowpoly_RockShape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 1,
+                        "POSITION": 2,
+                        "TANGENT": 3,
+                        "TEXCOORD_0": 4
+                    },
+                    "indices": 0,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "name": "lambert1",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    1.0
+                ],
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            }
+        }
+    ],
+    "accessors": [
+        {
+            "name": "lowpoly_RockShape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 186,
+            "max": [
+                185
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "lowpoly_RockShape#0/vertices/NORMAL",
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 186,
+            "max": [
+                0.9470447897911072,
+                0.923048973083496,
+                0.8849037885665894
+            ],
+            "min": [
+                -0.972524344921112,
+                -0.9881472587585448,
+                -0.9790446162223816
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "lowpoly_RockShape#0/vertices/POSITION",
+            "bufferView": 1,
+            "byteOffset": 2232,
+            "componentType": 5126,
+            "count": 186,
+            "max": [
+                43.971431732177737,
+                35.61266326904297,
+                55.35614013671875
+            ],
+            "min": [
+                -45.50260543823242,
+                -35.23017120361328,
+                -54.23185729980469
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "lowpoly_RockShape#0/vertices/TANGENT",
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 186,
+            "max": [
+                0.9997142553329468,
+                0.9997979402542114,
+                0.6619876623153687,
+                1.0
+            ],
+            "min": [
+                -0.8502487540245056,
+                -0.9989315867424012,
+                -0.5061138272285461,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "lowpoly_RockShape#0/vertices/TEXCOORD_0",
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 186,
+            "max": [
+                0.9980080127716065,
+                0.9981579780578612
+            ],
+            "min": [
+                0.001992000034078956,
+                0.07725197076797486
+            ],
+            "type": "VEC2"
+        }
+    ],
+    "bufferViews": [
+        {
+            "name": "lowpolyRock/data/indices-2",
+            "buffer": 0,
+            "byteOffset": 8928,
+            "byteLength": 372,
+            "target": 34963
+        },
+        {
+            "name": "lowpolyRock/data/vertices-12",
+            "buffer": 0,
+            "byteOffset": 2976,
+            "byteLength": 4464,
+            "byteStride": 12,
+            "target": 34962
+        },
+        {
+            "name": "lowpolyRock/data/vertices-16",
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 2976,
+            "byteStride": 16,
+            "target": 34962
+        },
+        {
+            "name": "lowpolyRock/data/vertices-8",
+            "buffer": 0,
+            "byteOffset": 7440,
+            "byteLength": 1488,
+            "byteStride": 8,
+            "target": 34962
+        }
+    ],
+    "buffers": [
+        {
+            "name": "lowpolyRock/data",
+            "byteLength": 9300,
+            "uri": "lowpolyRock0.bin"
+        }
+    ]
+}

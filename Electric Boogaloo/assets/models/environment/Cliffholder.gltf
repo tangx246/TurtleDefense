@@ -1,0 +1,185 @@
+{
+    "asset": {
+        "copyright": "(C)2024 CS_Dev01",
+        "generator": "maya2glTF main fbbc95e5dc4d",
+        "version": "2.0"
+    },
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0,
+    "nodes": [
+        {
+            "name": "cliffHolder",
+            "mesh": 0
+        }
+    ],
+    "meshes": [
+        {
+            "name": "cliffHolderShape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 1,
+                        "POSITION": 2,
+                        "TANGENT": 3,
+                        "TEXCOORD_0": 4
+                    },
+                    "indices": 0,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "name": "lambert3",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    1.0
+                ],
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            }
+        }
+    ],
+    "accessors": [
+        {
+            "name": "cliffHolderShape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 132,
+            "max": [
+                95
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "cliffHolderShape#0/vertices/NORMAL",
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 96,
+            "max": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                -1.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "cliffHolderShape#0/vertices/POSITION",
+            "bufferView": 1,
+            "byteOffset": 1152,
+            "componentType": 5126,
+            "count": 96,
+            "max": [
+                500.0,
+                100.0,
+                0.0
+            ],
+            "min": [
+                0.0,
+                0.0,
+                -200.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "cliffHolderShape#0/vertices/TANGENT",
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 96,
+            "max": [
+                0.7071093916893005,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -0.7071086168289185,
+                -1.0,
+                -1.0,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "cliffHolderShape#0/vertices/TEXCOORD_0",
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 96,
+            "max": [
+                0.9345178604125976,
+                0.9980079531669616
+            ],
+            "min": [
+                0.0018653050065040589,
+                0.001991986995562911
+            ],
+            "type": "VEC2"
+        }
+    ],
+    "bufferViews": [
+        {
+            "name": "Cliffholder/data/indices-2",
+            "buffer": 0,
+            "byteOffset": 4608,
+            "byteLength": 264,
+            "target": 34963
+        },
+        {
+            "name": "Cliffholder/data/vertices-12",
+            "buffer": 0,
+            "byteOffset": 1536,
+            "byteLength": 2304,
+            "byteStride": 12,
+            "target": 34962
+        },
+        {
+            "name": "Cliffholder/data/vertices-16",
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 1536,
+            "byteStride": 16,
+            "target": 34962
+        },
+        {
+            "name": "Cliffholder/data/vertices-8",
+            "buffer": 0,
+            "byteOffset": 3840,
+            "byteLength": 768,
+            "byteStride": 8,
+            "target": 34962
+        }
+    ],
+    "buffers": [
+        {
+            "name": "Cliffholder/data",
+            "byteLength": 4872,
+            "uri": "Cliffholder0.bin"
+        }
+    ]
+}

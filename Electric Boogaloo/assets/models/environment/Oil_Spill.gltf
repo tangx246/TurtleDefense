@@ -1,0 +1,201 @@
+{
+    "asset": {
+        "copyright": "(C)2024 CS_Dev01",
+        "generator": "maya2glTF main fbbc95e5dc4d",
+        "version": "2.0"
+    },
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0,
+    "nodes": [
+        {
+            "name": "oil_spill",
+            "children": [
+                1
+            ],
+            "translation": [
+                -0.06144516542553902,
+                0.0003072860126849264,
+                0.0
+            ]
+        },
+        {
+            "name": "oil_spill:PIV",
+            "mesh": 0,
+            "translation": [
+                0.06144516542553902,
+                -0.0003072860126849264,
+                0.0
+            ]
+        }
+    ],
+    "meshes": [
+        {
+            "name": "oil_spillShape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 1,
+                        "POSITION": 2,
+                        "TANGENT": 3,
+                        "TEXCOORD_0": 4
+                    },
+                    "indices": 0,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "name": "lambert4",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    1.0
+                ],
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            }
+        }
+    ],
+    "accessors": [
+        {
+            "name": "oil_spillShape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 750,
+            "max": [
+                499
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "oil_spillShape#0/vertices/NORMAL",
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 500,
+            "max": [
+                0.732367217540741,
+                0.9991470575332642,
+                0.7401047945022583
+            ],
+            "min": [
+                -0.9303301572799684,
+                0.3112485408782959,
+                -0.6903722286224365
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "oil_spillShape#0/vertices/POSITION",
+            "bufferView": 1,
+            "byteOffset": 6000,
+            "componentType": 5126,
+            "count": 500,
+            "max": [
+                101.0190658569336,
+                24.883289337158204,
+                101.0190658569336
+            ],
+            "min": [
+                -101.03508758544922,
+                -3.513119459152222,
+                -101.0190658569336
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "oil_spillShape#0/vertices/TANGENT",
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 500,
+            "max": [
+                0.7993943095207214,
+                0.9494694471359252,
+                0.12132345139980316,
+                1.0
+            ],
+            "min": [
+                -0.15087290108203889,
+                -0.7073627710342407,
+                -0.999976933002472,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "oil_spillShape#0/vertices/TEXCOORD_0",
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 500,
+            "max": [
+                0.9980079531669616,
+                0.99817955493927
+            ],
+            "min": [
+                0.0019920319318771364,
+                0.08795791864395142
+            ],
+            "type": "VEC2"
+        }
+    ],
+    "bufferViews": [
+        {
+            "name": "Oil_Spill/data/indices-2",
+            "buffer": 0,
+            "byteOffset": 24000,
+            "byteLength": 1500,
+            "target": 34963
+        },
+        {
+            "name": "Oil_Spill/data/vertices-12",
+            "buffer": 0,
+            "byteOffset": 8000,
+            "byteLength": 12000,
+            "byteStride": 12,
+            "target": 34962
+        },
+        {
+            "name": "Oil_Spill/data/vertices-16",
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 8000,
+            "byteStride": 16,
+            "target": 34962
+        },
+        {
+            "name": "Oil_Spill/data/vertices-8",
+            "buffer": 0,
+            "byteOffset": 20000,
+            "byteLength": 4000,
+            "byteStride": 8,
+            "target": 34962
+        }
+    ],
+    "buffers": [
+        {
+            "name": "Oil_Spill/data",
+            "byteLength": 25500,
+            "uri": "Oil_Spill0.bin"
+        }
+    ]
+}

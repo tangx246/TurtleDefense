@@ -1,16 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://ciovh5c40l5s2"]
+[gd_scene load_steps=14 format=3 uid="uid://ciovh5c40l5s2"]
 
-[ext_resource type="PackedScene" uid="uid://ci57jbgymbcl8" path="res://assets/models/TestObject.gltf" id="1_6o4av"]
+[ext_resource type="PackedScene" uid="uid://bo3o1dq35i3jw" path="res://assets/models/environment/Cliffholder.gltf" id="1_kf1j3"]
+[ext_resource type="PackedScene" uid="uid://dfvyp8kl3c0rm" path="res://assets/models/environment/Cliffside.gltf" id="2_30rbh"]
+[ext_resource type="PackedScene" uid="uid://dpa5k4rmsl4lg" path="res://assets/models/environment/lowpolyRock.gltf" id="3_pmi04"]
+[ext_resource type="PackedScene" uid="uid://deru7aje8mcxr" path="res://assets/models/environment/Oil_Spill.gltf" id="4_mjwao"]
+[ext_resource type="PackedScene" uid="uid://brsbt65h5dxbt" path="res://assets/models/environment/pitTrap.gltf" id="5_j1u0l"]
+[ext_resource type="PackedScene" uid="uid://djrkl461v20wq" path="res://assets/models/environment/sandTile.gltf" id="6_bhgay"]
+[ext_resource type="PackedScene" uid="uid://gkk7s0cl0ve7" path="res://assets/models/environment/Straw.gltf" id="7_5jh4f"]
+[ext_resource type="PackedScene" uid="uid://b36ii6jvmg7sg" path="res://assets/models/environment/StrawShooter.gltf" id="8_tkk6k"]
+[ext_resource type="PackedScene" uid="uid://3vmcretrcv3k" path="res://assets/models/environment/StrawTower.gltf" id="9_hh8cq"]
+[ext_resource type="PackedScene" uid="uid://c47ogn5xhu8v7" path="res://assets/models/environment/TestObject.gltf" id="10_7pb6s"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4i83c"]
-sky_top_color = Color(0.643592, 0.5865, 0.85, 1)
-sky_horizon_color = Color(0.490196, 0.447059, 0.647059, 1)
-ground_bottom_color = Color(0.42272, 0.361402, 0.607982, 1)
-ground_horizon_color = Color(0.490196, 0.447059, 0.647059, 1)
-sun_angle_max = 38.89
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_72lxd"]
 
 [sub_resource type="Sky" id="Sky_xse5m"]
-sky_material = SubResource("ProceduralSkyMaterial_4i83c")
+sky_material = SubResource("ProceduralSkyMaterial_72lxd")
 
 [sub_resource type="Environment" id="Environment_e5w07"]
 background_mode = 2
@@ -25,5 +29,37 @@ reflected_light_source = 2
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_e5w07")
 
-[node name="TestObject" parent="." instance=ExtResource("1_6o4av")]
-transform = Transform3D(0.890808, 0, -0.454379, 0, 1, 0, 0.454379, 0, 0.890808, 0.00671351, 0, 0.0122886)
+[node name="Cliffholder" parent="." instance=ExtResource("1_kf1j3")]
+
+[node name="Cliffside" parent="." instance=ExtResource("2_30rbh")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -5, -2)
+
+[node name="Cliffholder2" parent="." instance=ExtResource("1_kf1j3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
+
+[node name="Cliffside2" parent="." instance=ExtResource("2_30rbh")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5, -5, -2)
+
+[node name="lowpolyRock" parent="." instance=ExtResource("3_pmi04")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.755001, 1.32568, -1.22713)
+
+[node name="Oil_Spill" parent="." instance=ExtResource("4_mjwao")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -1)
+
+[node name="pitTrap" parent="." instance=ExtResource("5_j1u0l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, -1)
+
+[node name="sandTile" parent="." instance=ExtResource("6_bhgay")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -3)
+
+[node name="Straw2" parent="." instance=ExtResource("7_5jh4f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.90351, 0)
+
+[node name="StrawShooter" parent="." instance=ExtResource("8_tkk6k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8879, 1.59857, -1)
+
+[node name="StrawTower" parent="." instance=ExtResource("9_hh8cq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, -1)
+
+[node name="TestObject" parent="." instance=ExtResource("10_7pb6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 2, 0)

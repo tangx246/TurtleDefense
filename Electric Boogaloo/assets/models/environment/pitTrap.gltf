@@ -1,0 +1,185 @@
+{
+    "asset": {
+        "copyright": "(C)2024 CS_Dev01",
+        "generator": "maya2glTF main fbbc95e5dc4d",
+        "version": "2.0"
+    },
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0,
+    "nodes": [
+        {
+            "name": "pittrap",
+            "mesh": 0
+        }
+    ],
+    "meshes": [
+        {
+            "name": "pittrapShape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 1,
+                        "POSITION": 2,
+                        "TANGENT": 3,
+                        "TEXCOORD_0": 4
+                    },
+                    "indices": 0,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "name": "lambert1",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    1.0
+                ],
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            }
+        }
+    ],
+    "accessors": [
+        {
+            "name": "pittrapShape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 1272,
+            "max": [
+                853
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "pittrapShape#0/vertices/NORMAL",
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 854,
+            "max": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                -1.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "pittrapShape#0/vertices/POSITION",
+            "bufferView": 1,
+            "byteOffset": 10248,
+            "componentType": 5126,
+            "count": 854,
+            "max": [
+                50.0,
+                15.278736114501954,
+                50.0
+            ],
+            "min": [
+                -49.99999237060547,
+                0.0,
+                -49.99999237060547
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "pittrapShape#0/vertices/TANGENT",
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 854,
+            "max": [
+                1.0,
+                0.000008246000106737484,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -0.00001251600042451173,
+                -1.0,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "pittrapShape#0/vertices/TEXCOORD_0",
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 854,
+            "max": [
+                0.9894239902496338,
+                0.992438018321991
+            ],
+            "min": [
+                0.00848700013011694,
+                0.03993600606918335
+            ],
+            "type": "VEC2"
+        }
+    ],
+    "bufferViews": [
+        {
+            "name": "pitTrap/data/indices-2",
+            "buffer": 0,
+            "byteOffset": 40992,
+            "byteLength": 2544,
+            "target": 34963
+        },
+        {
+            "name": "pitTrap/data/vertices-12",
+            "buffer": 0,
+            "byteOffset": 13664,
+            "byteLength": 20496,
+            "byteStride": 12,
+            "target": 34962
+        },
+        {
+            "name": "pitTrap/data/vertices-16",
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 13664,
+            "byteStride": 16,
+            "target": 34962
+        },
+        {
+            "name": "pitTrap/data/vertices-8",
+            "buffer": 0,
+            "byteOffset": 34160,
+            "byteLength": 6832,
+            "byteStride": 8,
+            "target": 34962
+        }
+    ],
+    "buffers": [
+        {
+            "name": "pitTrap/data",
+            "byteLength": 43536,
+            "uri": "pitTrap0.bin"
+        }
+    ]
+}

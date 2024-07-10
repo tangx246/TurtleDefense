@@ -1,0 +1,185 @@
+{
+    "asset": {
+        "copyright": "(C)2024 CS_Dev01",
+        "generator": "maya2glTF main fbbc95e5dc4d",
+        "version": "2.0"
+    },
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0,
+    "nodes": [
+        {
+            "name": "cliffside2",
+            "mesh": 0
+        }
+    ],
+    "meshes": [
+        {
+            "name": "cliffside2Shape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 1,
+                        "POSITION": 2,
+                        "TANGENT": 3,
+                        "TEXCOORD_0": 4
+                    },
+                    "indices": 0,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "name": "lambert2",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    1.0
+                ],
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            }
+        }
+    ],
+    "accessors": [
+        {
+            "name": "cliffside2Shape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 1188,
+            "max": [
+                874
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "cliffside2Shape#0/vertices/NORMAL",
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 875,
+            "max": [
+                0.9996789693832398,
+                1.0,
+                0.9998939633369446
+            ],
+            "min": [
+                -0.9977719187736512,
+                -1.0,
+                -0.9994955062866212
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "cliffside2Shape#0/vertices/POSITION",
+            "bufferView": 1,
+            "byteOffset": 10500,
+            "componentType": 5126,
+            "count": 875,
+            "max": [
+                524.7078247070313,
+                499.9999694824219,
+                40.51323318481445
+            ],
+            "min": [
+                -33.62833786010742,
+                0.00001525900006527081,
+                -217.48095703125
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "cliffside2Shape#0/vertices/TANGENT",
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 875,
+            "max": [
+                0.9825284481048584,
+                0.9999979138374328,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -0.8531070947647095,
+                -0.999999463558197,
+                -1.0,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "cliffside2Shape#0/vertices/TEXCOORD_0",
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 875,
+            "max": [
+                0.9392695426940918,
+                0.9980079531669616
+            ],
+            "min": [
+                0.0018747890135273336,
+                0.0019919280894100668
+            ],
+            "type": "VEC2"
+        }
+    ],
+    "bufferViews": [
+        {
+            "name": "Cliffside/data/indices-2",
+            "buffer": 0,
+            "byteOffset": 42000,
+            "byteLength": 2376,
+            "target": 34963
+        },
+        {
+            "name": "Cliffside/data/vertices-12",
+            "buffer": 0,
+            "byteOffset": 14000,
+            "byteLength": 21000,
+            "byteStride": 12,
+            "target": 34962
+        },
+        {
+            "name": "Cliffside/data/vertices-16",
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 14000,
+            "byteStride": 16,
+            "target": 34962
+        },
+        {
+            "name": "Cliffside/data/vertices-8",
+            "buffer": 0,
+            "byteOffset": 35000,
+            "byteLength": 7000,
+            "byteStride": 8,
+            "target": 34962
+        }
+    ],
+    "buffers": [
+        {
+            "name": "Cliffside/data",
+            "byteLength": 44376,
+            "uri": "Cliffside0.bin"
+        }
+    ]
+}

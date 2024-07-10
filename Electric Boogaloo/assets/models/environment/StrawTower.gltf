@@ -1,0 +1,185 @@
+{
+    "asset": {
+        "copyright": "(C)2024 CS_Dev01",
+        "generator": "maya2glTF main fbbc95e5dc4d",
+        "version": "2.0"
+    },
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0,
+    "nodes": [
+        {
+            "name": "Straw_Tower",
+            "mesh": 0
+        }
+    ],
+    "meshes": [
+        {
+            "name": "Straw_TowerShape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 1,
+                        "POSITION": 2,
+                        "TANGENT": 3,
+                        "TEXCOORD_0": 4
+                    },
+                    "indices": 0,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "name": "lambert8",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    1.0
+                ],
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            }
+        }
+    ],
+    "accessors": [
+        {
+            "name": "Straw_TowerShape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 906,
+            "max": [
+                657
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "Straw_TowerShape#0/vertices/NORMAL",
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 658,
+            "max": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                -1.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Straw_TowerShape#0/vertices/POSITION",
+            "bufferView": 1,
+            "byteOffset": 7896,
+            "componentType": 5126,
+            "count": 658,
+            "max": [
+                35.14678955078125,
+                181.9739227294922,
+                35.15323638916016
+            ],
+            "min": [
+                -35.60505676269531,
+                -0.019969535991549493,
+                -35.60111618041992
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "Straw_TowerShape#0/vertices/TANGENT",
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 658,
+            "max": [
+                1.0,
+                0.9998289346694946,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -0.8419063687324524,
+                -0.6561681628227234,
+                -1.0,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "Straw_TowerShape#0/vertices/TEXCOORD_0",
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 658,
+            "max": [
+                1.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.09679853916168212
+            ],
+            "type": "VEC2"
+        }
+    ],
+    "bufferViews": [
+        {
+            "name": "StrawTower/data/indices-2",
+            "buffer": 0,
+            "byteOffset": 31584,
+            "byteLength": 1812,
+            "target": 34963
+        },
+        {
+            "name": "StrawTower/data/vertices-12",
+            "buffer": 0,
+            "byteOffset": 10528,
+            "byteLength": 15792,
+            "byteStride": 12,
+            "target": 34962
+        },
+        {
+            "name": "StrawTower/data/vertices-16",
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 10528,
+            "byteStride": 16,
+            "target": 34962
+        },
+        {
+            "name": "StrawTower/data/vertices-8",
+            "buffer": 0,
+            "byteOffset": 26320,
+            "byteLength": 5264,
+            "byteStride": 8,
+            "target": 34962
+        }
+    ],
+    "buffers": [
+        {
+            "name": "StrawTower/data",
+            "byteLength": 33396,
+            "uri": "StrawTower0.bin"
+        }
+    ]
+}

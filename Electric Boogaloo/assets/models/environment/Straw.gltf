@@ -1,0 +1,185 @@
+{
+    "asset": {
+        "copyright": "(C)2024 CS_Dev01",
+        "generator": "maya2glTF main fbbc95e5dc4d",
+        "version": "2.0"
+    },
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0,
+    "nodes": [
+        {
+            "name": "Straw",
+            "mesh": 0
+        }
+    ],
+    "meshes": [
+        {
+            "name": "StrawShape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 1,
+                        "POSITION": 2,
+                        "TANGENT": 3,
+                        "TEXCOORD_0": 4
+                    },
+                    "indices": 0,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "name": "lambert7",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    1.0
+                ],
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            }
+        }
+    ],
+    "accessors": [
+        {
+            "name": "StrawShape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 1104,
+            "max": [
+                751
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "StrawShape#0/vertices/NORMAL",
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 752,
+            "max": [
+                0.9999751448631288,
+                0.9251925945281982,
+                0.9846801161766052
+            ],
+            "min": [
+                -0.9956955909729004,
+                -0.9251469969749452,
+                -0.9495713710784912
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "StrawShape#0/vertices/POSITION",
+            "bufferView": 1,
+            "byteOffset": 9024,
+            "componentType": 5126,
+            "count": 752,
+            "max": [
+                26.558731079101564,
+                2.411224365234375,
+                8.116360664367676
+            ],
+            "min": [
+                -26.5587158203125,
+                -2.411224365234375,
+                -8.116360664367676
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "StrawShape#0/vertices/TANGENT",
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 752,
+            "max": [
+                0.9995872974395752,
+                0.999987542629242,
+                0.9999735951423644,
+                1.0
+            ],
+            "min": [
+                -0.7440959811210632,
+                -0.9241307377815248,
+                -0.9869266748428344,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "StrawShape#0/vertices/TEXCOORD_0",
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 752,
+            "max": [
+                0.9480835795402528,
+                0.9980079531669616
+            ],
+            "min": [
+                0.0018923829775303605,
+                0.001991986995562911
+            ],
+            "type": "VEC2"
+        }
+    ],
+    "bufferViews": [
+        {
+            "name": "Straw/data/indices-2",
+            "buffer": 0,
+            "byteOffset": 36096,
+            "byteLength": 2208,
+            "target": 34963
+        },
+        {
+            "name": "Straw/data/vertices-12",
+            "buffer": 0,
+            "byteOffset": 12032,
+            "byteLength": 18048,
+            "byteStride": 12,
+            "target": 34962
+        },
+        {
+            "name": "Straw/data/vertices-16",
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 12032,
+            "byteStride": 16,
+            "target": 34962
+        },
+        {
+            "name": "Straw/data/vertices-8",
+            "buffer": 0,
+            "byteOffset": 30080,
+            "byteLength": 6016,
+            "byteStride": 8,
+            "target": 34962
+        }
+    ],
+    "buffers": [
+        {
+            "name": "Straw/data",
+            "byteLength": 38304,
+            "uri": "Straw0.bin"
+        }
+    ]
+}

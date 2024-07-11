@@ -1,16 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://dy00o25dh55w6"]
 
-[ext_resource type="PackedScene" uid="uid://vb5enso3qswl" path="res://scenes/Placeholder.tscn" id="1_c0l1j"]
+[ext_resource type="PackedScene" uid="uid://cd1i4d2papecd" path="res://assets/models/environment/lowpoly_rock_shifted.tscn" id="1_a4e7i"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_aslol"]
 
 [node name="Rock" type="Node3D"]
-
-[node name="Placeholder" parent="." groups=["navigation_mesh_source_group"] instance=ExtResource("1_c0l1j")]
-transform = Transform3D(1, 0, 0, 0, 0.435483, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." groups=["navigation_mesh_source_group"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("BoxShape3D_aslol")
+
+[node name="lowpolyRockShifted" parent="." instance=ExtResource("1_a4e7i")]

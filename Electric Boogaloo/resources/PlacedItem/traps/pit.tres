@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://addons/topdown_item_placer/PlacedItem.gd" id="1_0jseh"]
 [ext_resource type="PackedScene" uid="uid://b1awsxvmgvcye" path="res://scenes/traps/pit.tscn" id="1_eqoxg"]
-[ext_resource type="PackedScene" uid="uid://vb5enso3qswl" path="res://scenes/Placeholder.tscn" id="1_xj6io"]
+[ext_resource type="PackedScene" uid="uid://brsbt65h5dxbt" path="res://assets/models/environment/pitTrap.gltf" id="2_nju2k"]
 
 [resource]
 script = ExtResource("1_0jseh")
-preview_scene = ExtResource("1_xj6io")
+preview_scene = ExtResource("2_nju2k")
 placed_scene = ExtResource("1_eqoxg")
 name = "Pit Trap"

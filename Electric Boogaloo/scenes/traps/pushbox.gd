@@ -3,6 +3,8 @@ extends Node3D
 @export var active : bool = true
 @export var area : Area3D
 
+signal turtles_pushed
+
 func _on_area_3d_body_entered(body):
 	if !active:
 		return
@@ -12,6 +14,7 @@ func _on_area_3d_body_entered(body):
 		push_turtles.call_deferred()
 
 func push_turtles():
+	turtles_pushed.emit()
 	var overlappingBodies = area.get_overlapping_bodies()
 	for overlappingBody in overlappingBodies:
 		if overlappingBody.get_parent() is Turtle:

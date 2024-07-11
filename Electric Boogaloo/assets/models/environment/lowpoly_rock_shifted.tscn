@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cd1i4d2papecd"]
+
+[ext_resource type="PackedScene" uid="uid://dpa5k4rmsl4lg" path="res://assets/models/environment/lowpolyRock.gltf" id="1_ilmw5"]
+
+[node name="lowpolyRockShifted" instance=ExtResource("1_ilmw5")]
+
+[node name="lowpoly_Rock" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)

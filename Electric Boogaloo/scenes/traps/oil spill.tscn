@@ -1,20 +1,20 @@
 [gd_scene load_steps=4 format=3 uid="uid://dc7hcl1twdmxr"]
 
-[ext_resource type="PackedScene" uid="uid://vb5enso3qswl" path="res://scenes/Placeholder.tscn" id="1_a1fgg"]
 [ext_resource type="Script" path="res://scenes/traps/oil spill.gd" id="1_ru8bo"]
+[ext_resource type="PackedScene" uid="uid://deru7aje8mcxr" path="res://assets/models/environment/Oil_Spill.gltf" id="2_3vmm6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_d6cht"]
+size = Vector3(2, 2, 2)
 
 [node name="Oil Spill" type="Node3D"]
 script = ExtResource("1_ru8bo")
-
-[node name="Placeholder" parent="." instance=ExtResource("1_a1fgg")]
-transform = Transform3D(1, 0, 0, 0, 0.0304136, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("BoxShape3D_d6cht")
+
+[node name="Oil_Spill" parent="." instance=ExtResource("2_3vmm6")]
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

@@ -1,13 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://br4v375ykxwat"]
+[gd_scene load_steps=5 format=3 uid="uid://br4v375ykxwat"]
 
 [ext_resource type="Script" path="res://scenes/traps/straw tower.gd" id="1_yo3oc"]
+[ext_resource type="PackedScene" uid="uid://gkk7s0cl0ve7" path="res://assets/models/environment/Straw.gltf" id="2_gmdpc"]
 [ext_resource type="PackedScene" uid="uid://3vmcretrcv3k" path="res://assets/models/environment/StrawTower.gltf" id="2_wmjy3"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ob3ib"]
 radius = 5.0
 
-[node name="Straw Tower" type="Node3D"]
+[node name="Straw Tower" type="Node3D" node_paths=PackedStringArray("strawFiringSource")]
 script = ExtResource("1_yo3oc")
+strawFiringSource = NodePath("StrawFiringSource")
+strawModel = ExtResource("2_gmdpc")
 
 [node name="Area3D" type="Area3D" parent="."]
 unique_name_in_owner = true
@@ -20,5 +23,8 @@ shape = SubResource("SphereShape3D_ob3ib")
 autostart = true
 
 [node name="StrawTower" parent="." instance=ExtResource("2_wmjy3")]
+
+[node name="StrawFiringSource" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.61869, 0)
 
 [connection signal="timeout" from="Timer" to="." method="fire_straw"]

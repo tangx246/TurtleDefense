@@ -1,9 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://cuncrh4qgna86"]
+[gd_scene load_steps=10 format=3 uid="uid://cuncrh4qgna86"]
 
 [ext_resource type="PackedScene" uid="uid://dhf18esgb7rm" path="res://assets/models/Turtle.glb" id="1_dnms5"]
 [ext_resource type="PackedScene" uid="uid://dyb6x4xtelhw2" path="res://assets/models/Egg.glb" id="2_vb3h6"]
 [ext_resource type="PackedScene" uid="uid://coung64a8bdux" path="res://assets/ParticleEffects/EggBreaking.tscn" id="3_sr4gq"]
 [ext_resource type="PackedScene" uid="uid://cray0qdrgjtdd" path="res://assets/models/environment/WaterPlane.glb" id="4_3ykb7"]
+[ext_resource type="PackedScene" uid="uid://44l4drdiacrc" path="res://assets/models/environment/ShoreStraight1.glb" id="5_wwcm2"]
+[ext_resource type="PackedScene" uid="uid://cdwjkwkbjweqs" path="res://assets/models/environment/ShoreStraight2.glb" id="6_0tx1v"]
+[ext_resource type="PackedScene" uid="uid://cwto1p2l2enr4" path="res://assets/models/environment/ShoreStraight3.glb" id="7_x3262"]
+[ext_resource type="PackedScene" uid="uid://dgi4cr4nd7c4u" path="res://assets/models/environment/ShoreStraight4.glb" id="8_83qxm"]
 
 [sub_resource type="Environment" id="Environment_8ff27"]
 background_mode = 2
@@ -33,7 +37,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
 
 [node name="WaterPlane3" parent="." instance=ExtResource("4_3ykb7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
 
 [node name="WaterPlane4" parent="." instance=ExtResource("4_3ykb7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+
+[node name="ShoreStraight12" parent="." instance=ExtResource("5_wwcm2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="ShoreStraight22" parent="." instance=ExtResource("6_0tx1v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="ShoreStraight32" parent="." instance=ExtResource("7_x3262")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+
+[node name="ShoreStraight42" parent="." instance=ExtResource("8_83qxm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)

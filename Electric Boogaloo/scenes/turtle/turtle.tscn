@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://clpsa4yewpfsn"]
+[gd_scene load_steps=14 format=3 uid="uid://clpsa4yewpfsn"]
 
 [ext_resource type="Script" path="res://scenes/turtle/movement_agent.gd" id="1_0fv47"]
 [ext_resource type="PackedScene" uid="uid://dhf18esgb7rm" path="res://assets/models/Turtle.glb" id="1_4wj1e"]
@@ -6,9 +6,32 @@
 [ext_resource type="AudioStream" uid="uid://d240q21nd6akv" path="res://assets/sounds/sfx/TurtleDying.ogg" id="2_bsgd5"]
 [ext_resource type="AnimationLibrary" uid="uid://cbbv1k7w0vef1" path="res://assets/animations/Anim-Turtle-Walk.glb" id="3_5oc6c"]
 [ext_resource type="AudioStream" uid="uid://djfpwuhg8r4rk" path="res://assets/sounds/sfx/TurtleDying2.ogg" id="3_uro0e"]
+[ext_resource type="AnimationLibrary" uid="uid://qeilfeyds5nv" path="res://assets/animations/Anim-Turtle-Death.glb" id="6_kvpu6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7xuvy"]
 size = Vector3(0.3, 0.4, 0.3)
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cuyos"]
+animation = &"Anim-Turtle-Death/Death"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7mf7g"]
+animation = &"Anim-Turtle-Walk/Walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_wo7u6"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_a4f28"]
+advance_mode = 2
+advance_expression = "dead"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_vvahp"]
+states/Anim-Turtle-Death_Death/node = SubResource("AnimationNodeAnimation_cuyos")
+states/Anim-Turtle-Death_Death/position = Vector2(413, 153)
+states/Anim-Turtle-Walk_Walk/node = SubResource("AnimationNodeAnimation_7mf7g")
+states/Anim-Turtle-Walk_Walk/position = Vector2(413, 45)
+states/Start/position = Vector2(181, 109)
+transitions = ["Start", "Anim-Turtle-Walk_Walk", SubResource("AnimationNodeStateMachineTransition_wo7u6"), "Anim-Turtle-Walk_Walk", "Anim-Turtle-Death_Death", SubResource("AnimationNodeStateMachineTransition_a4f28")]
+graph_offset = Vector2(-11, -30)
 
 [node name="Turtle" type="Node3D" groups=["Turtle"]]
 script = ExtResource("1_r2n3w")
@@ -37,7 +60,12 @@ radius = 0.2
 deterministic = true
 root_node = NodePath("../Turtle2")
 libraries = {
+"Anim-Turtle-Death": ExtResource("6_kvpu6"),
 "Anim-Turtle-Walk": ExtResource("3_5oc6c")
 }
 
-[connection signal="ready" from="." to="MovementAgent/AnimationPlayer" method="play" binds= [&"Anim-Turtle-Walk/Walk"]]
+[node name="AnimationTree" type="AnimationTree" parent="MovementAgent"]
+root_node = NodePath("../Turtle2")
+tree_root = SubResource("AnimationNodeStateMachine_vvahp")
+advance_expression_base_node = NodePath("../..")
+anim_player = NodePath("../AnimationPlayer")

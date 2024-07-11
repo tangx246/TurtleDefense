@@ -7,7 +7,7 @@ func fire_straw():
 	var closestTurtle : Turtle
 	for body in area.get_overlapping_bodies():
 		var bodyParent = body.get_parent() as Turtle
-		if bodyParent:
+		if bodyParent and not bodyParent.dead:
 			var distance : float = global_position.distance_squared_to(body.global_position)
 			if distance < closestDistance:
 				closestDistance = distance

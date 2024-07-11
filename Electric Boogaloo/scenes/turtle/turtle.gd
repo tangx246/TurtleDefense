@@ -4,6 +4,8 @@ extends Node3D
 @export var turtleDeathSounds : Array[AudioStream]
 @onready var agent : MovementAgent = %MovementAgent
 
+var dead : bool = false
+
 func _ready():
 	var shortestDistance : float = INF
 	var closestShoreline : Node3D
@@ -16,9 +18,13 @@ func _ready():
 	agent.set_movement_target(closestShoreline.global_position)
 
 func kill():
+	if dead:
+		return
+	dead = true
+	
 	var victoryFailureConditions : VictoryFailureConditions = get_tree().get_first_node_in_group(VictoryFailureConditions.tag)
 	victoryFailureConditions.kill_turtle()
-	queue_free()
+	agent.movement_speed = 0
 	
 	var player = AudioStreamPlayer3D.new()
 	player.finished.connect(func(): player.queue_free())

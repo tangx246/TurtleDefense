@@ -6,5 +6,5 @@
 [resource]
 render_priority = 0
 shader = ExtResource("1_h5fkt")
-shader_parameter/WaveSpeed = 0.15
+shader_parameter/WaveSpeed = 0.3
 shader_parameter/Voronoi = ExtResource("2_gerfh")

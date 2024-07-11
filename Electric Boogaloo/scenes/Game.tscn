@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://l0nwp737je10"]
+[gd_scene load_steps=18 format=3 uid="uid://l0nwp737je10"]
 
 [ext_resource type="Script" path="res://scenes/LevelLoader.gd" id="1_5431n"]
 [ext_resource type="Script" path="res://scenes/Environment.gd" id="1_i6w6l"]
@@ -13,6 +13,8 @@
 [ext_resource type="Script" path="res://scenes/TrapCounts.gd" id="8_rh0gq"]
 [ext_resource type="Script" path="res://scenes/VictoryFailureConditions.gd" id="9_uei18"]
 [ext_resource type="Script" path="res://scenes/VictoryDefeatUi.gd" id="9_ui8ai"]
+[ext_resource type="AudioStream" uid="uid://cj5b5oxg32pvd" path="res://assets/sounds/sfx/mouseclick1.ogg" id="10_wyoc3"]
+[ext_resource type="AudioStream" uid="uid://b0dok0knpcjtc" path="res://assets/sounds/sfx/plop.ogg" id="11_3v2hx"]
 [ext_resource type="Resource" uid="uid://bawc1ivob6x2u" path="res://resources/level/levels.tres" id="11_dlvsh"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_4gw0b"]
@@ -243,6 +245,12 @@ layout_mode = 2
 size_flags_horizontal = 4
 text = "Level Selector"
 
+[node name="Click" type="AudioStreamPlayer" parent="UI"]
+stream = ExtResource("10_wyoc3")
+
+[node name="Plop" type="AudioStreamPlayer" parent="UI"]
+stream = ExtResource("11_3v2hx")
+
 [node name="LevelLoader" type="Node3D" parent="."]
 unique_name_in_owner = true
 script = ExtResource("1_5431n")
@@ -260,12 +268,18 @@ script = ExtResource("8_rh0gq")
 unique_name_in_owner = true
 script = ExtResource("9_uei18")
 
+[connection signal="item_successfully_placed" from="Environment" to="UI/Plop" method="play"]
 [connection signal="pressed" from="UI/HBoxContainer/Start Game" to="Environment" method="start_egg_hatching"]
 [connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer/Pit Trap" to="UI/TopdownItemPlacer" method="place_item_requested"]
+[connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer/Pit Trap" to="UI/Click" method="play" unbinds=1]
 [connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer2/Rock" to="UI/TopdownItemPlacer" method="place_item_requested"]
+[connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer2/Rock" to="UI/Click" method="play" unbinds=1]
 [connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer3/Oil Spill" to="UI/TopdownItemPlacer" method="place_item_requested"]
+[connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer3/Oil Spill" to="UI/Click" method="play" unbinds=1]
 [connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer4/Push Box" to="UI/TopdownItemPlacer" method="place_item_requested"]
+[connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer4/Push Box" to="UI/Click" method="play" unbinds=1]
 [connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer5/Straw Tower" to="UI/TopdownItemPlacer" method="place_item_requested"]
+[connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer5/Straw Tower" to="UI/Click" method="play" unbinds=1]
 [connection signal="placed_item" from="UI/TopdownItemPlacer" to="Environment" method="on_placed_item"]
 [connection signal="pressed" from="UI/VictoryDefeat/VictoryVBoxContainer/HBoxContainer/Button" to="LevelLoader" method="nextLevel"]
 [connection signal="pressed" from="UI/VictoryDefeat/VictoryVBoxContainer/HBoxContainer/Button2" to="UI/VictoryDefeat" method="load_level_selector"]

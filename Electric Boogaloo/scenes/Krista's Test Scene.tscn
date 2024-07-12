@@ -17,7 +17,7 @@ ambient_light_color = Color(0.984695, 0.988285, 0.880348, 1)
 [node name="Krista\'sTestScene" type="Node3D"]
 
 [node name="Turtle2" parent="." instance=ExtResource("1_dnms5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.755, 0, 0.141)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350912, 0.00961706, 0.425645)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_8ff27")

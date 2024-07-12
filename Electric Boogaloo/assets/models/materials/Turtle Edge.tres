@@ -1,7 +1,10 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://myg1vahgotdc"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://myg1vahgotdc"]
+
+[ext_resource type="Material" uid="uid://cv0bxkv4hwcbq" path="res://assets/models/materials/ToonOutline.tres" id="1_15gu6"]
 
 [resource]
 resource_name = "Turtle Edge"
+next_pass = ExtResource("1_15gu6")
 cull_mode = 2
 diffuse_mode = 3
 specular_mode = 1

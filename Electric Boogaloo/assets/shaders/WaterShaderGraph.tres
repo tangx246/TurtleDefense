@@ -136,7 +136,6 @@ void fragment() {
 
 }
 "
-graph_offset = Vector2(-649.194, -54.6902)
 modes/diffuse = 3
 modes/specular = 1
 nodes/fragment/2/node = SubResource("VisualShaderNodeColorConstant_pyasd")

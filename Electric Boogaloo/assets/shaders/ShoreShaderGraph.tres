@@ -1,4 +1,4 @@
-[gd_resource type="VisualShader" load_steps=27 format=3 uid="uid://cpd4jpoyob2fl"]
+[gd_resource type="VisualShader" load_steps=26 format=3 uid="uid://cpd4jpoyob2fl"]
 
 [ext_resource type="Texture2D" uid="uid://bhtgqs2qpe8ak" path="res://assets/shaders/Textures/AlphaWhite.png" id="1_1shrx"]
 [ext_resource type="Texture2D" uid="uid://cxrkoqjy3phdr" path="res://assets/shaders/Textures/ShoreEdge.png" id="2_amdyh"]
@@ -56,8 +56,6 @@ function = 0
 
 [sub_resource type="VisualShaderNodeFloatFunc" id="VisualShaderNodeFloatFunc_hwn15"]
 function = 24
-
-[sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_rbccm"]
 
 [sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_apesd"]
 
@@ -187,6 +185,7 @@ void fragment() {
 
 }
 "
+graph_offset = Vector2(-102.607, -141.622)
 nodes/fragment/2/node = SubResource("VisualShaderNodeColorConstant_matpx")
 nodes/fragment/2/position = Vector2(-1300, 720)
 nodes/fragment/3/node = SubResource("VisualShaderNodeInput_n8135")
@@ -227,8 +226,6 @@ nodes/fragment/39/node = SubResource("VisualShaderNodeFloatOp_51esv")
 nodes/fragment/39/position = Vector2(-680, 160)
 nodes/fragment/40/node = SubResource("VisualShaderNodeFloatFunc_hwn15")
 nodes/fragment/40/position = Vector2(-420, 240)
-nodes/fragment/41/node = SubResource("VisualShaderNodeVectorOp_rbccm")
-nodes/fragment/41/position = Vector2(452.107, 262.351)
 nodes/fragment/42/node = SubResource("VisualShaderNodeVectorOp_apesd")
 nodes/fragment/42/position = Vector2(80, 160)
 nodes/fragment/43/node = SubResource("VisualShaderNodeTexture_erdli")

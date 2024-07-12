@@ -25,7 +25,9 @@ func loadCurrentLevel():
 func hasNextLevel() -> bool:
 	return currentLevelIndex < levels.levels.size() - 1
 
-func loadLevel(level: Level):
+func loadLevel(level: Level):	
+	LevelProgress.setCurrentProgress(currentLevelIndex)
+	
 	for child in environment.get_children():
 		environment.remove_child(child)
 		child.queue_free()

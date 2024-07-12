@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 LevelLoadRequest="*res://scenes/level selector/level_load_request.gd"
+LevelProgress="*res://scenes/level selector/level_progress.gd"
+PlayerPrefs="*res://addons/player_prefs/player_prefs.gd"
 
 [display]
 
@@ -30,7 +32,7 @@ project/assembly_name="Turtle Defense"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/topdown_item_placer/plugin.cfg")
+enabled=PackedStringArray("res://addons/player_prefs/plugin.cfg", "res://addons/topdown_item_placer/plugin.cfg")
 
 [input]
 

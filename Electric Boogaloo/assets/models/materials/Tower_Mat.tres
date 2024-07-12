@@ -1,0 +1,30 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://6sxiap8fb817"]
+
+[ext_resource type="Texture2D" uid="uid://dhu1ubje2w6vd" path="res://assets/Textures/Tower_Tex/Tower_AlbedoTransparency.png" id="1_hi0qa"]
+
+[sub_resource type="Curve" id="Curve_421l8"]
+_data = [Vector2(0.464968, 0.232868), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="CurveTexture" id="CurveTexture_5cyyd"]
+curve = SubResource("Curve_421l8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eattl"]
+cull_mode = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+refraction_scale = 1.0
+grow = true
+grow_amount = 0.02
+point_size = 8.0
+proximity_fade_distance = 71.77
+distance_fade_min_distance = 0.3
+distance_fade_max_distance = 0.0
+
+[resource]
+next_pass = SubResource("StandardMaterial3D_eattl")
+shading_mode = 0
+diffuse_mode = 3
+albedo_texture = ExtResource("1_hi0qa")
+heightmap_scale = 9.955
+detail_mask = SubResource("CurveTexture_5cyyd")

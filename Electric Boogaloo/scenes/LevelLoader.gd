@@ -26,8 +26,6 @@ func hasNextLevel() -> bool:
 	return currentLevelIndex < levels.levels.size() - 1
 
 func loadLevel(level: Level):	
-	LevelProgress.setCurrentProgress(currentLevelIndex)
-	
 	for child in environment.get_children():
 		environment.remove_child(child)
 		child.queue_free()
@@ -45,3 +43,8 @@ func loadLevel(level: Level):
 	trapCounts.update_counts()
 
 	victoryDefeatUi.visible = false
+
+
+func _on_victory_failure_conditions_game_end(victory):
+	if victory:
+		LevelProgress.setCurrentProgress(currentLevelIndex + 1)

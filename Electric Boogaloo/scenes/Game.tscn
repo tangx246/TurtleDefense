@@ -286,3 +286,4 @@ script = ExtResource("9_uei18")
 [connection signal="pressed" from="UI/VictoryDefeat/DefeatVBoxContainer/HBoxContainer/Button" to="LevelLoader" method="loadCurrentLevel"]
 [connection signal="pressed" from="UI/VictoryDefeat/DefeatVBoxContainer/HBoxContainer/Button2" to="UI/VictoryDefeat" method="load_level_selector"]
 [connection signal="pressed" from="UI/VictoryDefeat/GameCompletePanel/HBoxContainer/Button" to="UI/VictoryDefeat" method="load_level_selector"]
+[connection signal="game_end" from="VictoryFailureConditions" to="LevelLoader" method="_on_victory_failure_conditions_game_end"]

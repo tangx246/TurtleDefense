@@ -1,7 +1,10 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://cbiclj744rhxv"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cbiclj744rhxv"]
+
+[ext_resource type="Material" uid="uid://cv0bxkv4hwcbq" path="res://assets/models/materials/ToonOutline.tres" id="1_3i8yq"]
 
 [resource]
 resource_name = "Turtle Egg"
+next_pass = ExtResource("1_3i8yq")
 diffuse_mode = 3
 specular_mode = 1
 albedo_color = Color(0.944884, 0.938559, 0.62285, 1)

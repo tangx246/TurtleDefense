@@ -1,0 +1,41 @@
+[gd_resource type="StandardMaterial3D" load_steps=7 format=3 uid="uid://8xxo0xft7euj"]
+
+[ext_resource type="Texture2D" uid="uid://d12d8hp04nhko" path="res://assets/Textures/SandTile_Tex/sandTile_AlbedoTransparency.png" id="1_3jvjq"]
+[ext_resource type="Texture2D" uid="uid://bvuh76mkylg3d" path="res://assets/Textures/LowPolyRock_Tex/lowpolyRock_AO.png" id="1_5e81k"]
+[ext_resource type="Texture2D" uid="uid://ddapu26vcg6pn" path="res://assets/Textures/SandTile_Tex/sandTile_Normal.png" id="3_tb53h"]
+
+[sub_resource type="Curve" id="Curve_421l8"]
+_data = [Vector2(0.477707, 0.208122), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="CurveTexture" id="CurveTexture_5cyyd"]
+curve = SubResource("Curve_421l8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eattl"]
+cull_mode = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+refraction_scale = 1.0
+grow = true
+grow_amount = 0.02
+point_size = 8.0
+proximity_fade_distance = 71.77
+distance_fade_min_distance = 0.3
+distance_fade_max_distance = 0.0
+
+[resource]
+next_pass = SubResource("StandardMaterial3D_eattl")
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.82606, 0.82606, 0.82606, 1)
+albedo_texture = ExtResource("1_3jvjq")
+normal_enabled = true
+normal_texture = ExtResource("3_tb53h")
+heightmap_scale = 9.955
+detail_mask = SubResource("CurveTexture_5cyyd")
+detail_albedo = ExtResource("1_5e81k")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv2_triplanar = true
+uv2_world_triplanar = true

@@ -6,7 +6,7 @@ extends Node3D
 
 var dead : bool = false
 
-func _ready():
+func _physics_process(_delta):
 	var shortestDistance : float = INF
 	var closestShoreline : Node3D
 	for shoreline : Node3D in get_tree().get_nodes_in_group("ShoreLine"):

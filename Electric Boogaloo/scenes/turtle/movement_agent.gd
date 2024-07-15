@@ -5,6 +5,7 @@ extends CharacterBody3D
 @onready var navigation_agent: NavigationAgent3D = get_node("NavigationAgent3D")
 
 var tween : Tween
+var forced_velocity : Vector3 = Vector3.ZERO
 
 func _ready() -> void:
 	navigation_agent.velocity_computed.connect(Callable(_on_velocity_computed))
@@ -32,5 +33,5 @@ func _on_velocity_computed(safe_velocity: Vector3):
 	rotation = old_rotation
 	tween = create_tween()
 	tween.tween_property(self, "rotation", new_rotation, 0.1)
-	velocity = safe_velocity
+	velocity = safe_velocity + forced_velocity
 	move_and_slide()

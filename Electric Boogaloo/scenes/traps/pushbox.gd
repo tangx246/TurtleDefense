@@ -19,6 +19,12 @@ func push_turtles():
 	for overlappingBody in overlappingBodies:
 		if overlappingBody.get_parent() is Turtle:
 			var turtleBody : MovementAgent = overlappingBody
-			var tween = create_tween()
-			tween.tween_property(turtleBody, "position", position + basis * Vector3.BACK * 5, 0.2)
+			turtleBody.forced_velocity = position + basis * Vector3.BACK * 50
+			var timer = Timer.new()
+			turtleBody.add_child(timer)
+			timer.timeout.connect(func(): 
+				turtleBody.forced_velocity = Vector3.ZERO
+				timer.queue_free()
+			)
+			timer.start(0.2)
 			active = false

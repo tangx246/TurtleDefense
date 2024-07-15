@@ -68,7 +68,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, 5)
 
 [node name="Straw2" parent="." instance=ExtResource("7_5jh4f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.90351, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.68025, 1.90351, -1.3766)
 
 [node name="StrawShooter" parent="." instance=ExtResource("8_tkk6k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8879, 1.59857, -1)

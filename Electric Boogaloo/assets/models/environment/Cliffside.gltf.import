@@ -33,7 +33,7 @@ _subresources={
 "materials": {
 "lambert2": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/models/materials/Cliffholder_Mat.tres"
+"use_external/path": "res://assets/models/materials/Cliff_Mat.tres"
 }
 }
 }

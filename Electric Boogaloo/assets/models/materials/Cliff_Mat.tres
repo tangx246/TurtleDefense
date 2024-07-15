@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://17dv711h1324"]
 
-[ext_resource type="Texture2D" path="res://assets/Textures/Cliffside_Tex/Cliffside_AO.png" id="1_40svk"]
+[ext_resource type="Texture2D" uid="uid://dhs24qmyqlafi" path="res://assets/Textures/Cliffside_Tex/Cliffside_AO.png" id="1_40svk"]
 
 [sub_resource type="Curve" id="Curve_421l8"]
 _data = [Vector2(0.464968, 0.232868), 0.0, 0.0, 0, 0]

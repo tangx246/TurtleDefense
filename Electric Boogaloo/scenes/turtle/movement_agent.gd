@@ -4,6 +4,8 @@ extends CharacterBody3D
 @export var movement_speed: float = 4.0
 @onready var navigation_agent: NavigationAgent3D = get_node("NavigationAgent3D")
 
+var tween : Tween
+
 func _ready() -> void:
 	navigation_agent.velocity_computed.connect(Callable(_on_velocity_computed))
 
@@ -22,5 +24,13 @@ func _physics_process(_delta):
 		_on_velocity_computed(new_velocity)
 
 func _on_velocity_computed(safe_velocity: Vector3):
+	if tween:
+		tween.kill()
+	var old_rotation = rotation
+	look_at(position + safe_velocity)
+	var new_rotation = rotation
+	rotation = old_rotation
+	tween = create_tween()
+	tween.tween_property(self, "rotation", new_rotation, 0.1)
 	velocity = safe_velocity
 	move_and_slide()

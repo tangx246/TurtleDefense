@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://151p2g7cy8gf"]
+
+[ext_resource type="PackedScene" uid="uid://djrkl461v20wq" path="res://assets/models/environment/sandTile.gltf" id="1_irmop"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6fu3w"]
+size = Vector3(5, 0.1, 5)
+
+[node name="SandTile_Tile" type="Node3D"]
+
+[node name="sandTile" parent="." instance=ExtResource("1_irmop")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="sandTile"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sandTile/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, -0.05, 2.5)
+shape = SubResource("BoxShape3D_6fu3w")

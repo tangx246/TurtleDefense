@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdxnswbmxomvp"]
+
+[ext_resource type="PackedScene" uid="uid://dfvyp8kl3c0rm" path="res://assets/models/environment/Cliffside.gltf" id="1_qrkjv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fax4f"]
+size = Vector3(5.5, 5, 2.5)
+
+[node name="Cliffside_Tile" type="Node3D"]
+
+[node name="Cliffside" parent="." instance=ExtResource("1_qrkjv")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cliffside"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cliffside/StaticBody3D"]
+transform = Transform3D(1.00479, 0, 0, 0, 1.00479, 0, 0, 0, 1.00479, 2.5, 2.5, -1)
+shape = SubResource("BoxShape3D_fax4f")

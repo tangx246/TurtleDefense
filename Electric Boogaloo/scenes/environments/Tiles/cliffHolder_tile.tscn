@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu4lbg70n3w0a"]
+
+[ext_resource type="PackedScene" uid="uid://bo3o1dq35i3jw" path="res://assets/models/environment/Cliffholder.gltf" id="1_bo0u6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qxvh6"]
+size = Vector3(5, 1, 2)
+
+[node name="CliffHolder_Tile" type="Node3D"]
+
+[node name="Cliffholder" parent="." instance=ExtResource("1_bo0u6")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cliffholder"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cliffholder/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.5, -1)
+shape = SubResource("BoxShape3D_qxvh6")

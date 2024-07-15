@@ -1,8 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://l0nwp737je10"]
+[gd_scene load_steps=19 format=3 uid="uid://l0nwp737je10"]
 
 [ext_resource type="Script" path="res://scenes/LevelLoader.gd" id="1_5431n"]
 [ext_resource type="Script" path="res://scenes/Environment.gd" id="1_i6w6l"]
 [ext_resource type="Script" path="res://addons/topdown_item_placer/topdown_item_placer.gd" id="2_2u724"]
+[ext_resource type="Script" path="res://scenes/Switch Camera.gd" id="2_4qbtd"]
 [ext_resource type="Script" path="res://addons/topdown_item_placer/place_item_button.gd" id="3_6oegu"]
 [ext_resource type="Resource" uid="uid://d2ch1tgq77t7f" path="res://resources/PlacedItem/traps/rock.tres" id="4_3taqo"]
 [ext_resource type="Resource" uid="uid://c2kyq4q1txs6p" path="res://resources/PlacedItem/traps/pit.tres" id="4_yfdf4"]
@@ -53,6 +54,11 @@ grow_vertical = 0
 [node name="Start Game" type="Button" parent="UI/HBoxContainer"]
 layout_mode = 2
 text = "Start Game"
+
+[node name="Switch Camera" type="Button" parent="UI/HBoxContainer"]
+layout_mode = 2
+text = "Switch Camera"
+script = ExtResource("2_4qbtd")
 
 [node name="VSeparator" type="VSeparator" parent="UI/HBoxContainer"]
 layout_mode = 2
@@ -270,6 +276,7 @@ script = ExtResource("9_uei18")
 
 [connection signal="item_successfully_placed" from="Environment" to="UI/Plop" method="play"]
 [connection signal="pressed" from="UI/HBoxContainer/Start Game" to="Environment" method="start_egg_hatching"]
+[connection signal="pressed" from="UI/HBoxContainer/Switch Camera" to="UI/HBoxContainer/Switch Camera" method="switch_camera"]
 [connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer/Pit Trap" to="UI/TopdownItemPlacer" method="place_item_requested"]
 [connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer/Pit Trap" to="UI/Click" method="play" unbinds=1]
 [connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer2/Rock" to="UI/TopdownItemPlacer" method="place_item_requested"]

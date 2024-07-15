@@ -1,7 +1,7 @@
 - Create a scene under scenes/environments
 	- Name it a number to denote which level it is. Starting from level 0
 	- Place at least 1 shoreLine.tscn scene into the level. Reshapw, resize accordingly. The gizmo should show where the turtles will disappear when they touch. Turtles will path towards the center of this gizmo
-	- Create a Camera3D, a DirectionalLight3D, and WorldEnvironment
+	- Create 2 Camera3Ds, a DirectionalLight3D, and WorldEnvironment
 		- Play with these so that it looks right
 	- Drop egg.tscn's into the level
 	- Create floors, walls, whatever. All these need to be a StaticBody3D for them to count as navigable tiles

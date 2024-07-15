@@ -4,9 +4,9 @@
 [ext_resource type="Script" path="res://scenes/Environment.gd" id="1_i6w6l"]
 [ext_resource type="Script" path="res://addons/topdown_item_placer/topdown_item_placer.gd" id="2_2u724"]
 [ext_resource type="Script" path="res://scenes/Switch Camera.gd" id="2_4qbtd"]
-[ext_resource type="Script" path="res://addons/topdown_item_placer/place_item_button.gd" id="3_6oegu"]
+[ext_resource type="PackedScene" uid="uid://daljcm05plui" path="res://scenes/ui/trapButton.tscn" id="3_mwsef"]
 [ext_resource type="Resource" uid="uid://d2ch1tgq77t7f" path="res://resources/PlacedItem/traps/rock.tres" id="4_3taqo"]
-[ext_resource type="Resource" uid="uid://c2kyq4q1txs6p" path="res://resources/PlacedItem/traps/pit.tres" id="4_yfdf4"]
+[ext_resource type="Resource" uid="uid://c2kyq4q1txs6p" path="res://resources/PlacedItem/traps/pit.tres" id="4_bf2b3"]
 [ext_resource type="Resource" uid="uid://bedbcfpmdf7n1" path="res://resources/PlacedItem/traps/oil spill.tres" id="5_s5hg1"]
 [ext_resource type="Resource" uid="uid://brlod6x1pbj6p" path="res://resources/PlacedItem/traps/pushbox.tres" id="6_iv2m8"]
 [ext_resource type="Resource" uid="uid://b5p4iyt7llnf" path="res://resources/PlacedItem/traps/straw tower.tres" id="7_ttprc"]
@@ -63,82 +63,43 @@ script = ExtResource("2_4qbtd")
 [node name="VSeparator" type="VSeparator" parent="UI/HBoxContainer"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/HBoxContainer"]
+[node name="TrapButton" parent="UI/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
 layout_mode = 2
+item = ExtResource("4_bf2b3")
+label = "Pit Trap"
+topdownItemPlacer = NodePath("../../TopdownItemPlacer")
+click = NodePath("../../Click")
 
-[node name="Pit Trap" type="Button" parent="UI/HBoxContainer/VBoxContainer" groups=["PlacedItemButton"]]
+[node name="TrapButton2" parent="UI/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
 layout_mode = 2
-text = "Pit Trap"
-script = ExtResource("3_6oegu")
-item = ExtResource("4_yfdf4")
-
-[node name="Count" type="Label" parent="UI/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "0
-"
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="UI/HBoxContainer"]
-layout_mode = 2
-
-[node name="Rock" type="Button" parent="UI/HBoxContainer/VBoxContainer2" groups=["PlacedItemButton"]]
-layout_mode = 2
-text = "Rock"
-script = ExtResource("3_6oegu")
 item = ExtResource("4_3taqo")
+label = "Rock"
+topdownItemPlacer = NodePath("../../TopdownItemPlacer")
+click = NodePath("../../Click")
 
-[node name="Count" type="Label" parent="UI/HBoxContainer/VBoxContainer2"]
+[node name="TrapButton3" parent="UI/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
 layout_mode = 2
-size_flags_horizontal = 4
-text = "0
-"
-
-[node name="VBoxContainer3" type="VBoxContainer" parent="UI/HBoxContainer"]
-layout_mode = 2
-
-[node name="Oil Spill" type="Button" parent="UI/HBoxContainer/VBoxContainer3" groups=["PlacedItemButton"]]
-layout_mode = 2
-text = "Oil Spill"
-script = ExtResource("3_6oegu")
 item = ExtResource("5_s5hg1")
+label = "Oil Spill"
+topdownItemPlacer = NodePath("../../TopdownItemPlacer")
+click = NodePath("../../Click")
 
-[node name="Count" type="Label" parent="UI/HBoxContainer/VBoxContainer3"]
+[node name="TrapButton4" parent="UI/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
 layout_mode = 2
-size_flags_horizontal = 4
-text = "0
-"
-
-[node name="VBoxContainer4" type="VBoxContainer" parent="UI/HBoxContainer"]
-layout_mode = 2
-
-[node name="Push Box" type="Button" parent="UI/HBoxContainer/VBoxContainer4" groups=["PlacedItemButton"]]
-layout_mode = 2
-text = "Push Box"
-script = ExtResource("3_6oegu")
 item = ExtResource("6_iv2m8")
+label = "Push Box"
+topdownItemPlacer = NodePath("../../TopdownItemPlacer")
+click = NodePath("../../Click")
 
-[node name="Count" type="Label" parent="UI/HBoxContainer/VBoxContainer4"]
+[node name="TrapButton5" parent="UI/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
 layout_mode = 2
-size_flags_horizontal = 4
-text = "0
-"
-
-[node name="VBoxContainer5" type="VBoxContainer" parent="UI/HBoxContainer"]
-layout_mode = 2
-
-[node name="Straw Tower" type="Button" parent="UI/HBoxContainer/VBoxContainer5" groups=["PlacedItemButton"]]
-layout_mode = 2
-text = "Straw Tower"
-script = ExtResource("3_6oegu")
 item = ExtResource("7_ttprc")
-
-[node name="Count" type="Label" parent="UI/HBoxContainer/VBoxContainer5"]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "0
-"
+label = "Straw Tower"
+topdownItemPlacer = NodePath("../../TopdownItemPlacer")
+click = NodePath("../../Click")
 
 [node name="TopdownItemPlacer" type="Control" parent="UI"]
+unique_name_in_owner = true
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("2_2u724")
@@ -252,6 +213,7 @@ size_flags_horizontal = 4
 text = "Level Selector"
 
 [node name="Click" type="AudioStreamPlayer" parent="UI"]
+unique_name_in_owner = true
 stream = ExtResource("10_wyoc3")
 
 [node name="Plop" type="AudioStreamPlayer" parent="UI"]
@@ -277,16 +239,6 @@ script = ExtResource("9_uei18")
 [connection signal="item_successfully_placed" from="Environment" to="UI/Plop" method="play"]
 [connection signal="pressed" from="UI/HBoxContainer/Start Game" to="Environment" method="start_egg_hatching"]
 [connection signal="pressed" from="UI/HBoxContainer/Switch Camera" to="UI/HBoxContainer/Switch Camera" method="switch_camera"]
-[connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer/Pit Trap" to="UI/TopdownItemPlacer" method="place_item_requested"]
-[connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer/Pit Trap" to="UI/Click" method="play" unbinds=1]
-[connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer2/Rock" to="UI/TopdownItemPlacer" method="place_item_requested"]
-[connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer2/Rock" to="UI/Click" method="play" unbinds=1]
-[connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer3/Oil Spill" to="UI/TopdownItemPlacer" method="place_item_requested"]
-[connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer3/Oil Spill" to="UI/Click" method="play" unbinds=1]
-[connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer4/Push Box" to="UI/TopdownItemPlacer" method="place_item_requested"]
-[connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer4/Push Box" to="UI/Click" method="play" unbinds=1]
-[connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer5/Straw Tower" to="UI/TopdownItemPlacer" method="place_item_requested"]
-[connection signal="pressed_item" from="UI/HBoxContainer/VBoxContainer5/Straw Tower" to="UI/Click" method="play" unbinds=1]
 [connection signal="placed_item" from="UI/TopdownItemPlacer" to="Environment" method="on_placed_item"]
 [connection signal="pressed" from="UI/VictoryDefeat/VictoryVBoxContainer/HBoxContainer/Button" to="LevelLoader" method="nextLevel"]
 [connection signal="pressed" from="UI/VictoryDefeat/VictoryVBoxContainer/HBoxContainer/Button2" to="UI/VictoryDefeat" method="load_level_selector"]

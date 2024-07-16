@@ -31,6 +31,10 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
+"sand": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/models/materials/Sand.tres"
+},
 "shore": {
 "use_external/enabled": true,
 "use_external/path": "res://assets/models/environment/materials/ShoreShaderMaterial.tres"

@@ -1,10 +1,32 @@
-[gd_scene load_steps=6 format=3 uid="uid://dhc0hlwiervw7"]
+[gd_scene load_steps=26 format=3 uid="uid://dhc0hlwiervw7"]
 
 [ext_resource type="Script" path="res://scenes/level selector/LevelContainer.gd" id="1_ki30r"]
 [ext_resource type="Resource" uid="uid://bawc1ivob6x2u" path="res://resources/level/levels.tres" id="2_o14oj"]
 [ext_resource type="PackedScene" uid="uid://dlgsv773i5bt" path="res://scenes/level selector/level_displayer.tscn" id="3_3g0r2"]
 [ext_resource type="AudioStream" uid="uid://cmgf1tuy65usn" path="res://assets/sounds/music/sailor_waltz_with_water_effects_c64_style.ogg" id="4_ag3lw"]
 [ext_resource type="PackedScene" uid="uid://ptb02aoy8gn1" path="res://addons/volume_control/volume_container.tscn" id="5_iq1ft"]
+[ext_resource type="PackedScene" uid="uid://dhf18esgb7rm" path="res://assets/models/Turtle.glb" id="6_qbwya"]
+[ext_resource type="PackedScene" uid="uid://coung64a8bdux" path="res://assets/ParticleEffects/EggBreaking.tscn" id="7_i1l65"]
+[ext_resource type="PackedScene" uid="uid://b2e82t5wpihh2" path="res://assets/models/push_box_preview_model.tscn" id="8_wgfjo"]
+[ext_resource type="PackedScene" uid="uid://bo3o1dq35i3jw" path="res://assets/models/environment/Cliffholder.gltf" id="9_eq40h"]
+[ext_resource type="PackedScene" uid="uid://dfvyp8kl3c0rm" path="res://assets/models/environment/Cliffside.gltf" id="10_1cngv"]
+[ext_resource type="PackedScene" uid="uid://dpa5k4rmsl4lg" path="res://assets/models/environment/lowpolyRock.gltf" id="11_48g3g"]
+[ext_resource type="PackedScene" uid="uid://cd1i4d2papecd" path="res://assets/models/environment/lowpoly_rock_shifted.tscn" id="12_qqd4n"]
+[ext_resource type="PackedScene" uid="uid://deru7aje8mcxr" path="res://assets/models/environment/Oil_Spill.gltf" id="13_ty3mt"]
+[ext_resource type="PackedScene" uid="uid://brsbt65h5dxbt" path="res://assets/models/environment/pitTrap.gltf" id="14_74cl0"]
+[ext_resource type="PackedScene" uid="uid://djrkl461v20wq" path="res://assets/models/environment/sandTile.gltf" id="15_55vnw"]
+[ext_resource type="PackedScene" uid="uid://44l4drdiacrc" path="res://assets/models/environment/ShoreStraight1.glb" id="16_1vbug"]
+[ext_resource type="PackedScene" uid="uid://cdwjkwkbjweqs" path="res://assets/models/environment/ShoreStraight2.glb" id="17_fxivb"]
+[ext_resource type="PackedScene" uid="uid://cwto1p2l2enr4" path="res://assets/models/environment/ShoreStraight3.glb" id="18_ubhoc"]
+[ext_resource type="PackedScene" uid="uid://dgi4cr4nd7c4u" path="res://assets/models/environment/ShoreStraight4.glb" id="19_qe6pg"]
+[ext_resource type="PackedScene" uid="uid://gkk7s0cl0ve7" path="res://assets/models/environment/Straw.gltf" id="20_74okk"]
+[ext_resource type="PackedScene" uid="uid://b36ii6jvmg7sg" path="res://assets/models/environment/StrawShooter.gltf" id="21_3oflo"]
+[ext_resource type="PackedScene" uid="uid://3vmcretrcv3k" path="res://assets/models/environment/StrawTower.gltf" id="22_21d5q"]
+[ext_resource type="PackedScene" uid="uid://c47ogn5xhu8v7" path="res://assets/models/environment/TestObject.gltf" id="23_r7tfg"]
+[ext_resource type="PackedScene" uid="uid://cray0qdrgjtdd" path="res://assets/models/environment/WaterPlane.glb" id="24_ocql7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o53sg"]
+bg_color = Color(0.6, 0.6, 0.745098, 1)
 
 [node name="LevelSelector" type="Panel"]
 anchors_preset = 15
@@ -12,6 +34,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_o53sg")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -66,3 +89,46 @@ anchor_right = 1.0
 offset_left = -168.0
 offset_right = 0.0
 grow_horizontal = 0
+
+[node name="Shader Precompilation" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Shader Precompilation"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.96777)
+
+[node name="Turtle2" parent="Shader Precompilation" instance=ExtResource("6_qbwya")]
+
+[node name="EggBreaking" parent="Shader Precompilation" instance=ExtResource("7_i1l65")]
+
+[node name="PushBoxPreviewModel" parent="Shader Precompilation" instance=ExtResource("8_wgfjo")]
+
+[node name="Cliffholder" parent="Shader Precompilation" instance=ExtResource("9_eq40h")]
+
+[node name="Cliffside" parent="Shader Precompilation" instance=ExtResource("10_1cngv")]
+
+[node name="lowpolyRock" parent="Shader Precompilation" instance=ExtResource("11_48g3g")]
+
+[node name="lowpolyRockShifted" parent="Shader Precompilation" instance=ExtResource("12_qqd4n")]
+
+[node name="Oil_Spill" parent="Shader Precompilation" instance=ExtResource("13_ty3mt")]
+
+[node name="pitTrap" parent="Shader Precompilation" instance=ExtResource("14_74cl0")]
+
+[node name="sandTile" parent="Shader Precompilation" instance=ExtResource("15_55vnw")]
+
+[node name="ShoreStraight12" parent="Shader Precompilation" instance=ExtResource("16_1vbug")]
+
+[node name="ShoreStraight22" parent="Shader Precompilation" instance=ExtResource("17_fxivb")]
+
+[node name="ShoreStraight32" parent="Shader Precompilation" instance=ExtResource("18_ubhoc")]
+
+[node name="ShoreStraight42" parent="Shader Precompilation" instance=ExtResource("19_qe6pg")]
+
+[node name="Straw2" parent="Shader Precompilation" instance=ExtResource("20_74okk")]
+
+[node name="StrawShooter" parent="Shader Precompilation" instance=ExtResource("21_3oflo")]
+
+[node name="StrawTower" parent="Shader Precompilation" instance=ExtResource("22_21d5q")]
+
+[node name="TestObject" parent="Shader Precompilation" instance=ExtResource("23_r7tfg")]
+
+[node name="WaterPlane" parent="Shader Precompilation" instance=ExtResource("24_ocql7")]

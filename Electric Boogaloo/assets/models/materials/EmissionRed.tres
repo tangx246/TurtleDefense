@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dbca603m5lco5"]
+
+[resource]
+resource_name = "EmissionWhite"
+transparency = 1
+cull_mode = 2
+albedo_color = Color(0.509804, 0.305882, 0.294118, 0.45098)
+metallic = 1.0
+emission_enabled = true
+emission = Color(0.57, 0.239685, 0.2223, 1)

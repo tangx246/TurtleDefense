@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cuncrh4qgna86"]
+[gd_scene load_steps=14 format=3 uid="uid://cuncrh4qgna86"]
 
 [ext_resource type="PackedScene" uid="uid://dhf18esgb7rm" path="res://assets/models/Turtle.glb" id="1_dnms5"]
 [ext_resource type="PackedScene" uid="uid://dyb6x4xtelhw2" path="res://assets/models/Egg.glb" id="2_vb3h6"]
@@ -8,6 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://cdwjkwkbjweqs" path="res://assets/models/environment/ShoreStraight2.glb" id="6_0tx1v"]
 [ext_resource type="PackedScene" uid="uid://cwto1p2l2enr4" path="res://assets/models/environment/ShoreStraight3.glb" id="7_x3262"]
 [ext_resource type="PackedScene" uid="uid://dgi4cr4nd7c4u" path="res://assets/models/environment/ShoreStraight4.glb" id="8_83qxm"]
+[ext_resource type="PackedScene" uid="uid://br4v375ykxwat" path="res://scenes/traps/straw tower.tscn" id="9_vy8a0"]
+[ext_resource type="PackedScene" uid="uid://c0f51m3ptq7hn" path="res://assets/models/TowerAffectedArea.glb" id="10_26nk7"]
+[ext_resource type="PackedScene" uid="uid://dygqhuohvwop4" path="res://assets/models/PushBoxAffectedArea.glb" id="11_mhfpo"]
+[ext_resource type="PackedScene" uid="uid://151p2g7cy8gf" path="res://scenes/environments/Tiles/Sand_Tile.tscn" id="12_p6jsm"]
 
 [sub_resource type="Environment" id="Environment_8ff27"]
 background_mode = 2
@@ -26,7 +30,7 @@ environment = SubResource("Environment_8ff27")
 transform = Transform3D(0.822938, -0.51749, -0.234472, 0, -0.412707, 0.910864, -0.568131, -0.749585, -0.339632, 0, 0, 0)
 
 [node name="Egg2" parent="." instance=ExtResource("2_vb3h6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.29414, 0, -4.78656)
 
 [node name="EggBreaking" parent="." instance=ExtResource("3_sr4gq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 1)
@@ -35,7 +39,7 @@ emitting = true
 [node name="WaterPlane" parent="." instance=ExtResource("4_3ykb7")]
 
 [node name="WaterPlane2" parent="." instance=ExtResource("4_3ykb7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.58021, 1)
 
 [node name="WaterPlane3" parent="." instance=ExtResource("4_3ykb7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
@@ -47,10 +51,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
 
 [node name="ShoreStraight22" parent="." instance=ExtResource("6_0tx1v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, 1)
 
 [node name="ShoreStraight32" parent="." instance=ExtResource("7_x3262")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
 
 [node name="ShoreStraight42" parent="." instance=ExtResource("8_83qxm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
+
+[node name="Straw Tower" parent="." instance=ExtResource("9_vy8a0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.41604, 0, -6.67301)
+
+[node name="TowerAffectedArea2" parent="." instance=ExtResource("10_26nk7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.52131, 0, -1.61613)
+
+[node name="PushBoxAffectedArea2" parent="." instance=ExtResource("11_mhfpo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.76443, 0, -1.25012)
+
+[node name="SandTile_Tile" parent="." instance=ExtResource("12_p6jsm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3924, 0, -11.2121)
+
+[node name="SandTile_Tile2" parent="." instance=ExtResource("12_p6jsm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.39118, 1.8999e-07, -6.23749)
+
+[node name="SandTile_Tile3" parent="." instance=ExtResource("12_p6jsm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.28188, 0, -6.17719)
+
+[node name="SandTile_Tile4" parent="." instance=ExtResource("12_p6jsm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.23413, 0, -11.1202)

@@ -34,6 +34,10 @@ project/assembly_name="Turtle Defense"
 
 enabled=PackedStringArray("res://addons/player_prefs/plugin.cfg", "res://addons/topdown_item_placer/plugin.cfg")
 
+[gui]
+
+timers/tooltip_delay_sec=0.0
+
 [input]
 
 "Rotate Clockwise"={

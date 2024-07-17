@@ -30,6 +30,7 @@ ambient_light_color = Color(1, 1, 1, 1)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.8844, -0.222054, 0.410522, -6.73801e-05, 0.879511, 0.475879, -0.46673, -0.420895, 0.777825, 3.47917, 5.61609, 6.65356)
+current = true
 
 [node name="Camera3D2" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.00394344, 9.02202, -1.0134)

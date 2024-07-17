@@ -105,6 +105,7 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("2_2u724")
 end_placing_once_placed = true
+raycast_mask = 2
 
 [node name="VictoryDefeat" type="Panel" parent="UI"]
 unique_name_in_owner = true

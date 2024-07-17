@@ -1,5 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://vyoe20st18hg"]
+[gd_scene load_steps=3 format=3 uid="uid://vyoe20st18hg"]
 
 [ext_resource type="PackedScene" uid="uid://3vmcretrcv3k" path="res://assets/models/environment/StrawTower.gltf" id="1_u6xqh"]
+[ext_resource type="PackedScene" uid="uid://c0f51m3ptq7hn" path="res://assets/models/TowerAffectedArea.glb" id="2_vdpf1"]
 
 [node name="StrawTowerPreviewModel" instance=ExtResource("1_u6xqh")]
+
+[node name="TowerAffectedArea2" parent="." index="1" instance=ExtResource("2_vdpf1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 5)

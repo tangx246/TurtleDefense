@@ -222,6 +222,25 @@ stream = ExtResource("10_wyoc3")
 [node name="Plop" type="AudioStreamPlayer" parent="UI"]
 stream = ExtResource("11_3v2hx")
 
+[node name="Help" type="Panel" parent="UI"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="CenterContainer" type="CenterContainer" parent="UI/Help"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="UI/Help/CenterContainer"]
+layout_mode = 2
+text = "?"
+
 [node name="LevelLoader" type="Node3D" parent="."]
 unique_name_in_owner = true
 script = ExtResource("1_5431n")

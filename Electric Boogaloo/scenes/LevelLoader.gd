@@ -6,6 +6,7 @@ extends Node3D
 @onready var trapCounts : TrapCounts = %TrapCounts
 @onready var victoryFailureCondition : VictoryFailureConditions = %VictoryFailureConditions
 @onready var victoryDefeatUi : Control = %VictoryDefeat
+@onready var helpTooltip : Control = %Help
 
 @export var currentLevelIndex : int = 0
 
@@ -43,6 +44,9 @@ func loadLevel(level: Level):
 	trapCounts.update_counts()
 
 	victoryDefeatUi.visible = false
+	
+	helpTooltip.visible = !level.helpTooltip.is_empty()
+	helpTooltip.tooltip_text = level.helpTooltip
 
 
 func _on_victory_failure_conditions_game_end(victory):

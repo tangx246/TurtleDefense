@@ -48,7 +48,6 @@ func loadLevel(level: Level):
 	helpTooltip.visible = !level.helpTooltip.is_empty()
 	helpTooltip.tooltip_text = level.helpTooltip
 
-
 func _on_victory_failure_conditions_game_end(victory):
 	if victory:
 		LevelProgress.setCurrentProgress(currentLevelIndex + 1)

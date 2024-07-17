@@ -3,4 +3,4 @@ extends Resource
 
 @export var environment : PackedScene
 @export var trapCounts : Array[TrapCount]
-@export var helpTooltip : String
+@export_multiline var helpTooltip : String

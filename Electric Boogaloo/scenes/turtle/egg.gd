@@ -27,9 +27,9 @@ func hatch():
 	var parent = get_parent()
 	var instantiated = turtle.instantiate()
 	
+	instantiated.position = position
+	instantiated.rotation = rotation
 	parent.add_child(instantiated)
-	instantiated.global_position = global_position
-	instantiated.global_rotation = global_rotation
 	
 	var eggCrackEffect : Node3D = eggCrack.instantiate()
 	parent.add_child(eggCrackEffect)

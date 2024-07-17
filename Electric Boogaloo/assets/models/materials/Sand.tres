@@ -30,6 +30,7 @@ specular_mode = 1
 albedo_color = Color(0.82606, 0.82606, 0.82606, 1)
 albedo_texture = ExtResource("1_3jvjq")
 normal_enabled = true
+normal_scale = 3.0
 normal_texture = ExtResource("3_tb53h")
 heightmap_scale = 9.955
 detail_mask = SubResource("CurveTexture_5cyyd")

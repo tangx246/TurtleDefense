@@ -5,7 +5,7 @@ signal turtle_escaped
 
 func _on_area_3d_body_entered(body : Node3D):
 	var turtle = body.get_parent() as Turtle
-	if not turtle:
+	if not turtle or turtle.dead:
 		return
 	
 	turtle_escaped.emit()

@@ -29,6 +29,7 @@ ambient_light_color = Color(1, 1, 1, 1)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.903351, -0.203982, 0.377291, 0, 0.879666, 0.475592, -0.428902, -0.429626, 0.794647, 3.09916, 3.39763, 4.35198)
+current = true
 
 [node name="Camera3D2" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.00394344, 9.02202, -1.0134)
@@ -38,7 +39,7 @@ environment = SubResource("Environment_t7v8e")
 camera_attributes = SubResource("CameraAttributesPractical_wnbg6")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.717729, 0.045782, 0.694816, -0.427493, 0.816624, 0.387782, -0.54965, -0.575351, 0.605686, 0, 1.37637, 0)
+transform = Transform3D(0.717729, 0.0457822, 0.694816, -0.427493, 0.816624, 0.387782, -0.54965, -0.575351, 0.605686, 0, 1.37637, 0)
 
 [node name="Egg" parent="." instance=ExtResource("1_4all7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.280517, 0.05, 0.418781)
@@ -55,6 +56,7 @@ transform = Transform3D(12, 0, 0, 0, 1, 0, 0, 0, 1, 0.559384, 0.05, -3.92591)
 [node name="Environment" type="Node3D" parent="."]
 
 [node name="SandTile_Tile" parent="Environment" instance=ExtResource("3_i668g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00582504, 0.0174568, -0.0152931)
 
 [node name="Main_SHoreline" parent="Environment" instance=ExtResource("3_i668g")]
 transform = Transform3D(25.9736, 0, 0, 0, 1.00099, 0, 0, 0, 3.44287, 65, -0.122703, -5)

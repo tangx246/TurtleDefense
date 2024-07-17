@@ -38,3 +38,4 @@ count = 0
 script = ExtResource("2_svrwb")
 environment = ExtResource("1_muya4")
 trapCounts = Array[ExtResource("3_2y18w")]([SubResource("Resource_jgiwx"), SubResource("Resource_ya6ul"), SubResource("Resource_3cqh6"), SubResource("Resource_olrnq"), SubResource("Resource_xm243")])
+helpTooltip = ""

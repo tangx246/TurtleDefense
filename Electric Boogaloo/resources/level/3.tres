@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Level" load_steps=14 format=3 uid="uid://1bfsdidyq2vj"]
+
+[ext_resource type="PackedScene" uid="uid://nb6ocvmkxvhx" path="res://scenes/environments/3.tscn" id="1_e2kem"]
+[ext_resource type="Script" path="res://resources/level/level.gd" id="2_x1tjw"]
+[ext_resource type="Script" path="res://scenes/TrapCount.gd" id="3_lgy5y"]
+[ext_resource type="Resource" uid="uid://c2kyq4q1txs6p" path="res://resources/PlacedItem/traps/pit.tres" id="4_r7nb3"]
+[ext_resource type="Resource" uid="uid://bedbcfpmdf7n1" path="res://resources/PlacedItem/traps/oil spill.tres" id="5_d2m0t"]
+[ext_resource type="Resource" uid="uid://d2ch1tgq77t7f" path="res://resources/PlacedItem/traps/rock.tres" id="6_dt51r"]
+[ext_resource type="Resource" uid="uid://brlod6x1pbj6p" path="res://resources/PlacedItem/traps/pushbox.tres" id="7_pgtl7"]
+[ext_resource type="Resource" uid="uid://b5p4iyt7llnf" path="res://resources/PlacedItem/traps/straw tower.tres" id="8_o6325"]
+
+[sub_resource type="Resource" id="Resource_jgiwx"]
+script = ExtResource("3_lgy5y")
+trap = ExtResource("4_r7nb3")
+count = 0
+
+[sub_resource type="Resource" id="Resource_ya6ul"]
+script = ExtResource("3_lgy5y")
+trap = ExtResource("5_d2m0t")
+count = 0
+
+[sub_resource type="Resource" id="Resource_3cqh6"]
+script = ExtResource("3_lgy5y")
+trap = ExtResource("6_dt51r")
+count = 0
+
+[sub_resource type="Resource" id="Resource_olrnq"]
+script = ExtResource("3_lgy5y")
+trap = ExtResource("7_pgtl7")
+count = 0
+
+[sub_resource type="Resource" id="Resource_xm243"]
+script = ExtResource("3_lgy5y")
+trap = ExtResource("8_o6325")
+count = 1
+
+[resource]
+script = ExtResource("2_x1tjw")
+environment = ExtResource("1_e2kem")
+trapCounts = Array[ExtResource("3_lgy5y")]([SubResource("Resource_jgiwx"), SubResource("Resource_ya6ul"), SubResource("Resource_3cqh6"), SubResource("Resource_olrnq"), SubResource("Resource_xm243")])
+helpTooltip = ""

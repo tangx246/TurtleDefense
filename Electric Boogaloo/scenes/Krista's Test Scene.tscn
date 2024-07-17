@@ -30,6 +30,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
 
 [node name="EggBreaking" parent="." instance=ExtResource("3_sr4gq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 1)
+emitting = true
 
 [node name="WaterPlane" parent="." instance=ExtResource("4_3ykb7")]
 

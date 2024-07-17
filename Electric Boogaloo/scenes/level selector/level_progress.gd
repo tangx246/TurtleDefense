@@ -12,8 +12,9 @@ func save():
 	PlayerPrefs.save()
 	
 func setCurrentProgress(level : int):
-	unlockedLevel = level
-	save()
+	if level > unlockedLevel:
+		unlockedLevel = level
+		save()
 
 func getCurrentProgress() -> int:
 	return unlockedLevel

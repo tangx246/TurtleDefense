@@ -49,6 +49,7 @@ shape = SubResource("BoxShape3D_7xuvy")
 [node name="Turtle2" parent="MovementAgent" instance=ExtResource("1_4wj1e")]
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="MovementAgent"]
+unique_name_in_owner = true
 path_desired_distance = 0.2
 target_desired_distance = 0.2
 path_height_offset = 0.2

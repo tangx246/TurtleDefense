@@ -4,7 +4,7 @@ extends Control
 signal placing_item(placing: bool, item_name: String)
 signal placed_item(item: PlacedItem, global_pos: Vector3, global_rot: Vector3)
 
-@export var finish_placing_once_placed : bool = false
+@export var end_placing_once_placed : bool = false
 @export var ray_length : float = 1000
 
 var _placing : bool = false:
@@ -36,7 +36,7 @@ func _unhandled_input(event: InputEvent):
 	if mouse.is_pressed() and mouse.button_mask == MOUSE_BUTTON_MASK_LEFT:
 		placed_item.emit(_current_item, _current_item_preview_scene.global_position, _current_item_preview_scene.global_rotation)
 		
-		if finish_placing_once_placed:
+		if end_placing_once_placed:
 			cancel_item_placing()
 
 func _input(event: InputEvent):

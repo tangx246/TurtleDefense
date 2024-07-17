@@ -25,7 +25,7 @@ func _physics_process(_delta):
 	var shortestDistance : float = INF
 	var closestShoreline : Node3D
 	for shoreline : Node3D in get_tree().get_nodes_in_group("ShoreLine"):
-		var distance = global_position.distance_squared_to(shoreline.global_position)
+		var distance = agent.global_position.distance_squared_to(shoreline.global_position)
 		if distance < shortestDistance and has_path_to(shoreline.global_position):
 			shortestDistance = distance
 			closestShoreline = shoreline

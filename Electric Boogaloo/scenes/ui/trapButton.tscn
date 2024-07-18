@@ -1,26 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://daljcm05plui"]
+[gd_scene load_steps=5 format=3 uid="uid://daljcm05plui"]
 
 [ext_resource type="Script" path="res://scenes/ui/trapButton.gd" id="1_ano5h"]
 [ext_resource type="Script" path="res://addons/topdown_item_placer/place_item_button.gd" id="1_cwmox"]
 
-[node name="TrapButton" type="MarginContainer"]
-script = ExtResource("1_ano5h")
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g446h"]
 
-[node name="Button" type="Button" parent="." groups=["PlacedItemButton"]]
-unique_name_in_owner = true
-layout_mode = 2
-script = ExtResource("1_cwmox")
+[sub_resource type="Theme" id="Theme_h0cbf"]
+Button/styles/normal = SubResource("StyleBoxEmpty_g446h")
+
+[node name="TrapButton" type="MarginContainer"]
+theme = SubResource("Theme_h0cbf")
+script = ExtResource("1_ano5h")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Label" type="Label" parent="VBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
 mouse_filter = 2
 expand_mode = 4
@@ -30,5 +28,10 @@ layout_mode = 2
 size_flags_horizontal = 4
 text = "0
 "
+
+[node name="Button" type="Button" parent="." groups=["PlacedItemButton"]]
+unique_name_in_owner = true
+layout_mode = 2
+script = ExtResource("1_cwmox")
 
 [connection signal="pressed_item" from="Button" to="." method="_on_button_pressed_item"]

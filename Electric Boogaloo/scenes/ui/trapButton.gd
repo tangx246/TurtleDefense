@@ -9,13 +9,12 @@ signal pressed_item(item: PlacedItem)
 @export var topdownItemPlacer : TopdownItemPlacer
 @export var click : AudioStreamPlayer
 
-@onready var text : Label = %Label
 @onready var textureRect : TextureRect = %TextureRect
 @onready var button : PlacedItemButton = %Button
 
 func _ready():
 	button.item = item
-	text.text = label
+	button.tooltip_text = label
 	textureRect.texture = icon
 
 func _on_button_pressed_item(_item: PlacedItem):

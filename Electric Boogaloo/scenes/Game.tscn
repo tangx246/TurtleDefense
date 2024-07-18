@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://l0nwp737je10"]
+[gd_scene load_steps=24 format=3 uid="uid://l0nwp737je10"]
 
 [ext_resource type="Script" path="res://scenes/LevelLoader.gd" id="1_5431n"]
 [ext_resource type="Script" path="res://scenes/Environment.gd" id="1_i6w6l"]
@@ -7,16 +7,21 @@
 [ext_resource type="PackedScene" uid="uid://daljcm05plui" path="res://scenes/ui/trapButton.tscn" id="3_mwsef"]
 [ext_resource type="Resource" uid="uid://d2ch1tgq77t7f" path="res://resources/PlacedItem/traps/rock.tres" id="4_3taqo"]
 [ext_resource type="Resource" uid="uid://c2kyq4q1txs6p" path="res://resources/PlacedItem/traps/pit.tres" id="4_bf2b3"]
+[ext_resource type="Texture2D" uid="uid://dx818c1s1a2q7" path="res://assets/UI/TrapIcons/SpikeTrapIcon.png" id="5_lnukp"]
 [ext_resource type="Resource" uid="uid://bedbcfpmdf7n1" path="res://resources/PlacedItem/traps/oil spill.tres" id="5_s5hg1"]
 [ext_resource type="Resource" uid="uid://brlod6x1pbj6p" path="res://resources/PlacedItem/traps/pushbox.tres" id="6_iv2m8"]
 [ext_resource type="Resource" uid="uid://b5p4iyt7llnf" path="res://resources/PlacedItem/traps/straw tower.tres" id="7_ttprc"]
+[ext_resource type="Texture2D" uid="uid://bd2pkhxyii1n" path="res://assets/UI/TrapIcons/RockIcon.png" id="7_x5n0w"]
 [ext_resource type="AudioStream" uid="uid://nwaq4gow1b0p" path="res://assets/sounds/music/8bit Bossa.ogg" id="7_xul4c"]
 [ext_resource type="Script" path="res://scenes/TrapCounts.gd" id="8_rh0gq"]
+[ext_resource type="Texture2D" uid="uid://deto248tcxslw" path="res://assets/UI/TrapIcons/OilPuddleIcon.png" id="9_q4hl7"]
 [ext_resource type="Script" path="res://scenes/VictoryFailureConditions.gd" id="9_uei18"]
 [ext_resource type="Script" path="res://scenes/VictoryDefeatUi.gd" id="9_ui8ai"]
 [ext_resource type="AudioStream" uid="uid://cj5b5oxg32pvd" path="res://assets/sounds/sfx/mouseclick1.ogg" id="10_wyoc3"]
 [ext_resource type="AudioStream" uid="uid://b0dok0knpcjtc" path="res://assets/sounds/sfx/plop.ogg" id="11_3v2hx"]
 [ext_resource type="Resource" uid="uid://bawc1ivob6x2u" path="res://resources/level/levels.tres" id="11_dlvsh"]
+[ext_resource type="Texture2D" uid="uid://cmq6yqe3ova7i" path="res://assets/UI/TrapIcons/PushingBoxIcon.png" id="11_iuuwx"]
+[ext_resource type="Texture2D" uid="uid://csju4r7dh56d3" path="res://assets/UI/TrapIcons/TurretIcon.png" id="13_r2kp8"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_4gw0b"]
 geometry_parsed_geometry_type = 1
@@ -67,6 +72,7 @@ layout_mode = 2
 [node name="TrapButton" parent="UI/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
 layout_mode = 2
 item = ExtResource("4_bf2b3")
+icon = ExtResource("5_lnukp")
 label = "Pit Trap"
 topdownItemPlacer = NodePath("../../TopdownItemPlacer")
 click = NodePath("../../Click")
@@ -74,6 +80,7 @@ click = NodePath("../../Click")
 [node name="TrapButton2" parent="UI/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
 layout_mode = 2
 item = ExtResource("4_3taqo")
+icon = ExtResource("7_x5n0w")
 label = "Rock"
 topdownItemPlacer = NodePath("../../TopdownItemPlacer")
 click = NodePath("../../Click")
@@ -81,6 +88,7 @@ click = NodePath("../../Click")
 [node name="TrapButton3" parent="UI/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
 layout_mode = 2
 item = ExtResource("5_s5hg1")
+icon = ExtResource("9_q4hl7")
 label = "Oil Spill"
 topdownItemPlacer = NodePath("../../TopdownItemPlacer")
 click = NodePath("../../Click")
@@ -88,6 +96,7 @@ click = NodePath("../../Click")
 [node name="TrapButton4" parent="UI/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
 layout_mode = 2
 item = ExtResource("6_iv2m8")
+icon = ExtResource("11_iuuwx")
 label = "Push Box"
 topdownItemPlacer = NodePath("../../TopdownItemPlacer")
 click = NodePath("../../Click")
@@ -95,6 +104,7 @@ click = NodePath("../../Click")
 [node name="TrapButton5" parent="UI/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
 layout_mode = 2
 item = ExtResource("7_ttprc")
+icon = ExtResource("13_r2kp8")
 label = "Straw Tower"
 topdownItemPlacer = NodePath("../../TopdownItemPlacer")
 click = NodePath("../../Click")

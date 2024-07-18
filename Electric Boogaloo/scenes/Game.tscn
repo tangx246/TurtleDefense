@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://l0nwp737je10"]
+[gd_scene load_steps=25 format=3 uid="uid://l0nwp737je10"]
 
 [ext_resource type="Script" path="res://scenes/LevelLoader.gd" id="1_5431n"]
 [ext_resource type="Script" path="res://scenes/Environment.gd" id="1_i6w6l"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://daljcm05plui" path="res://scenes/ui/trapButton.tscn" id="3_mwsef"]
 [ext_resource type="Resource" uid="uid://d2ch1tgq77t7f" path="res://resources/PlacedItem/traps/rock.tres" id="4_3taqo"]
 [ext_resource type="Resource" uid="uid://c2kyq4q1txs6p" path="res://resources/PlacedItem/traps/pit.tres" id="4_bf2b3"]
+[ext_resource type="Theme" uid="uid://c8n5ojgmw4lji" path="res://assets/UI/Themes/TrapMenu.tres" id="4_fqmjj"]
 [ext_resource type="Texture2D" uid="uid://dx818c1s1a2q7" path="res://assets/UI/TrapIcons/SpikeTrapIcon.png" id="5_lnukp"]
 [ext_resource type="Resource" uid="uid://bedbcfpmdf7n1" path="res://resources/PlacedItem/traps/oil spill.tres" id="5_s5hg1"]
 [ext_resource type="Resource" uid="uid://brlod6x1pbj6p" path="res://resources/PlacedItem/traps/pushbox.tres" id="6_iv2m8"]
@@ -44,70 +45,93 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UI"]
+[node name="MarginContainer" type="MarginContainer" parent="UI"]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
+anchors_preset = 12
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = -40.0
-offset_right = 20.0
+offset_top = -176.0
+offset_right = 2.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
 
-[node name="Start Game" type="Button" parent="UI/HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/MarginContainer"]
 layout_mode = 2
-text = "Start Game"
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("4_fqmjj")
 
-[node name="Switch Camera" type="Button" parent="UI/HBoxContainer"]
+[node name="Start Game" type="Button" parent="UI/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
-text = "Switch Camera"
+text = "Start
+Game"
+
+[node name="Switch Camera" type="Button" parent="UI/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(125, 125)
+layout_mode = 2
+text = "Switch
+Camera"
 script = ExtResource("2_4qbtd")
 
-[node name="VSeparator" type="VSeparator" parent="UI/HBoxContainer"]
+[node name="VSeparator" type="VSeparator" parent="UI/MarginContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="TrapButton" parent="UI/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
+[node name="TrapButton" parent="UI/MarginContainer/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
+theme = ExtResource("4_fqmjj")
 item = ExtResource("4_bf2b3")
 icon = ExtResource("5_lnukp")
 label = "Pit Trap"
-topdownItemPlacer = NodePath("../../TopdownItemPlacer")
-click = NodePath("../../Click")
+topdownItemPlacer = NodePath("../../../TopdownItemPlacer")
+click = NodePath("../../../Click")
 
-[node name="TrapButton2" parent="UI/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
+[node name="TrapButton2" parent="UI/MarginContainer/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
+theme = null
 item = ExtResource("4_3taqo")
 icon = ExtResource("7_x5n0w")
 label = "Rock"
-topdownItemPlacer = NodePath("../../TopdownItemPlacer")
-click = NodePath("../../Click")
+topdownItemPlacer = NodePath("../../../TopdownItemPlacer")
+click = NodePath("../../../Click")
 
-[node name="TrapButton3" parent="UI/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
+[node name="TrapButton3" parent="UI/MarginContainer/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
+theme = null
 item = ExtResource("5_s5hg1")
 icon = ExtResource("9_q4hl7")
 label = "Oil Spill"
-topdownItemPlacer = NodePath("../../TopdownItemPlacer")
-click = NodePath("../../Click")
+topdownItemPlacer = NodePath("../../../TopdownItemPlacer")
+click = NodePath("../../../Click")
 
-[node name="TrapButton4" parent="UI/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
+[node name="TrapButton4" parent="UI/MarginContainer/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
+theme = null
 item = ExtResource("6_iv2m8")
 icon = ExtResource("11_iuuwx")
 label = "Push Box"
-topdownItemPlacer = NodePath("../../TopdownItemPlacer")
-click = NodePath("../../Click")
+topdownItemPlacer = NodePath("../../../TopdownItemPlacer")
+click = NodePath("../../../Click")
 
-[node name="TrapButton5" parent="UI/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
+[node name="TrapButton5" parent="UI/MarginContainer/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
+theme = null
 item = ExtResource("7_ttprc")
 icon = ExtResource("13_r2kp8")
 label = "Straw Tower"
-topdownItemPlacer = NodePath("../../TopdownItemPlacer")
-click = NodePath("../../Click")
+topdownItemPlacer = NodePath("../../../TopdownItemPlacer")
+click = NodePath("../../../Click")
 
 [node name="TopdownItemPlacer" type="Control" parent="UI"]
 unique_name_in_owner = true
@@ -269,8 +293,8 @@ unique_name_in_owner = true
 script = ExtResource("9_uei18")
 
 [connection signal="item_successfully_placed" from="Environment" to="UI/Plop" method="play"]
-[connection signal="pressed" from="UI/HBoxContainer/Start Game" to="Environment" method="start_egg_hatching"]
-[connection signal="pressed" from="UI/HBoxContainer/Switch Camera" to="UI/HBoxContainer/Switch Camera" method="switch_camera"]
+[connection signal="pressed" from="UI/MarginContainer/HBoxContainer/Start Game" to="Environment" method="start_egg_hatching"]
+[connection signal="pressed" from="UI/MarginContainer/HBoxContainer/Switch Camera" to="UI/MarginContainer/HBoxContainer/Switch Camera" method="switch_camera"]
 [connection signal="placed_item" from="UI/TopdownItemPlacer" to="Environment" method="on_placed_item"]
 [connection signal="pressed" from="UI/VictoryDefeat/VictoryVBoxContainer/HBoxContainer/Button" to="LevelLoader" method="nextLevel"]
 [connection signal="pressed" from="UI/VictoryDefeat/VictoryVBoxContainer/HBoxContainer/Button2" to="UI/VictoryDefeat" method="load_level_selector"]

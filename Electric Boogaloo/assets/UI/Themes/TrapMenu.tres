@@ -1,0 +1,14 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://c8n5ojgmw4lji"]
+
+[ext_resource type="StyleBox" uid="uid://bo6lglwc113lb" path="res://assets/UI/Themes/TrapMenuButton.tres" id="1_2etle"]
+[ext_resource type="StyleBox" uid="uid://7ax8dtk8alh4" path="res://assets/UI/Themes/TrapMenuButtonHoverFocus.tres" id="2_kbfl6"]
+[ext_resource type="StyleBox" uid="uid://4j6pgh5g4hgw" path="res://assets/UI/Themes/TrapMenuButtonSBNormal.tres" id="2_micp7"]
+
+[resource]
+Button/font_sizes/font_size = 24
+Button/styles/disabled = ExtResource("1_2etle")
+Button/styles/focus = ExtResource("1_2etle")
+Button/styles/hover = ExtResource("2_kbfl6")
+Button/styles/normal = ExtResource("2_micp7")
+Button/styles/pressed = ExtResource("1_2etle")
+Label/font_sizes/font_size = 24

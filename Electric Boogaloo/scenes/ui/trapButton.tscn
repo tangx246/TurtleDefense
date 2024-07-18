@@ -23,11 +23,24 @@ layout_mode = 2
 mouse_filter = 2
 expand_mode = 4
 
-[node name="Count" type="Label" parent="VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/TextureRect"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 5.0
+offset_right = 140.0
+offset_bottom = 115.0
+
+[node name="Count" type="Label" parent="VBoxContainer/TextureRect/MarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
 text = "0
 "
+vertical_alignment = 2
 
 [node name="Button" type="Button" parent="." groups=["PlacedItemButton"]]
 unique_name_in_owner = true

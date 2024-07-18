@@ -5,10 +5,29 @@
 [ext_resource type="StyleBox" uid="uid://4j6pgh5g4hgw" path="res://assets/UI/Themes/TrapMenuButtonSBNormal.tres" id="2_micp7"]
 
 [resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_focus_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 1)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/outline_size = 4
 Button/font_sizes/font_size = 24
 Button/styles/disabled = ExtResource("1_2etle")
 Button/styles/focus = ExtResource("1_2etle")
 Button/styles/hover = ExtResource("2_kbfl6")
 Button/styles/normal = ExtResource("2_micp7")
 Button/styles/pressed = ExtResource("1_2etle")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(1, 1, 1, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/outline_size = 4
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
 Label/font_sizes/font_size = 24

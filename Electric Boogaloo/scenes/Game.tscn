@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://daljcm05plui" path="res://scenes/ui/trapButton.tscn" id="3_mwsef"]
 [ext_resource type="Resource" uid="uid://d2ch1tgq77t7f" path="res://resources/PlacedItem/traps/rock.tres" id="4_3taqo"]
 [ext_resource type="Resource" uid="uid://c2kyq4q1txs6p" path="res://resources/PlacedItem/traps/pit.tres" id="4_bf2b3"]
-[ext_resource type="Theme" uid="uid://c8n5ojgmw4lji" path="res://assets/UI/Themes/TrapMenu.tres" id="4_fqmjj"]
+[ext_resource type="Theme" uid="uid://c8n5ojgmw4lji" path="res://assets/UI/Themes/Menu.tres" id="4_fqmjj"]
 [ext_resource type="Texture2D" uid="uid://dx818c1s1a2q7" path="res://assets/UI/TrapIcons/SpikeTrapIcon.png" id="5_lnukp"]
 [ext_resource type="Resource" uid="uid://bedbcfpmdf7n1" path="res://resources/PlacedItem/traps/oil spill.tres" id="5_s5hg1"]
 [ext_resource type="Resource" uid="uid://brlod6x1pbj6p" path="res://resources/PlacedItem/traps/pushbox.tres" id="6_iv2m8"]
@@ -44,6 +44,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
+theme = ExtResource("4_fqmjj")
 
 [node name="MarginContainer" type="MarginContainer" parent="UI"]
 layout_mode = 1

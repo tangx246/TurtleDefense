@@ -1,6 +1,7 @@
-[gd_scene load_steps=26 format=3 uid="uid://dhc0hlwiervw7"]
+[gd_scene load_steps=27 format=3 uid="uid://dhc0hlwiervw7"]
 
 [ext_resource type="Script" path="res://scenes/level selector/LevelContainer.gd" id="1_ki30r"]
+[ext_resource type="Theme" uid="uid://c8n5ojgmw4lji" path="res://assets/UI/Themes/Menu.tres" id="1_l7et2"]
 [ext_resource type="Resource" uid="uid://bawc1ivob6x2u" path="res://resources/level/levels.tres" id="2_o14oj"]
 [ext_resource type="PackedScene" uid="uid://dlgsv773i5bt" path="res://scenes/level selector/level_displayer.tscn" id="3_3g0r2"]
 [ext_resource type="AudioStream" uid="uid://cmgf1tuy65usn" path="res://assets/sounds/music/sailor_waltz_with_water_effects_c64_style.ogg" id="4_ag3lw"]
@@ -34,6 +35,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_l7et2")
 theme_override_styles/panel = SubResource("StyleBoxFlat_o53sg")
 
 [node name="Label" type="Label" parent="."]

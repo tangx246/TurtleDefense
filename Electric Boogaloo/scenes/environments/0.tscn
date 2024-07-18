@@ -59,7 +59,7 @@ transform = Transform3D(12, 0, 0, 0, 1, 0, 0, 0, 1, 0.559384, 0.05, -3.92591)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00582504, 0.0174568, -0.0152931)
 
 [node name="Main_SHoreline" parent="Environment" instance=ExtResource("3_i668g")]
-transform = Transform3D(25.9736, 0, 0, 0, 1.00099, 0, 0, 0, 3.44287, 65, -0.122703, -5)
+transform = Transform3D(25.9736, 0, 0, 0, 1.00099, 0, 0, 0, 3.44287, 65, 0, -5)
 
 [node name="SandTile_Tile2" parent="Environment" instance=ExtResource("3_i668g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)

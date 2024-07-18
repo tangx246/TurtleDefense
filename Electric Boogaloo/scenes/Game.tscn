@@ -56,10 +56,10 @@ offset_right = 2.0
 offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_constants/margin_left = 25
-theme_override_constants/margin_top = 25
-theme_override_constants/margin_right = 25
-theme_override_constants/margin_bottom = 25
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UI/MarginContainer"]
 layout_mode = 2
@@ -68,13 +68,13 @@ size_flags_vertical = 8
 theme = ExtResource("4_fqmjj")
 
 [node name="Start Game" type="Button" parent="UI/MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(125, 125)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 text = "Start
 Game"
 
 [node name="Switch Camera" type="Button" parent="UI/MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(125, 125)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 text = "Switch
 Camera"
@@ -84,7 +84,7 @@ script = ExtResource("2_4qbtd")
 layout_mode = 2
 
 [node name="TrapButton" parent="UI/MarginContainer/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
-custom_minimum_size = Vector2(125, 125)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme = ExtResource("4_fqmjj")
 item = ExtResource("4_bf2b3")
@@ -94,7 +94,7 @@ topdownItemPlacer = NodePath("../../../TopdownItemPlacer")
 click = NodePath("../../../Click")
 
 [node name="TrapButton2" parent="UI/MarginContainer/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
-custom_minimum_size = Vector2(125, 125)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme = null
 item = ExtResource("4_3taqo")
@@ -104,7 +104,7 @@ topdownItemPlacer = NodePath("../../../TopdownItemPlacer")
 click = NodePath("../../../Click")
 
 [node name="TrapButton3" parent="UI/MarginContainer/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
-custom_minimum_size = Vector2(125, 125)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme = null
 item = ExtResource("5_s5hg1")
@@ -114,7 +114,7 @@ topdownItemPlacer = NodePath("../../../TopdownItemPlacer")
 click = NodePath("../../../Click")
 
 [node name="TrapButton4" parent="UI/MarginContainer/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
-custom_minimum_size = Vector2(125, 125)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme = null
 item = ExtResource("6_iv2m8")

@@ -27,11 +27,12 @@ func _physics_process(_delta):
 func _on_velocity_computed(safe_velocity: Vector3):
 	if tween:
 		tween.kill()
-	var old_rotation = rotation
-	look_at(position + safe_velocity)
-	var new_rotation = rotation
-	rotation = old_rotation
-	tween = create_tween()
-	tween.tween_property(self, "rotation", new_rotation, 0.1)
+	if safe_velocity.normalized().dot(Vector3.UP) < 0.9 and safe_velocity.abs().length() > 0.1:
+		var old_rotation = rotation
+		look_at(global_position + safe_velocity)
+		var new_rotation = rotation
+		rotation = old_rotation
+		tween = create_tween()
+		tween.tween_property(self, "rotation", new_rotation, 0.1)
 	velocity = safe_velocity + forced_velocity
 	move_and_slide()

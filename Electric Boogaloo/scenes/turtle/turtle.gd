@@ -44,7 +44,7 @@ func teleport_towards_closest_shoreline():
 	print("Could not find path to shoreline. Teleporting towards closest one")
 	var closestShoreline : Node3D = get_closest_shoreline(false)
 	var directionToShoreline : Vector3 = closestShoreline.global_position - agent.global_position
-	var desiredPosition = agent.position + directionToShoreline.normalized()
+	var desiredPosition = agent.position + directionToShoreline.normalized() * 0.2
 	var navMeshPos = NavigationServer3D.map_get_closest_point(navAgent.get_navigation_map(), desiredPosition)
 	agent.position = navMeshPos
 	navAgent.set_velocity_forced(Vector3.ZERO)

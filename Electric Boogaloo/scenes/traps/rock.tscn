@@ -1,10 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://dy00o25dh55w6"]
+[gd_scene load_steps=5 format=3 uid="uid://dy00o25dh55w6"]
 
 [ext_resource type="PackedScene" uid="uid://cd1i4d2papecd" path="res://assets/models/environment/lowpoly_rock_shifted.tscn" id="1_a4e7i"]
+[ext_resource type="Script" path="res://scenes/traps/rock.gd" id="1_o6j10"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_aslol"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ojy6t"]
+size = Vector3(0.5, 1, 0.5)
+
 [node name="Rock" type="Node3D"]
+script = ExtResource("1_o6j10")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." groups=["navigation_mesh_source_group"]]
 
@@ -13,3 +18,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("BoxShape3D_aslol")
 
 [node name="lowpolyRockShifted" parent="." instance=ExtResource("1_a4e7i")]
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_ojy6t")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

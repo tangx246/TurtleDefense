@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://clpsa4yewpfsn"]
+[gd_scene load_steps=15 format=3 uid="uid://clpsa4yewpfsn"]
 
 [ext_resource type="Script" path="res://scenes/turtle/movement_agent.gd" id="1_0fv47"]
 [ext_resource type="PackedScene" uid="uid://dhf18esgb7rm" path="res://assets/models/Turtle.glb" id="1_4wj1e"]
@@ -7,6 +7,7 @@
 [ext_resource type="AnimationLibrary" uid="uid://cbbv1k7w0vef1" path="res://assets/animations/Anim-Turtle-Walk.glb" id="3_5oc6c"]
 [ext_resource type="AudioStream" uid="uid://djfpwuhg8r4rk" path="res://assets/sounds/sfx/TurtleDying2.ogg" id="3_uro0e"]
 [ext_resource type="AnimationLibrary" uid="uid://qeilfeyds5nv" path="res://assets/animations/Anim-Turtle-Death.glb" id="6_kvpu6"]
+[ext_resource type="Script" path="res://addons/nav_agent_height_adjuster/nav_agent_height_adjuster.gd" id="8_x0pag"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7xuvy"]
 size = Vector3(0.3, 0.4, 0.3)
@@ -72,3 +73,9 @@ root_node = NodePath("../Turtle2")
 tree_root = SubResource("AnimationNodeStateMachine_vvahp")
 advance_expression_base_node = NodePath("../..")
 anim_player = NodePath("../AnimationPlayer")
+
+[node name="NavAgentHeightAdjuster" type="Node" parent="MovementAgent" node_paths=PackedStringArray("raycastSource", "navAgent", "model")]
+script = ExtResource("8_x0pag")
+raycastSource = NodePath("..")
+navAgent = NodePath("../NavigationAgent3D")
+model = NodePath("../Turtle2")

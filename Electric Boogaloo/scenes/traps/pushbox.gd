@@ -22,10 +22,12 @@ func push_turtles():
 			var turtleBody : MovementAgent = overlappingBody
 			var forced_velocity : Vector3 = position + basis * Vector3.BACK * strength
 			turtleBody.forced_velocity = turtleBody.forced_velocity + forced_velocity
+			turtleBody.movement_speed = turtleBody.movement_speed / 4
 			var timer = Timer.new()
 			turtleBody.add_child(timer)
 			timer.timeout.connect(func(): 
 				turtleBody.forced_velocity = turtleBody.forced_velocity - forced_velocity
+				turtleBody.movement_speed = turtleBody.movement_speed * 4
 				timer.queue_free()
 			)
 			timer.start(0.2)

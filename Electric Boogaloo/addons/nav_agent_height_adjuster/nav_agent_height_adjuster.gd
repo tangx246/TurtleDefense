@@ -11,7 +11,7 @@ extends Node
 
 func _physics_process(_delta):
 	var space_state = get_tree().root.get_world_3d().direct_space_state
-	var from : Vector3 = raycastSource.global_position
+	var from : Vector3 = raycastSource.global_position + (down * 0.05)
 	var to : Vector3 = from + down * ray_length
 	
 	var query = PhysicsRayQueryParameters3D.create(from, to, raycast_mask)

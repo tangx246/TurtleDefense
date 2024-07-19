@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Level" load_steps=14 format=3 uid="uid://bpfvijgygw7fn"]
+
+[ext_resource type="PackedScene" uid="uid://bnh057lb3tejk" path="res://scenes/environments/15.tscn" id="1_fi4is"]
+[ext_resource type="Script" path="res://resources/level/level.gd" id="2_jjbte"]
+[ext_resource type="Script" path="res://scenes/TrapCount.gd" id="3_h3moo"]
+[ext_resource type="Resource" uid="uid://c2kyq4q1txs6p" path="res://resources/PlacedItem/traps/pit.tres" id="4_yi8vn"]
+[ext_resource type="Resource" uid="uid://bedbcfpmdf7n1" path="res://resources/PlacedItem/traps/oil spill.tres" id="5_qoym7"]
+[ext_resource type="Resource" uid="uid://d2ch1tgq77t7f" path="res://resources/PlacedItem/traps/rock.tres" id="6_7idh3"]
+[ext_resource type="Resource" uid="uid://brlod6x1pbj6p" path="res://resources/PlacedItem/traps/pushbox.tres" id="7_c0cr0"]
+[ext_resource type="Resource" uid="uid://b5p4iyt7llnf" path="res://resources/PlacedItem/traps/straw tower.tres" id="8_0l2ka"]
+
+[sub_resource type="Resource" id="Resource_jgiwx"]
+script = ExtResource("3_h3moo")
+trap = ExtResource("4_yi8vn")
+count = 1
+
+[sub_resource type="Resource" id="Resource_ya6ul"]
+script = ExtResource("3_h3moo")
+trap = ExtResource("5_qoym7")
+count = 0
+
+[sub_resource type="Resource" id="Resource_3cqh6"]
+script = ExtResource("3_h3moo")
+trap = ExtResource("6_7idh3")
+count = 1
+
+[sub_resource type="Resource" id="Resource_olrnq"]
+script = ExtResource("3_h3moo")
+trap = ExtResource("7_c0cr0")
+count = 1
+
+[sub_resource type="Resource" id="Resource_xm243"]
+script = ExtResource("3_h3moo")
+trap = ExtResource("8_0l2ka")
+count = 0
+
+[resource]
+script = ExtResource("2_jjbte")
+environment = ExtResource("1_fi4is")
+trapCounts = Array[ExtResource("3_h3moo")]([SubResource("Resource_jgiwx"), SubResource("Resource_ya6ul"), SubResource("Resource_3cqh6"), SubResource("Resource_olrnq"), SubResource("Resource_xm243")])
+helpTooltip = "hint: You just need to make sure each turtle ends up in a lane that kills them."

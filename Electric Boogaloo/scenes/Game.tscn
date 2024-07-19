@@ -81,10 +81,39 @@ text = "Switch
 Camera"
 script = ExtResource("2_4qbtd")
 
-[node name="VSeparator" type="VSeparator" parent="UI/MarginContainer/HBoxContainer"]
-layout_mode = 2
+[node name="RightSideMarginContainer" type="MarginContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -135.0
+offset_bottom = 695.0
+grow_horizontal = 0
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
 
-[node name="TrapButton" parent="UI/MarginContainer/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/RightSideMarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Help" type="Panel" parent="UI/RightSideMarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="UI/RightSideMarginContainer/VBoxContainer/Help"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="UI/RightSideMarginContainer/VBoxContainer/Help/CenterContainer"]
+layout_mode = 2
+text = "?"
+
+[node name="TrapButton" parent="UI/RightSideMarginContainer/VBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme = ExtResource("4_fqmjj")
@@ -94,7 +123,7 @@ label = "Pit Trap"
 topdownItemPlacer = NodePath("../../../TopdownItemPlacer")
 click = NodePath("../../../Click")
 
-[node name="TrapButton2" parent="UI/MarginContainer/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
+[node name="TrapButton2" parent="UI/RightSideMarginContainer/VBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme = null
@@ -104,7 +133,7 @@ label = "Rock"
 topdownItemPlacer = NodePath("../../../TopdownItemPlacer")
 click = NodePath("../../../Click")
 
-[node name="TrapButton3" parent="UI/MarginContainer/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
+[node name="TrapButton3" parent="UI/RightSideMarginContainer/VBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme = null
@@ -114,7 +143,7 @@ label = "Oil Spill"
 topdownItemPlacer = NodePath("../../../TopdownItemPlacer")
 click = NodePath("../../../Click")
 
-[node name="TrapButton4" parent="UI/MarginContainer/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
+[node name="TrapButton4" parent="UI/RightSideMarginContainer/VBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme = null
@@ -124,7 +153,7 @@ label = "Push Box"
 topdownItemPlacer = NodePath("../../../TopdownItemPlacer")
 click = NodePath("../../../Click")
 
-[node name="TrapButton5" parent="UI/MarginContainer/HBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
+[node name="TrapButton5" parent="UI/RightSideMarginContainer/VBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
 custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 theme = null
@@ -256,25 +285,6 @@ stream = ExtResource("10_wyoc3")
 
 [node name="Plop" type="AudioStreamPlayer" parent="UI"]
 stream = ExtResource("11_3v2hx")
-
-[node name="Help" type="Panel" parent="UI"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -40.0
-offset_bottom = 40.0
-grow_horizontal = 0
-
-[node name="CenterContainer" type="CenterContainer" parent="UI/Help"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="UI/Help/CenterContainer"]
-layout_mode = 2
-text = "?"
 
 [node name="LevelLoader" type="Node3D" parent="."]
 unique_name_in_owner = true

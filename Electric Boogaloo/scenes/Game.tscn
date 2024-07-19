@@ -78,6 +78,13 @@ text = "Switch
 Camera"
 script = ExtResource("2_4qbtd")
 
+[node name="Restart" type="Button" parent="UI/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+text = "Restart
+Stage"
+script = ExtResource("2_4qbtd")
+
 [node name="RightSideMarginContainer" type="MarginContainer" parent="UI"]
 layout_mode = 1
 anchors_preset = 1
@@ -303,6 +310,7 @@ script = ExtResource("9_uei18")
 [connection signal="item_successfully_placed" from="Environment" to="UI/Plop" method="play"]
 [connection signal="pressed" from="UI/MarginContainer/HBoxContainer/Start Game" to="Environment" method="start_egg_hatching"]
 [connection signal="pressed" from="UI/MarginContainer/HBoxContainer/Switch Camera" to="UI/MarginContainer/HBoxContainer/Switch Camera" method="switch_camera"]
+[connection signal="pressed" from="UI/MarginContainer/HBoxContainer/Restart" to="LevelLoader" method="loadCurrentLevel"]
 [connection signal="placed_item" from="UI/TopdownItemPlacer" to="Environment" method="on_placed_item"]
 [connection signal="pressed" from="UI/VictoryDefeat/VictoryVBoxContainer/HBoxContainer/Button" to="LevelLoader" method="nextLevel"]
 [connection signal="pressed" from="UI/VictoryDefeat/VictoryVBoxContainer/HBoxContainer/Button2" to="UI/VictoryDefeat" method="load_level_selector"]

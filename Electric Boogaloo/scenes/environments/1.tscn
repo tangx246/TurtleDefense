@@ -444,3 +444,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.80924, -2.86847e-07, 0.3564
 
 [node name="Pit5" parent="." instance=ExtResource("8_jkba1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.80924, -2.86847e-07, 0.35643)
+
+[node name="Cliffside_Tile" parent="." instance=ExtResource("4_timn1")]
+transform = Transform3D(-1.74846e-07, 0, -4, 0, 4, 0, 4, 0, -1.74846e-07, -71.0589, -8.1227, 4.39535)
+
+[node name="Cliffside_Tile2" parent="." instance=ExtResource("4_timn1")]
+transform = Transform3D(-1.74846e-07, 0, -4, 0, 4, 0, 4, 0, -1.74846e-07, -70.2854, -4.19982, -15.5867)
+
+[node name="Cliffside_Tile3" parent="." instance=ExtResource("4_timn1")]
+transform = Transform3D(-1.52486e-07, 0, 7.4035, 0, 4, 0, -3.48847, 0, -3.23617e-07, -60.2708, -13.7323, 9.88751)

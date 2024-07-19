@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://c46fo3rlejjv6"]
+[gd_scene load_steps=12 format=3 uid="uid://c46fo3rlejjv6"]
 
 [ext_resource type="PackedScene" uid="uid://chyg2agr1samy" path="res://scenes/turtle/egg.tscn" id="1_lysni"]
 [ext_resource type="PackedScene" uid="uid://nlm2ppnbkpbd" path="res://scenes/environments/shoreLine.tscn" id="2_kqvsg"]
 [ext_resource type="PackedScene" uid="uid://151p2g7cy8gf" path="res://scenes/environments/Tiles/Sand_Tile.tscn" id="3_3703t"]
 [ext_resource type="PackedScene" uid="uid://cu4lbg70n3w0a" path="res://scenes/environments/Tiles/cliffHolder_tile.tscn" id="5_vmbll"]
 [ext_resource type="PackedScene" uid="uid://44l4drdiacrc" path="res://assets/models/environment/ShoreStraight1.glb" id="6_aokyi"]
+[ext_resource type="PackedScene" uid="uid://cdxnswbmxomvp" path="res://scenes/environments/Tiles/cliffside_tile.tscn" id="7_dqmrm"]
 [ext_resource type="PackedScene" uid="uid://cray0qdrgjtdd" path="res://assets/models/environment/WaterPlane.glb" id="7_k86f7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6bc8s"]
@@ -433,3 +434,12 @@ transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 4.4963, -1, -41.5663)
 
 [node name="WaterPlane24" parent="Environment" instance=ExtResource("7_k86f7")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 19.4963, -1, -41.5663)
+
+[node name="Cliffside_Tile" parent="." instance=ExtResource("7_dqmrm")]
+transform = Transform3D(-1.74846e-07, 0, -4, 0, 4, 0, 4, 0, -1.74846e-07, -71.0589, -8.1227, 4.39535)
+
+[node name="Cliffside_Tile2" parent="." instance=ExtResource("7_dqmrm")]
+transform = Transform3D(-1.74846e-07, 0, -4, 0, 4, 0, 4, 0, -1.74846e-07, -70.2854, -4.19982, -15.5867)
+
+[node name="Cliffside_Tile3" parent="." instance=ExtResource("7_dqmrm")]
+transform = Transform3D(-1.52486e-07, 0, 7.4035, 0, 4, 0, -3.48847, 0, -3.23617e-07, -60.2708, -13.7323, 9.88751)

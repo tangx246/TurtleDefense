@@ -38,4 +38,4 @@ count = 2
 script = ExtResource("2_cm2gb")
 environment = ExtResource("1_e4y3x")
 trapCounts = Array[ExtResource("3_fbuv2")]([SubResource("Resource_jgiwx"), SubResource("Resource_ya6ul"), SubResource("Resource_3cqh6"), SubResource("Resource_olrnq"), SubResource("Resource_xm243")])
-helpTooltip = ""
+helpTooltip = "hint: Try to maximize the turtles time under fire by any means necesarry."

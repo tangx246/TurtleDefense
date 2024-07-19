@@ -38,4 +38,4 @@ count = 1
 script = ExtResource("2_x1tjw")
 environment = ExtResource("1_e2kem")
 trapCounts = Array[ExtResource("3_lgy5y")]([SubResource("Resource_jgiwx"), SubResource("Resource_ya6ul"), SubResource("Resource_3cqh6"), SubResource("Resource_olrnq"), SubResource("Resource_xm243")])
-helpTooltip = ""
+helpTooltip = "Straw towers will slowly shoot all turtles in range."

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://nb6ocvmkxvhx"]
+[gd_scene load_steps=13 format=3 uid="uid://nb6ocvmkxvhx"]
 
 [ext_resource type="PackedScene" uid="uid://chyg2agr1samy" path="res://scenes/turtle/egg.tscn" id="1_nwln4"]
 [ext_resource type="PackedScene" uid="uid://nlm2ppnbkpbd" path="res://scenes/environments/shoreLine.tscn" id="2_ywiac"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://44l4drdiacrc" path="res://assets/models/environment/ShoreStraight1.glb" id="6_dwike"]
 [ext_resource type="PackedScene" uid="uid://dy00o25dh55w6" path="res://scenes/traps/rock.tscn" id="7_gmkop"]
 [ext_resource type="PackedScene" uid="uid://cray0qdrgjtdd" path="res://assets/models/environment/WaterPlane.glb" id="7_hfgpf"]
+[ext_resource type="PackedScene" uid="uid://cdxnswbmxomvp" path="res://scenes/environments/Tiles/cliffside_tile.tscn" id="8_ixm7u"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6bc8s"]
 sky_top_color = Color(1, 1, 1, 1)
@@ -422,3 +423,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.49199, 1.8999e-07, 0.147687
 
 [node name="Rock4" parent="." instance=ExtResource("7_gmkop")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.102961, 1.8999e-07, -0.978212)
+
+[node name="Cliffside_Tile" parent="." instance=ExtResource("8_ixm7u")]
+transform = Transform3D(-1.74846e-07, 0, -4, 0, 4, 0, 4, 0, -1.74846e-07, -71.0589, -8.1227, 4.39535)
+
+[node name="Cliffside_Tile2" parent="." instance=ExtResource("8_ixm7u")]
+transform = Transform3D(-1.74846e-07, 0, -4, 0, 4, 0, 4, 0, -1.74846e-07, -70.2854, -4.19982, -15.5867)
+
+[node name="Cliffside_Tile3" parent="." instance=ExtResource("8_ixm7u")]
+transform = Transform3D(-1.52486e-07, 0, 7.4035, 0, 4, 0, -3.48847, 0, -3.23617e-07, -60.2708, -13.7323, 9.88751)

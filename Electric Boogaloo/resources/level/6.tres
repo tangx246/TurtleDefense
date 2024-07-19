@@ -38,4 +38,4 @@ count = 0
 script = ExtResource("2_n176o")
 environment = ExtResource("1_k0cst")
 trapCounts = Array[ExtResource("3_6o8rk")]([SubResource("Resource_jgiwx"), SubResource("Resource_ya6ul"), SubResource("Resource_3cqh6"), SubResource("Resource_olrnq"), SubResource("Resource_xm243")])
-helpTooltip = ""
+helpTooltip = "hint: You can place traps after the turtles have hatched."

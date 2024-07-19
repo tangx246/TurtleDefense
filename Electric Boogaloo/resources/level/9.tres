@@ -12,12 +12,12 @@
 [sub_resource type="Resource" id="Resource_jgiwx"]
 script = ExtResource("3_qgueh")
 trap = ExtResource("4_esf7h")
-count = 0
+count = 1
 
 [sub_resource type="Resource" id="Resource_ya6ul"]
 script = ExtResource("3_qgueh")
 trap = ExtResource("5_lx5cm")
-count = 1
+count = 0
 
 [sub_resource type="Resource" id="Resource_3cqh6"]
 script = ExtResource("3_qgueh")
@@ -32,7 +32,7 @@ count = 1
 [sub_resource type="Resource" id="Resource_xm243"]
 script = ExtResource("3_qgueh")
 trap = ExtResource("8_qnqsb")
-count = 2
+count = 0
 
 [resource]
 script = ExtResource("2_6odxq")

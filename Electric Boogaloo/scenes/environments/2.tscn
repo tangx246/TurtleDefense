@@ -53,7 +53,7 @@ transform = Transform3D(12, 0, 0, 0, 1, 0, 0, 0, 1, -2.00191, 0.05, -4.83068)
 [node name="SandTile_Tile" parent="Environment" instance=ExtResource("3_p1gyr")]
 
 [node name="Main_SHoreline" parent="Environment" instance=ExtResource("3_p1gyr")]
-transform = Transform3D(25.9736, 0, 0, 0, 1.00099, 0, 0, 0, 3.44287, 65, -0.122703, -5)
+transform = Transform3D(25.9736, 0, 0, 0, 1.00099, 0, 0, 0, 4.20145, 65, -0.122703, -7)
 
 [node name="SandTile_Tile2" parent="Environment" instance=ExtResource("3_p1gyr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00303602, 0, -4.97293)
@@ -406,6 +406,30 @@ transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 34.4963, -1, -26.5663)
 [node name="WaterPlane71" parent="Environment" instance=ExtResource("7_40odq")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 94.4963, -1, -41.5663)
 
+[node name="WaterPlane80" parent="Environment" instance=ExtResource("7_40odq")]
+transform = Transform3D(25, 0, 0, 0, 1, 0, 0, 0, 25, 89.4963, -2, -60.5663)
+
+[node name="WaterPlane81" parent="Environment" instance=ExtResource("7_40odq")]
+transform = Transform3D(25, 0, 0, 0, 1, 0, 0, 0, 25, 64.4963, -2, -60.5663)
+
+[node name="WaterPlane82" parent="Environment" instance=ExtResource("7_40odq")]
+transform = Transform3D(25, 0, 0, 0, 1, 0, 0, 0, 25, 39.4963, -2, -60.5663)
+
+[node name="WaterPlane83" parent="Environment" instance=ExtResource("7_40odq")]
+transform = Transform3D(25, 0, 0, 0, 1, 0, 0, 0, 25, 14.4963, -2, -60.5663)
+
+[node name="WaterPlane84" parent="Environment" instance=ExtResource("7_40odq")]
+transform = Transform3D(25, 0, 0, 0, 1, 0, 0, 0, 25, -10.5037, -2, -60.5663)
+
+[node name="WaterPlane85" parent="Environment" instance=ExtResource("7_40odq")]
+transform = Transform3D(25, 0, 0, 0, 1, 0, 0, 0, 25, -35.5037, -2, -60.5663)
+
+[node name="WaterPlane86" parent="Environment" instance=ExtResource("7_40odq")]
+transform = Transform3D(25, 0, 0, 0, 1, 0, 0, 0, 25, -60.5037, -2, -60.5663)
+
+[node name="WaterPlane87" parent="Environment" instance=ExtResource("7_40odq")]
+transform = Transform3D(25, 0, 0, 0, 1, 0, 0, 0, 25, -85.5037, -2, -60.5663)
+
 [node name="WaterPlane22" parent="Environment" instance=ExtResource("7_40odq")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, -10.5037, -1, -41.5663)
 
@@ -420,3 +444,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.11631, 1.8999e-07, 0.89996
 
 [node name="Pit2" parent="." instance=ExtResource("8_m18mp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.11631, 1.8999e-07, 2.2632)
+
+[node name="Cliffside_Tile" parent="." instance=ExtResource("4_jcc7q")]
+transform = Transform3D(-1.74846e-07, 0, -4, 0, 4, 0, 4, 0, -1.74846e-07, -71.8829, -6.1227, -0.896798)
+
+[node name="Cliffside_Tile2" parent="." instance=ExtResource("4_jcc7q")]
+transform = Transform3D(2.38419e-07, 0, 4, 0, 4, 0, -4, 0, 2.38419e-07, -65.8829, -2.1227, -0.896797)
+
+[node name="Cliffside_Tile3" parent="." instance=ExtResource("4_jcc7q")]
+transform = Transform3D(1.90239e-07, 0, 7.87006, 0, 3.68972, 0, -3.19167, 0, 4.69092e-07, -60.8073, -12.6491, 0.638447)

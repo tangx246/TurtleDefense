@@ -58,7 +58,7 @@ transform = Transform3D(12, 0, 0, 0, 1, 0, 0, 0, 1, -2.00191, 0.05, -4.83068)
 [node name="SandTile_Tile" parent="Environment" instance=ExtResource("3_h1lcx")]
 
 [node name="Main_SHoreline" parent="Environment" instance=ExtResource("3_h1lcx")]
-transform = Transform3D(25.9736, 0, 0, 0, 1.00099, 0, 0, 0, 3.44287, 65, -0.122703, -5)
+transform = Transform3D(25.9736, 0, 0, 0, 1.00099, 0, 0, 0, 4.53704, 65, -0.122703, -6.42319)
 
 [node name="SandTile_Tile2" parent="Environment" instance=ExtResource("3_h1lcx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00303602, 0, -4.97293)

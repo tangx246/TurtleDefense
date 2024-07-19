@@ -22,15 +22,29 @@ func _ready():
 	queryResult = NavigationPathQueryResult3D.new()
 
 func _physics_process(_delta):
+	var closestShoreline = get_closest_shoreline(true)
+	
+	if closestShoreline:		
+		agent.set_movement_target(closestShoreline.global_position)
+	else:
+		teleport_towards_closest_shoreline()
+
+func get_closest_shoreline(check_path : bool) -> Node3D:
 	var shortestDistance : float = INF
 	var closestShoreline : Node3D
 	for shoreline : Node3D in get_tree().get_nodes_in_group("ShoreLine"):
 		var distance = agent.global_position.distance_squared_to(shoreline.global_position)
-		if distance < shortestDistance and has_path_to(shoreline.global_position):
+		if distance < shortestDistance and (!check_path or has_path_to(shoreline.global_position)):
 			shortestDistance = distance
 			closestShoreline = shoreline
 			
-	agent.set_movement_target(closestShoreline.global_position)
+	return closestShoreline
+
+func teleport_towards_closest_shoreline():
+	print("Could not find path to shoreline. Teleporting towards closest one")
+	var closestShoreline : Node3D = get_closest_shoreline(false)
+	var directionToShoreline : Vector3 = closestShoreline.global_position - agent.global_position
+	agent.position = agent.position + directionToShoreline.normalized()
 
 func has_path_to(targetPos : Vector3) -> bool:
 	queryResult.reset()

@@ -8,5 +8,5 @@ next_pass = ExtResource("1_15gu6")
 cull_mode = 2
 diffuse_mode = 3
 specular_mode = 1
-albedo_color = Color(0.309606, 0.428985, 1.92523e-07, 1)
+albedo_color = Color(0.0900729, 0.30208, 0.115881, 1)
 roughness = 0.05

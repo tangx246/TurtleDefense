@@ -7,6 +7,6 @@ resource_name = "Turtle Skin"
 next_pass = ExtResource("1_n6j1g")
 diffuse_mode = 3
 specular_mode = 1
-albedo_color = Color(0.712055, 0.944163, 0.40063, 1)
+albedo_color = Color(0.5928, 0.8, 0.464, 1)
 roughness = 0.0
 grow_amount = 0.323

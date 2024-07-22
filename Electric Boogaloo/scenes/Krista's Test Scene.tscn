@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cuncrh4qgna86"]
+[gd_scene load_steps=23 format=3 uid="uid://cuncrh4qgna86"]
 
 [ext_resource type="PackedScene" uid="uid://dhf18esgb7rm" path="res://assets/models/Turtle.glb" id="1_dnms5"]
 [ext_resource type="PackedScene" uid="uid://dyb6x4xtelhw2" path="res://assets/models/Egg.glb" id="2_vb3h6"]
@@ -33,6 +33,22 @@ ambient_light_color = Color(1, 1, 1, 1)
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_uhmlo"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ihm21"]
+albedo_color = Color(0.529412, 0.556863, 0.533333, 1)
+grow = true
+grow_amount = 0.005
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_npnym"]
+next_pass = SubResource("StandardMaterial3D_ihm21")
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow_amount = 0.001
+
+[sub_resource type="TextMesh" id="TextMesh_5h5x0"]
+material = SubResource("StandardMaterial3D_npnym")
+text = "Turtle Defense"
+font_size = 28
+
 [node name="Krista\'sTestScene" type="Node3D"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
@@ -40,11 +56,11 @@ transform = Transform3D(-0.856236, -0.265648, 0.443047, -0.0151898, 0.870223, 0.
 visible = false
 
 [node name="Camera3D2" type="Camera3D" parent="."]
-transform = Transform3D(-1, -6.16011e-08, 6.20326e-08, 0, 0.709571, 0.704634, -8.74228e-08, 0.704634, -0.709571, 2.216, 0.991, -0.993)
+transform = Transform3D(-1, 1.51808e-08, -8.60946e-08, 0, 0.984808, 0.173648, 8.74228e-08, 0.173648, -0.984808, 2.181, 0.4, -1)
 current = true
 
 [node name="Turtle2" parent="." instance=ExtResource("1_dnms5")]
-transform = Transform3D(0.973976, 0, 0.226651, 0, 1, 0, -0.226651, 0, 0.973976, 1.313, 0.012, 0.367)
+transform = Transform3D(0.973976, 0, 0.226651, 0, 1, 0, -0.226651, 0, 0.973976, 1.353, 0.012, 0.542)
 
 [node name="Turtle8" parent="." instance=ExtResource("1_dnms5")]
 transform = Transform3D(0.922086, 0, -0.386985, 0, 1, 0, 0.386985, 0, 0.922086, -1.46081, 0.012, 3.04375)
@@ -1109,3 +1125,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.893, 0.007, 3.651)
 
 [node name="Pit" parent="." instance=ExtResource("15_1ycwh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.337901, -4.84288e-08, 1.5314)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.999976, 0, -0.00694642, 0, 1, 0, 0.00694642, 0, -0.999976, 2.15215, 0.0922234, -0.194846)
+mesh = SubResource("TextMesh_5h5x0")
+skeleton = NodePath("../Pit")

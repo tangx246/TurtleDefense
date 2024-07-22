@@ -37,18 +37,23 @@ ambient_light_color = Color(1, 1, 1, 1)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-0.856236, -0.265648, 0.443047, -0.0151898, 0.870223, 0.492424, -0.516361, 0.414901, -0.749152, 3.13, 0.79, -0.555)
+visible = false
+
+[node name="Camera3D2" type="Camera3D" parent="."]
+transform = Transform3D(-1, -6.16011e-08, 6.20326e-08, 0, 0.709571, 0.704634, -8.74228e-08, 0.704634, -0.709571, 2.216, 0.991, -0.993)
+current = true
 
 [node name="Turtle2" parent="." instance=ExtResource("1_dnms5")]
-transform = Transform3D(0.984503, 0, -0.175367, 0, 1, 0, 0.175367, 0, 0.984503, 2.22302, 0.0120001, 0.367295)
+transform = Transform3D(0.973976, 0, 0.226651, 0, 1, 0, -0.226651, 0, 0.973976, 1.313, 0.012, 0.367)
 
 [node name="Turtle8" parent="." instance=ExtResource("1_dnms5")]
 transform = Transform3D(0.922086, 0, -0.386985, 0, 1, 0, 0.386985, 0, 0.922086, -1.46081, 0.012, 3.04375)
 
 [node name="Turtle3" parent="." instance=ExtResource("1_dnms5")]
-transform = Transform3D(0.883766, 0, 0.46793, 0, 1, 0, -0.46793, 0, 0.883766, 2.06902, 0.0120001, 1.3093)
+transform = Transform3D(0.999877, 0, 0.0157073, 0, 1, 0, -0.0157073, 0, 0.999877, 2.149, 0.012, 0.814)
 
 [node name="Turtle4" parent="." instance=ExtResource("1_dnms5")]
-transform = Transform3D(0.992014, 0, -0.12613, 0, 1, 0, 0.12613, 0, 0.992014, 2.79515, 0.0120001, 0.764806)
+transform = Transform3D(0.992014, 0, -0.12613, 0, 1, 0, 0.12613, 0, 0.992014, 3.045, 0.012, 0.54)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_qu4d4")
@@ -156,6 +161,51 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 0, -0.5)
 
 [node name="ShoreStraight45" parent="." instance=ExtResource("8_83qxm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, -0.5)
+
+[node name="ShoreStraight20" parent="." instance=ExtResource("5_wwcm2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5, 0, -0.5)
+
+[node name="ShoreStraight30" parent="." instance=ExtResource("6_0tx1v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 0, -0.5)
+
+[node name="ShoreStraight40" parent="." instance=ExtResource("7_x3262")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 0, -0.5)
+
+[node name="ShoreStraight50" parent="." instance=ExtResource("8_83qxm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0, -0.5)
+
+[node name="ShoreStraight21" parent="." instance=ExtResource("5_wwcm2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0, -0.5)
+
+[node name="ShoreStraight31" parent="." instance=ExtResource("6_0tx1v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 0, -0.5)
+
+[node name="ShoreStraight41" parent="." instance=ExtResource("7_x3262")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, -0.5)
+
+[node name="ShoreStraight51" parent="." instance=ExtResource("8_83qxm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, -0.5)
+
+[node name="ShoreStraight52" parent="." instance=ExtResource("5_wwcm2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, -0.5)
+
+[node name="ShoreStraight53" parent="." instance=ExtResource("6_0tx1v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, -0.5)
+
+[node name="ShoreStraight54" parent="." instance=ExtResource("7_x3262")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0, -0.5)
+
+[node name="ShoreStraight55" parent="." instance=ExtResource("8_83qxm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, -0.5)
+
+[node name="ShoreStraight56" parent="." instance=ExtResource("6_0tx1v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, -0.5)
+
+[node name="ShoreStraight57" parent="." instance=ExtResource("7_x3262")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, -0.5)
+
+[node name="ShoreStraight58" parent="." instance=ExtResource("8_83qxm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -0.5)
 
 [node name="WaterPlane17" parent="." instance=ExtResource("4_3ykb7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 0, -1.5)

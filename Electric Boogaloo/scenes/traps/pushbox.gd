@@ -32,3 +32,8 @@ func push_turtles():
 			)
 			timer.start(0.2)
 			active = false
+			
+	var timer = Timer.new()
+	add_child(timer)
+	timer.start(3)
+	timer.timeout.connect(func(): queue_free())

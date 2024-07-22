@@ -118,6 +118,7 @@ layout_mode = 2
 text = "?"
 
 [node name="TrapButton" parent="UI/LeftSideMarginContainer/VBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
+texture_filter = 4
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme = ExtResource("4_fqmjj")
@@ -128,6 +129,7 @@ topdownItemPlacer = NodePath("../../../TopdownItemPlacer")
 click = NodePath("../../../Click")
 
 [node name="TrapButton2" parent="UI/LeftSideMarginContainer/VBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
+texture_filter = 4
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme = null
@@ -138,6 +140,7 @@ topdownItemPlacer = NodePath("../../../TopdownItemPlacer")
 click = NodePath("../../../Click")
 
 [node name="TrapButton3" parent="UI/LeftSideMarginContainer/VBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
+texture_filter = 4
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme = null
@@ -148,6 +151,7 @@ topdownItemPlacer = NodePath("../../../TopdownItemPlacer")
 click = NodePath("../../../Click")
 
 [node name="TrapButton4" parent="UI/LeftSideMarginContainer/VBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
+texture_filter = 4
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme = null
@@ -158,6 +162,7 @@ topdownItemPlacer = NodePath("../../../TopdownItemPlacer")
 click = NodePath("../../../Click")
 
 [node name="TrapButton5" parent="UI/LeftSideMarginContainer/VBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
+texture_filter = 4
 custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 theme = null

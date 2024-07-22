@@ -1,41 +1,41 @@
-[gd_resource type="Resource" script_class="Level" load_steps=14 format=3 uid="uid://cbt01tgk8qbmy"]
+[gd_resource type="Resource" script_class="Level" load_steps=14 format=3 uid="uid://bpfvijgygw7fn"]
 
-[ext_resource type="PackedScene" uid="uid://bewdqb3gngbor" path="res://scenes/environments/19.tscn" id="1_55qa3"]
-[ext_resource type="Script" path="res://resources/level/level.gd" id="2_t53fa"]
-[ext_resource type="Script" path="res://scenes/TrapCount.gd" id="3_de3qr"]
-[ext_resource type="Resource" uid="uid://c2kyq4q1txs6p" path="res://resources/PlacedItem/traps/pit.tres" id="4_ygjwm"]
-[ext_resource type="Resource" uid="uid://bedbcfpmdf7n1" path="res://resources/PlacedItem/traps/oil spill.tres" id="5_mvyhv"]
-[ext_resource type="Resource" uid="uid://d2ch1tgq77t7f" path="res://resources/PlacedItem/traps/rock.tres" id="6_oe6f0"]
-[ext_resource type="Resource" uid="uid://brlod6x1pbj6p" path="res://resources/PlacedItem/traps/pushbox.tres" id="7_a0nod"]
-[ext_resource type="Resource" uid="uid://b5p4iyt7llnf" path="res://resources/PlacedItem/traps/straw tower.tres" id="8_0dmgt"]
+[ext_resource type="PackedScene" uid="uid://bnh057lb3tejk" path="res://scenes/environments/19.tscn" id="1_cbo56"]
+[ext_resource type="Script" path="res://resources/level/level.gd" id="2_22e6l"]
+[ext_resource type="Script" path="res://scenes/TrapCount.gd" id="3_lgldy"]
+[ext_resource type="Resource" uid="uid://c2kyq4q1txs6p" path="res://resources/PlacedItem/traps/pit.tres" id="4_l0w58"]
+[ext_resource type="Resource" uid="uid://bedbcfpmdf7n1" path="res://resources/PlacedItem/traps/oil spill.tres" id="5_2k012"]
+[ext_resource type="Resource" uid="uid://d2ch1tgq77t7f" path="res://resources/PlacedItem/traps/rock.tres" id="6_qj8qc"]
+[ext_resource type="Resource" uid="uid://brlod6x1pbj6p" path="res://resources/PlacedItem/traps/pushbox.tres" id="7_i4j1e"]
+[ext_resource type="Resource" uid="uid://b5p4iyt7llnf" path="res://resources/PlacedItem/traps/straw tower.tres" id="8_tpc2v"]
 
 [sub_resource type="Resource" id="Resource_jgiwx"]
-script = ExtResource("3_de3qr")
-trap = ExtResource("4_ygjwm")
+script = ExtResource("3_lgldy")
+trap = ExtResource("4_l0w58")
 count = 1
 
 [sub_resource type="Resource" id="Resource_ya6ul"]
-script = ExtResource("3_de3qr")
-trap = ExtResource("5_mvyhv")
+script = ExtResource("3_lgldy")
+trap = ExtResource("5_2k012")
 count = 0
 
 [sub_resource type="Resource" id="Resource_3cqh6"]
-script = ExtResource("3_de3qr")
-trap = ExtResource("6_oe6f0")
+script = ExtResource("3_lgldy")
+trap = ExtResource("6_qj8qc")
 count = 1
 
 [sub_resource type="Resource" id="Resource_olrnq"]
-script = ExtResource("3_de3qr")
-trap = ExtResource("7_a0nod")
+script = ExtResource("3_lgldy")
+trap = ExtResource("7_i4j1e")
 count = 1
 
 [sub_resource type="Resource" id="Resource_xm243"]
-script = ExtResource("3_de3qr")
-trap = ExtResource("8_0dmgt")
+script = ExtResource("3_lgldy")
+trap = ExtResource("8_tpc2v")
 count = 0
 
 [resource]
-script = ExtResource("2_t53fa")
-environment = ExtResource("1_55qa3")
-trapCounts = Array[ExtResource("3_de3qr")]([SubResource("Resource_jgiwx"), SubResource("Resource_ya6ul"), SubResource("Resource_3cqh6"), SubResource("Resource_olrnq"), SubResource("Resource_xm243")])
+script = ExtResource("2_22e6l")
+environment = ExtResource("1_cbo56")
+trapCounts = Array[ExtResource("3_lgldy")]([SubResource("Resource_jgiwx"), SubResource("Resource_ya6ul"), SubResource("Resource_3cqh6"), SubResource("Resource_olrnq"), SubResource("Resource_xm243")])
 helpTooltip = "hint: You just need to make sure each turtle ends up in a lane that kills them."

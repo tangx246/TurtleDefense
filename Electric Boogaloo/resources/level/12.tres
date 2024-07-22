@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="Level" load_steps=14 format=3 uid="uid://cbd8bq1sqy468"]
+[gd_resource type="Resource" script_class="Level" load_steps=14 format=3 uid="uid://d03wo1slwd5v2"]
 
-[ext_resource type="PackedScene" uid="uid://dsvl2h6t5fqhh" path="res://scenes/environments/12.tscn" id="1_3misf"]
+[ext_resource type="PackedScene" uid="uid://ib7h72fmmxu2" path="res://scenes/environments/12.tscn" id="1_7u4m2"]
 [ext_resource type="Script" path="res://resources/level/level.gd" id="2_i5gba"]
 [ext_resource type="Script" path="res://scenes/TrapCount.gd" id="3_aqpnn"]
 [ext_resource type="Resource" uid="uid://c2kyq4q1txs6p" path="res://resources/PlacedItem/traps/pit.tres" id="4_xk0ld"]
@@ -12,22 +12,22 @@
 [sub_resource type="Resource" id="Resource_jgiwx"]
 script = ExtResource("3_aqpnn")
 trap = ExtResource("4_xk0ld")
-count = 1
+count = 0
 
 [sub_resource type="Resource" id="Resource_ya6ul"]
 script = ExtResource("3_aqpnn")
 trap = ExtResource("5_a5vhl")
-count = 0
+count = 8
 
 [sub_resource type="Resource" id="Resource_3cqh6"]
 script = ExtResource("3_aqpnn")
 trap = ExtResource("6_70oit")
-count = 1
+count = 0
 
 [sub_resource type="Resource" id="Resource_olrnq"]
 script = ExtResource("3_aqpnn")
 trap = ExtResource("7_556eb")
-count = 1
+count = 10
 
 [sub_resource type="Resource" id="Resource_xm243"]
 script = ExtResource("3_aqpnn")
@@ -36,6 +36,6 @@ count = 0
 
 [resource]
 script = ExtResource("2_i5gba")
-environment = ExtResource("1_3misf")
+environment = ExtResource("1_7u4m2")
 trapCounts = Array[ExtResource("3_aqpnn")]([SubResource("Resource_jgiwx"), SubResource("Resource_ya6ul"), SubResource("Resource_3cqh6"), SubResource("Resource_olrnq"), SubResource("Resource_xm243")])
 helpTooltip = "hint: You just need to make sure each turtle ends up in a lane that kills them."

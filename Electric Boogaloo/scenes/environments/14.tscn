@@ -1,12 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://dygjrp8aw5s5q"]
+[gd_scene load_steps=12 format=3 uid="uid://dsvl2h6t5fqhh"]
 
-[ext_resource type="PackedScene" uid="uid://chyg2agr1samy" path="res://scenes/turtle/egg.tscn" id="1_xmb4n"]
-[ext_resource type="PackedScene" uid="uid://nlm2ppnbkpbd" path="res://scenes/environments/shoreLine.tscn" id="2_tby65"]
-[ext_resource type="PackedScene" uid="uid://151p2g7cy8gf" path="res://scenes/environments/Tiles/Sand_Tile.tscn" id="3_26t0m"]
-[ext_resource type="PackedScene" uid="uid://cu4lbg70n3w0a" path="res://scenes/environments/Tiles/cliffHolder_tile.tscn" id="4_p6401"]
-[ext_resource type="PackedScene" uid="uid://44l4drdiacrc" path="res://assets/models/environment/ShoreStraight1.glb" id="5_lec18"]
-[ext_resource type="PackedScene" uid="uid://cray0qdrgjtdd" path="res://assets/models/environment/WaterPlane.glb" id="6_xv2rk"]
-[ext_resource type="PackedScene" uid="uid://cdxnswbmxomvp" path="res://scenes/environments/Tiles/cliffside_tile.tscn" id="7_cnw4q"]
+[ext_resource type="PackedScene" uid="uid://chyg2agr1samy" path="res://scenes/turtle/egg.tscn" id="1_vkt5o"]
+[ext_resource type="PackedScene" uid="uid://nlm2ppnbkpbd" path="res://scenes/environments/shoreLine.tscn" id="2_ku48y"]
+[ext_resource type="PackedScene" uid="uid://151p2g7cy8gf" path="res://scenes/environments/Tiles/Sand_Tile.tscn" id="3_tutrh"]
+[ext_resource type="PackedScene" uid="uid://cu4lbg70n3w0a" path="res://scenes/environments/Tiles/cliffHolder_tile.tscn" id="4_ja8i8"]
+[ext_resource type="PackedScene" uid="uid://44l4drdiacrc" path="res://assets/models/environment/ShoreStraight1.glb" id="5_xjloy"]
+[ext_resource type="PackedScene" uid="uid://cray0qdrgjtdd" path="res://assets/models/environment/WaterPlane.glb" id="6_k21ef"]
+[ext_resource type="PackedScene" uid="uid://cdxnswbmxomvp" path="res://scenes/environments/Tiles/cliffside_tile.tscn" id="7_qetmr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6bc8s"]
 sky_top_color = Color(1, 1, 1, 1)
@@ -41,345 +41,634 @@ camera_attributes = SubResource("CameraAttributesPractical_wnbg6")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.717729, 0.0457822, 0.694816, -0.427493, 0.816624, 0.387782, -0.54965, -0.575351, 0.605686, 0, 1.37637, 0)
 
-[node name="Egg" parent="." instance=ExtResource("1_xmb4n")]
+[node name="Egg" parent="." instance=ExtResource("1_vkt5o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.02902, 0.0500002, 6.60694)
 
-[node name="ShoreLine" parent="." instance=ExtResource("2_tby65")]
+[node name="ShoreLine" parent="." instance=ExtResource("2_ku48y")]
 transform = Transform3D(12, 0, 0, 0, 1, 0, 0, 0, 1, -1.90512, 0.05, -4.83068)
 
 [node name="Environment" type="Node3D" parent="."]
 
-[node name="SandTile_Tile" parent="Environment" instance=ExtResource("3_26t0m")]
+[node name="SandTile_Tile" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 
-[node name="Main_SHoreline" parent="Environment" instance=ExtResource("3_26t0m")]
+[node name="SandTile_Tile2" parent="Environment" instance=ExtResource("3_tutrh")]
+
+[node name="SandTile_Tile3" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
+
+[node name="SandTile_Tile4" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+
+[node name="SandTile_Tile9" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -5)
+
+[node name="SandTile_Tile10" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -5)
+
+[node name="SandTile_Tile11" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+
+[node name="SandTile_Tile5" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 5)
+
+[node name="SandTile_Tile6" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 10)
+
+[node name="SandTile_Tile12" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 0)
+
+[node name="SandTile_Tile13" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -5)
+
+[node name="SandTile_Tile14" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 5)
+
+[node name="SandTile_Tile15" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 10)
+
+[node name="SandTile_Tile16" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 0)
+
+[node name="SandTile_Tile17" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -5)
+
+[node name="SandTile_Tile18" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 5)
+
+[node name="SandTile_Tile19" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 10)
+
+[node name="SandTile_Tile20" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="SandTile_Tile21" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -5)
+
+[node name="SandTile_Tile22" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 5)
+
+[node name="SandTile_Tile23" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 10)
+
+[node name="SandTile_Tile24" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+
+[node name="SandTile_Tile25" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -5)
+
+[node name="SandTile_Tile26" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 5)
+
+[node name="SandTile_Tile27" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 10)
+
+[node name="SandTile_Tile7" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 10)
+
+[node name="SandTile_Tile8" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+
+[node name="SandTile_Tile28" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 15)
+
+[node name="SandTile_Tile29" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 15)
+
+[node name="SandTile_Tile30" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 15)
+
+[node name="SandTile_Tile31" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 15)
+
+[node name="SandTile_Tile32" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 15)
+
+[node name="SandTile_Tile33" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 15)
+
+[node name="SandTile_Tile34" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15)
+
+[node name="SandTile_Tile35" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 20)
+
+[node name="SandTile_Tile36" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 20)
+
+[node name="SandTile_Tile37" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 20)
+
+[node name="SandTile_Tile38" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 20)
+
+[node name="SandTile_Tile39" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 20)
+
+[node name="SandTile_Tile40" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 20)
+
+[node name="SandTile_Tile41" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
+
+[node name="SandTile_Tile42" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 25)
+
+[node name="SandTile_Tile43" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 25)
+
+[node name="SandTile_Tile44" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 25)
+
+[node name="SandTile_Tile45" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 25)
+
+[node name="SandTile_Tile46" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 25)
+
+[node name="SandTile_Tile47" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 25)
+
+[node name="SandTile_Tile48" parent="Environment" instance=ExtResource("3_tutrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 25)
+
+[node name="Main_SHoreline" parent="Environment" instance=ExtResource("3_tutrh")]
 transform = Transform3D(25.9736, 0, 0, 0, 1.00099, 0, 0, 0, 5.78913, 65, -0.122703, -7)
+visible = false
 
-[node name="CliffHolder_Tile5" parent="Environment" instance=ExtResource("4_p6401")]
-transform = Transform3D(-4.37114e-08, 0, 0.3, 0, 1, 0, -1, 0, -1.31134e-08, -3, 0, 0)
+[node name="CliffHolder_Tile16" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-0.00607375, 0, 0.999982, 0, 1, 0, -0.999982, 0, -0.00607375, 12, 0, 0)
 
-[node name="CliffHolder_Tile15" parent="Environment" instance=ExtResource("4_p6401")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 0, 8)
+[node name="CliffHolder_Tile17" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12, 0, 5)
 
-[node name="CliffHolder_Tile10" parent="Environment" instance=ExtResource("4_p6401")]
-transform = Transform3D(0.229488, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+[node name="CliffHolder_Tile55" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11, 0, 27)
 
-[node name="ShoreStraight12" parent="Environment" instance=ExtResource("5_lec18")]
+[node name="CliffHolder_Tile56" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11, 0, 32)
+
+[node name="CliffHolder_Tile57" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 11, 0, 32)
+
+[node name="CliffHolder_Tile58" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 6, 0, 32)
+
+[node name="CliffHolder_Tile59" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 32)
+
+[node name="CliffHolder_Tile60" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4, 0, 32)
+
+[node name="CliffHolder_Tile61" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9, 0, 32)
+
+[node name="CliffHolder_Tile62" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -14, 0, 32)
+
+[node name="CliffHolder_Tile63" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -19, 0, 32)
+
+[node name="CliffHolder_Tile66" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-0.4, 0, -1.50996e-07, 0, 1, 0, 6.03983e-08, 0, -1, -24, 0, 32)
+
+[node name="CliffHolder_Tile64" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-0.00720819, 0, 0.999974, 0, 1, 0, -0.999974, 0, -0.00720819, -24, 0, 32)
+
+[node name="CliffHolder_Tile65" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -24, 0, 27)
+
+[node name="CliffHolder_Tile18" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12, 0, 10)
+
+[node name="CliffHolder_Tile19" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-4.37114e-08, 0, 0.3, 0, 1, 0, -1, 0, -1.31134e-08, -9, 0, 20)
+
+[node name="CliffHolder_Tile20" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-4.37114e-08, 0, 0.3, 0, 1, 0, -1, 0, -1.31134e-08, -6, 0, 20)
+
+[node name="CliffHolder_Tile21" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.3, -6, 0, 20)
+
+[node name="CliffHolder_Tile22" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.3, -1, 0, 20)
+
+[node name="CliffHolder_Tile29" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.3, -20, 0, 20)
+
+[node name="CliffHolder_Tile31" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-4.37114e-08, 0, 0.3, 0, 1, 0, -1, 0, -1.31134e-08, -20, 0, 20)
+
+[node name="CliffHolder_Tile32" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-4.37114e-08, 0, 0.3, 0, 1, 0, -1, 0, -1.31134e-08, -20, 0, 15)
+
+[node name="CliffHolder_Tile33" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-4.37114e-08, 0, 0.3, 0, 1, 0, -1, 0, -1.31134e-08, -20, 0, 7)
+
+[node name="CliffHolder_Tile34" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-4.37114e-08, 0, 0.3, 0, 1, 0, -1, 0, -1.31134e-08, -20, 0, 2)
+
+[node name="CliffHolder_Tile35" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-4.37114e-08, 0, 0.3, 0, 1, 0, -1, 0, -1.31134e-08, -23, 0, 2)
+
+[node name="CliffHolder_Tile36" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-4.37114e-08, 0, 0.3, 0, 1, 0, -1, 0, -1.31134e-08, -23, 0, 7)
+
+[node name="CliffHolder_Tile37" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-4.37114e-08, 0, 0.3, 0, 1, 0, -1, 0, -1.31134e-08, -23, 0, 12)
+
+[node name="CliffHolder_Tile38" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-4.37114e-08, 0, 0.3, 0, 1, 0, -1, 0, -1.31134e-08, -23, 0, 17)
+
+[node name="CliffHolder_Tile39" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-4.37114e-08, 0, 0.3, 0, 1, 0, -1, 0, -1.31134e-08, -23, 0, 22)
+
+[node name="CliffHolder_Tile40" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.3, -24, 0, 23)
+
+[node name="CliffHolder_Tile41" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.3, -19, 0, 23)
+
+[node name="CliffHolder_Tile42" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.3, -14.9786, 0, 23.0898)
+
+[node name="CliffHolder_Tile43" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.3, -5.9786, 0, 23.0898)
+
+[node name="CliffHolder_Tile44" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.3, -0.978601, 0, 23.0898)
+
+[node name="CliffHolder_Tile45" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.3, 4.0214, 0, 23.0898)
+
+[node name="CliffHolder_Tile46" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-4.37114e-08, 0, 0.3, 0, 1, 0, -1, 0, -1.31134e-08, 9.0214, 0, 23.0898)
+
+[node name="CliffHolder_Tile47" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-4.37114e-08, 0, 0.3, 0, 1, 0, -1, 0, -1.31134e-08, 9.0214, 0, 18.0898)
+
+[node name="CliffHolder_Tile48" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-4.37114e-08, 0, 0.3, 0, 1, 0, -1, 0, -1.31134e-08, 9.0214, 0, 13.0898)
+
+[node name="CliffHolder_Tile49" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-4.37114e-08, 0, 0.3, 0, 1, 0, -1, 0, -1.31134e-08, 9.0214, 0, 8.08984)
+
+[node name="CliffHolder_Tile54" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-4.37114e-08, 0, 0.3, 0, 1, 0, -1, 0, -1.31134e-08, 4.0214, 0, 7.08984)
+
+[node name="CliffHolder_Tile50" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-4.37114e-08, 0, 0.3, 0, 1, 0, -1, 0, -1.31134e-08, 9.0214, 0, 3.08984)
+
+[node name="CliffHolder_Tile51" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-4.37114e-08, 0, 0.3, 0, 1, 0, -1, 0, -1.31134e-08, 9.0214, 0, -1.91016)
+
+[node name="CliffHolder_Tile52" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-1, 0, -2.62268e-08, 0, 1, 0, 8.74228e-08, 0, -0.3, 8.43255, 0, -4.91016)
+
+[node name="CliffHolder_Tile53" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-1, 0, -2.62268e-08, 0, 1, 0, 8.74228e-08, 0, -0.3, 3.43255, 0, -4.91016)
+
+[node name="CliffHolder_Tile30" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.3, -15, 0, 20)
+
+[node name="CliffHolder_Tile23" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-4.37114e-08, 0, 0.3, 0, 1, 0, -1, 0, -1.31134e-08, 3.91119, -0.187662, 19.4809)
+
+[node name="CliffHolder_Tile24" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-4.37114e-08, 0, 0.3, 0, 1, 0, -1, 0, -1.31134e-08, 3.91119, -0.187662, 14.4809)
+
+[node name="CliffHolder_Tile25" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-1, 0, -2.62268e-08, 0, 1, 0, 8.74228e-08, 0, -0.3, 3.91119, -0.187662, 9.48094)
+
+[node name="CliffHolder_Tile26" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-1, 0, -2.62268e-08, 0, 1, 0, 8.74228e-08, 0, -0.3, 3.91119, -0.187662, 6.48094)
+
+[node name="CliffHolder_Tile27" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-1, 0, -2.62268e-08, 0, 1, 0, 8.74228e-08, 0, -0.3, -15.0888, -0.187662, 9.48094)
+
+[node name="CliffHolder_Tile28" parent="Environment" instance=ExtResource("4_ja8i8")]
+transform = Transform3D(-1, 0, -2.62268e-08, 0, 1, 0, 8.74228e-08, 0, -0.3, -15.0888, -0.187662, 6.48094)
+
+[node name="ShoreStraight12" parent="Environment" instance=ExtResource("5_xjloy")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 2.5, 0, -7.5)
 
-[node name="ShoreStraight13" parent="Environment" instance=ExtResource("5_lec18")]
+[node name="ShoreStraight13" parent="Environment" instance=ExtResource("5_xjloy")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -2.5, 0, -7.5)
 
-[node name="ShoreStraight14" parent="Environment" instance=ExtResource("5_lec18")]
+[node name="ShoreStraight14" parent="Environment" instance=ExtResource("5_xjloy")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -7.5, 0, -7.5)
 
-[node name="WaterPlane2" parent="Environment" instance=ExtResource("6_xv2rk")]
-transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 2.49606, 0.022016, -12.5134)
-
-[node name="WaterPlane3" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane3" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -2.5, 0, -12.5)
 
-[node name="WaterPlane4" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane4" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -7.5, 0, -12.5)
 
-[node name="ShoreStraight16" parent="Environment" instance=ExtResource("5_lec18")]
+[node name="ShoreStraight16" parent="Environment" instance=ExtResource("5_xjloy")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -12.5, 0, -7.5)
 
-[node name="ShoreStraight18" parent="Environment" instance=ExtResource("5_lec18")]
+[node name="ShoreStraight18" parent="Environment" instance=ExtResource("5_xjloy")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -17.5, 0, -7.5)
 
-[node name="ShoreStraight19" parent="Environment" instance=ExtResource("5_lec18")]
+[node name="ShoreStraight19" parent="Environment" instance=ExtResource("5_xjloy")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -22.5, 0, -7.5)
 
-[node name="WaterPlane5" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane5" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -12.5, 0, -12.5)
 
-[node name="WaterPlane8" parent="Environment" instance=ExtResource("6_xv2rk")]
-transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 2.49606, 0.022016, -17.5134)
-
-[node name="WaterPlane9" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane9" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -2.5, 0, -17.5)
 
-[node name="WaterPlane10" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane8" parent="Environment" instance=ExtResource("6_k21ef")]
+transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 2.5, 0, -12.5)
+
+[node name="WaterPlane81" parent="Environment" instance=ExtResource("6_k21ef")]
+transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 2.5, 0, -17.5)
+
+[node name="WaterPlane80" parent="Environment" instance=ExtResource("6_k21ef")]
+transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -7.5, 0, 7.5)
+
+[node name="WaterPlane10" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -7.5, 0, -17.5)
 
-[node name="WaterPlane11" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane11" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -12.5, 0, -17.5)
 
-[node name="WaterPlane13" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane13" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -17.5, 0, -12.5)
 
-[node name="WaterPlane14" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane14" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -17.5, 0, -17.5)
 
-[node name="WaterPlane15" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane15" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -22.5, 0, -12.5)
 
-[node name="WaterPlane16" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane16" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -22.5, 0, -17.5)
 
-[node name="ShoreStraight20" parent="Environment" instance=ExtResource("5_lec18")]
+[node name="ShoreStraight20" parent="Environment" instance=ExtResource("5_xjloy")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -27.5, 0, -7.5)
 
-[node name="WaterPlane25" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane25" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -27.5, 0, -12.5)
 
-[node name="WaterPlane26" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane26" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -27.5, 0, -17.5)
 
-[node name="ShoreStraight21" parent="Environment" instance=ExtResource("5_lec18")]
+[node name="ShoreStraight21" parent="Environment" instance=ExtResource("5_xjloy")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -32.5, 0, -7.5)
 
-[node name="WaterPlane27" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane27" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -32.5, 0, -12.5)
 
-[node name="WaterPlane28" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane28" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -32.5, 0, -17.5)
 
-[node name="ShoreStraight22" parent="Environment" instance=ExtResource("5_lec18")]
+[node name="ShoreStraight22" parent="Environment" instance=ExtResource("5_xjloy")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -37.5, 0, -7.5)
 
-[node name="WaterPlane29" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane29" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -37.5, 0, -12.5)
 
-[node name="WaterPlane30" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane30" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -37.5, 0, -17.5)
 
-[node name="ShoreStraight23" parent="Environment" instance=ExtResource("5_lec18")]
+[node name="ShoreStraight23" parent="Environment" instance=ExtResource("5_xjloy")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -42.5, 0, -7.5)
 
-[node name="WaterPlane39" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane39" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -42.5, 0, -12.5)
 
-[node name="WaterPlane40" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane40" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -42.5, 0, -17.5)
 
-[node name="ShoreStraight24" parent="Environment" instance=ExtResource("5_lec18")]
+[node name="ShoreStraight24" parent="Environment" instance=ExtResource("5_xjloy")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -47.5, 0, -7.5)
 
-[node name="WaterPlane41" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane41" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -47.5, 0, -12.5)
 
-[node name="WaterPlane42" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane42" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -47.5, 0, -17.5)
 
-[node name="ShoreStraight25" parent="Environment" instance=ExtResource("5_lec18")]
+[node name="ShoreStraight25" parent="Environment" instance=ExtResource("5_xjloy")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -52.5, 0, -7.5)
 
-[node name="WaterPlane43" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane43" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -52.5, 0, -12.5)
 
-[node name="WaterPlane44" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane44" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -52.5, 0, -17.5)
 
-[node name="ShoreStraight34" parent="Environment" instance=ExtResource("5_lec18")]
+[node name="ShoreStraight34" parent="Environment" instance=ExtResource("5_xjloy")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -57.5, 0, -7.5)
 
-[node name="WaterPlane72" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane72" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -57.5, 0, -12.5)
 
-[node name="WaterPlane73" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane73" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -57.5, 0, -17.5)
 
-[node name="ShoreStraight35" parent="Environment" instance=ExtResource("5_lec18")]
+[node name="ShoreStraight35" parent="Environment" instance=ExtResource("5_xjloy")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -62.5, 0, -7.5)
 
-[node name="WaterPlane74" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane74" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -62.5, 0, -12.5)
 
-[node name="WaterPlane75" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane75" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, -62.5, 0, -17.5)
 
-[node name="ShoreStraight15" parent="Environment" instance=ExtResource("5_lec18")]
+[node name="ShoreStraight15" parent="Environment" instance=ExtResource("5_xjloy")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 52.5, 0, -7.5)
 
-[node name="WaterPlane6" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane6" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 52.5, 0, -12.5)
 
-[node name="ShoreStraight17" parent="Environment" instance=ExtResource("5_lec18")]
+[node name="ShoreStraight17" parent="Environment" instance=ExtResource("5_xjloy")]
 transform = Transform3D(5, 0.000427071, -0.00311443, -0.00213641, 1, -0.00160026, 0.0031137, 0.000320336, 5, 47.5, 0, -7.5)
 
-[node name="ShoreStraight26" parent="Environment" instance=ExtResource("5_lec18")]
+[node name="ShoreStraight26" parent="Environment" instance=ExtResource("5_xjloy")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 42.5, 0, -7.5)
 
-[node name="ShoreStraight27" parent="Environment" instance=ExtResource("5_lec18")]
+[node name="ShoreStraight27" parent="Environment" instance=ExtResource("5_xjloy")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 37.5, 0, -7.5)
 
-[node name="WaterPlane7" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane7" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 47.5, 0, -12.5)
 
-[node name="WaterPlane12" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane12" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 52.5, 0, -17.5)
 
-[node name="WaterPlane45" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane45" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 47.5, 0, -17.5)
 
-[node name="ShoreStraight36" parent="Environment" instance=ExtResource("5_lec18")]
+[node name="ShoreStraight36" parent="Environment" instance=ExtResource("5_xjloy")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 62.5, 0, -7.5)
 
-[node name="WaterPlane76" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane76" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 62.5, 0, -12.5)
 
-[node name="ShoreStraight37" parent="Environment" instance=ExtResource("5_lec18")]
+[node name="ShoreStraight37" parent="Environment" instance=ExtResource("5_xjloy")]
 transform = Transform3D(5, 0.000427071, -0.00311443, -0.00213641, 1, -0.00160026, 0.0031137, 0.000320336, 5, 57.5, 0, -7.5)
 
-[node name="WaterPlane77" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane77" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 57.5, 0, -12.5)
 
-[node name="WaterPlane78" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane78" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 62.5, 0, -17.5)
 
-[node name="WaterPlane79" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane79" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 57.5, 0, -17.5)
 
-[node name="WaterPlane46" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane46" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 42.5, 0, -12.5)
 
-[node name="WaterPlane47" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane47" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 42.5, 0, -17.5)
 
-[node name="WaterPlane48" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane48" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 37.5, 0, -12.5)
 
-[node name="WaterPlane49" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane49" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 37.5, 0, -17.5)
 
-[node name="ShoreStraight28" parent="Environment" instance=ExtResource("5_lec18")]
+[node name="ShoreStraight28" parent="Environment" instance=ExtResource("5_xjloy")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 32.5, 0, -7.5)
 
-[node name="WaterPlane50" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane50" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 32.5, 0, -12.5)
 
-[node name="WaterPlane51" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane51" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 32.5, 0, -17.5)
 
-[node name="ShoreStraight29" parent="Environment" instance=ExtResource("5_lec18")]
+[node name="ShoreStraight29" parent="Environment" instance=ExtResource("5_xjloy")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 27.5, 0, -7.5)
 
-[node name="WaterPlane52" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane52" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 27.5, 0, -12.5)
 
-[node name="WaterPlane53" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane53" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 27.5, 0, -17.5)
 
-[node name="ShoreStraight30" parent="Environment" instance=ExtResource("5_lec18")]
+[node name="ShoreStraight30" parent="Environment" instance=ExtResource("5_xjloy")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 22.5, 0, -7.5)
 
-[node name="WaterPlane54" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane54" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 22.5, 0, -12.5)
 
-[node name="WaterPlane55" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane55" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 22.5, 0, -17.5)
 
-[node name="ShoreStraight31" parent="Environment" instance=ExtResource("5_lec18")]
+[node name="ShoreStraight31" parent="Environment" instance=ExtResource("5_xjloy")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 17.5, 0, -7.5)
 
-[node name="WaterPlane56" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane56" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 17.5, 0, -12.5)
 
-[node name="WaterPlane57" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane57" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 17.5, 0, -17.5)
 
-[node name="ShoreStraight32" parent="Environment" instance=ExtResource("5_lec18")]
+[node name="ShoreStraight32" parent="Environment" instance=ExtResource("5_xjloy")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 12.5, 0, -7.5)
 
-[node name="WaterPlane58" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane58" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 12.5, 0, -12.5)
 
-[node name="WaterPlane59" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane59" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 12.5, 0, -17.5)
 
-[node name="ShoreStraight33" parent="Environment" instance=ExtResource("5_lec18")]
+[node name="ShoreStraight33" parent="Environment" instance=ExtResource("5_xjloy")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 7.5, 0, -7.5)
 
-[node name="WaterPlane60" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane60" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 7.5, 0, -12.5)
 
-[node name="WaterPlane61" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane61" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 7.5, 0, -17.5)
 
-[node name="WaterPlane17" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane17" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, -25.5037, -1, -26.5663)
 
-[node name="WaterPlane18" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane18" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, -10.5037, -1, -26.5663)
 
-[node name="WaterPlane19" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane19" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 4.4963, -1, -26.5663)
 
-[node name="WaterPlane20" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane20" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 19.4963, -1, -26.5663)
 
-[node name="WaterPlane21" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane21" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, -40.5037, -1, -41.5663)
 
-[node name="WaterPlane31" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane31" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, -40.5037, -1, -26.5663)
 
-[node name="WaterPlane33" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane33" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, -55.5037, -1, -41.5663)
 
-[node name="WaterPlane34" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane34" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, -55.5037, -1, -26.5663)
 
-[node name="WaterPlane35" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane35" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, -70.5037, -1, -41.5663)
 
-[node name="WaterPlane36" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane36" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, -70.5037, -1, -26.5663)
 
-[node name="WaterPlane37" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane37" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, -85.5037, -1, -41.5663)
 
-[node name="WaterPlane38" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane38" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, -85.5037, -1, -26.5663)
 
-[node name="WaterPlane32" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane32" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, -25.5037, -1, -41.5663)
 
-[node name="WaterPlane62" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane62" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 94.4963, -1, -26.5663)
 
-[node name="WaterPlane63" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane63" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 79.4963, -1, -41.5663)
 
-[node name="WaterPlane64" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane64" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 79.4963, -1, -26.5663)
 
-[node name="WaterPlane65" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane65" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 64.4963, -1, -41.5663)
 
-[node name="WaterPlane66" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane66" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 64.4963, -1, -26.5663)
 
-[node name="WaterPlane67" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane67" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 49.4963, -1, -41.5663)
 
-[node name="WaterPlane68" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane68" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 49.4963, -1, -26.5663)
 
-[node name="WaterPlane69" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane69" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 34.4963, -1, -41.5663)
 
-[node name="WaterPlane70" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane70" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 34.4963, -1, -26.5663)
 
-[node name="WaterPlane71" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane71" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 94.4963, -1, -41.5663)
 
-[node name="WaterPlane22" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane22" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, -10.5037, -1, -41.5663)
 
-[node name="WaterPlane23" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane23" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 4.4963, -1, -41.5663)
 
-[node name="WaterPlane24" parent="Environment" instance=ExtResource("6_xv2rk")]
+[node name="WaterPlane24" parent="Environment" instance=ExtResource("6_k21ef")]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 19.4963, -1, -41.5663)
 
-[node name="Cliffside_Tile" parent="." instance=ExtResource("7_cnw4q")]
+[node name="Cliffside_Tile" parent="." instance=ExtResource("7_qetmr")]
 transform = Transform3D(-1.74846e-07, 0, -4, 0, 4, 0, 4, 0, -1.74846e-07, -71.0589, -8.1227, 4.39535)
 
-[node name="Cliffside_Tile2" parent="." instance=ExtResource("7_cnw4q")]
+[node name="Cliffside_Tile2" parent="." instance=ExtResource("7_qetmr")]
 transform = Transform3D(-1.74846e-07, 0, -4, 0, 4, 0, 4, 0, -1.74846e-07, -70.2854, -4.19982, -15.5867)
 
-[node name="Cliffside_Tile3" parent="." instance=ExtResource("7_cnw4q")]
+[node name="Cliffside_Tile3" parent="." instance=ExtResource("7_qetmr")]
 transform = Transform3D(-1.52486e-07, 0, 7.4035, 0, 4, 0, -3.48847, 0, -3.23617e-07, -60.2708, -13.7323, 9.88751)

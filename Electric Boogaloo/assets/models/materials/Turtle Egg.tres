@@ -7,6 +7,6 @@ resource_name = "Turtle Egg"
 next_pass = ExtResource("1_s31fc")
 diffuse_mode = 3
 specular_mode = 1
-albedo_color = Color(0.945098, 0.937255, 0.623529, 1)
+albedo_color = Color(0.84, 0.83272, 0.6216, 1)
 metallic = 0.47
 roughness = 0.4

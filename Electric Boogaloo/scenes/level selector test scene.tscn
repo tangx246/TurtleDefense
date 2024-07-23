@@ -58,7 +58,7 @@ stretch = true
 [node name="SubViewport2" type="SubViewport" parent="MarchyTurtlePanel/SubViewportContainer2"]
 transparent_bg = true
 handle_input_locally = false
-size = Vector2i(250, 249)
+size = Vector2i(250, 250)
 render_target_update_mode = 4
 
 [node name="Camera3D" type="Camera3D" parent="MarchyTurtlePanel/SubViewportContainer2/SubViewport2"]
@@ -74,14 +74,18 @@ offset_left = 180.0
 offset_top = 401.76
 offset_right = -851.0
 offset_bottom = -66.2396
+grow_horizontal = 2
+grow_vertical = 2
 stretch = true
 
 [node name="SubViewport2" type="SubViewport" parent="MarchyTurtlePanel/SubViewportContainer3"]
 transparent_bg = true
 handle_input_locally = false
-size = Vector2i(249, 250)
+size = Vector2i(250, 250)
 render_target_update_mode = 4
 
 [node name="Camera3D" type="Camera3D" parent="MarchyTurtlePanel/SubViewportContainer3/SubViewport2"]
 transform = Transform3D(1, 0, 0, 0, 0.95882, 0.284015, 0, -0.284015, 0.95882, 0, 0.405, 0.63)
 current = true
+
+[connection signal="ready" from="MarchyTurtlePanel/SubViewportContainer/SubViewport/Turtle2/AnimationPlayer" to="MarchyTurtlePanel/SubViewportContainer/SubViewport/Turtle2/AnimationPlayer" method="play" binds= [&"Anim-Turtle-Walk/Walk"]]

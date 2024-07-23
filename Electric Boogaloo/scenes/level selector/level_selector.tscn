@@ -1,10 +1,12 @@
-[gd_scene load_steps=27 format=3 uid="uid://dhc0hlwiervw7"]
+[gd_scene load_steps=31 format=3 uid="uid://dhc0hlwiervw7"]
 
 [ext_resource type="Script" path="res://scenes/level selector/LevelContainer.gd" id="1_ki30r"]
 [ext_resource type="Theme" uid="uid://c8n5ojgmw4lji" path="res://assets/UI/Themes/Menu.tres" id="1_l7et2"]
 [ext_resource type="Resource" uid="uid://bawc1ivob6x2u" path="res://resources/level/levels.tres" id="2_o14oj"]
 [ext_resource type="PackedScene" uid="uid://dlgsv773i5bt" path="res://scenes/level selector/level_displayer.tscn" id="3_3g0r2"]
+[ext_resource type="AnimationLibrary" uid="uid://cbbv1k7w0vef1" path="res://assets/animations/Anim-Turtle-Walk.glb" id="3_3pd53"]
 [ext_resource type="AudioStream" uid="uid://cmgf1tuy65usn" path="res://assets/sounds/music/sailor_waltz_with_water_effects_c64_style.ogg" id="4_ag3lw"]
+[ext_resource type="Environment" uid="uid://bc460gnah6ow4" path="res://assets/UI/TransparentLevelSelectorEnvironment.tres" id="4_pvwqh"]
 [ext_resource type="PackedScene" uid="uid://ptb02aoy8gn1" path="res://addons/volume_control/volume_container.tscn" id="5_iq1ft"]
 [ext_resource type="PackedScene" uid="uid://dhf18esgb7rm" path="res://assets/models/Turtle.glb" id="6_qbwya"]
 [ext_resource type="PackedScene" uid="uid://coung64a8bdux" path="res://assets/ParticleEffects/EggBreaking.tscn" id="7_i1l65"]
@@ -27,7 +29,11 @@
 [ext_resource type="PackedScene" uid="uid://cray0qdrgjtdd" path="res://assets/models/environment/WaterPlane.glb" id="24_ocql7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o53sg"]
-bg_color = Color(0.6, 0.6, 0.745098, 1)
+bg_color = Color(0.3876, 0.580007, 0.76, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eqjf3"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_guxeq"]
 
 [node name="LevelSelector" type="Panel"]
 anchors_preset = 15
@@ -37,6 +43,91 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_l7et2")
 theme_override_styles/panel = SubResource("StyleBoxFlat_o53sg")
+
+[node name="MarchyTurtlePanel" type="Panel" parent="."]
+layout_mode = 2
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 1230.0
+offset_bottom = 670.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_eqjf3")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="MarchyTurtlePanel"]
+layout_mode = 0
+offset_left = 68.07
+offset_top = 71.39
+offset_right = 318.07
+offset_bottom = 321.39
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="MarchyTurtlePanel/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(250, 250)
+render_target_update_mode = 4
+
+[node name="Turtle2" parent="MarchyTurtlePanel/SubViewportContainer/SubViewport" instance=ExtResource("6_qbwya")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.7913, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MarchyTurtlePanel/SubViewportContainer/SubViewport/Turtle2"]
+libraries = {
+"Anim-Turtle-Walk": ExtResource("3_3pd53")
+}
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="MarchyTurtlePanel/SubViewportContainer/SubViewport"]
+environment = ExtResource("4_pvwqh")
+camera_attributes = SubResource("CameraAttributesPractical_guxeq")
+
+[node name="Camera3D" type="Camera3D" parent="MarchyTurtlePanel/SubViewportContainer/SubViewport"]
+transform = Transform3D(-1, 1.96658e-08, -8.51822e-08, 0, 0.97437, 0.224951, 8.74228e-08, 0.224951, -0.97437, -23.7913, 0.26, -0.765)
+current = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="MarchyTurtlePanel/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, -0.258819, 0.965926, 0, -0.965926, -0.258819, 0, 3, 0)
+sky_mode = 1
+
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="MarchyTurtlePanel"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 847.135
+offset_top = 206.995
+offset_right = -82.8643
+offset_bottom = -163.005
+stretch = true
+
+[node name="SubViewport2" type="SubViewport" parent="MarchyTurtlePanel/SubViewportContainer2"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(250, 249)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="MarchyTurtlePanel/SubViewportContainer2/SubViewport2"]
+transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, -23.7913, 0.765, 0)
+current = true
+
+[node name="SubViewportContainer3" type="SubViewportContainer" parent="MarchyTurtlePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 156.57
+offset_top = 324.855
+offset_right = -773.43
+offset_bottom = -45.1448
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport2" type="SubViewport" parent="MarchyTurtlePanel/SubViewportContainer3"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(249, 250)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="MarchyTurtlePanel/SubViewportContainer3/SubViewport2"]
+transform = Transform3D(1, 0, 0, 0, 0.95882, 0.284015, 0, -0.284015, 0.95882, -23.7913, 0.405, 0.63)
+current = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -185,3 +276,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.96777)
 [node name="TestObject" parent="Shader Precompilation" instance=ExtResource("23_r7tfg")]
 
 [node name="WaterPlane" parent="Shader Precompilation" instance=ExtResource("24_ocql7")]
+
+[connection signal="ready" from="MarchyTurtlePanel/SubViewportContainer/SubViewport/Turtle2/AnimationPlayer" to="MarchyTurtlePanel/SubViewportContainer/SubViewport/Turtle2/AnimationPlayer" method="play" binds= ["Anim-Turtle-Walk/Walk"]]

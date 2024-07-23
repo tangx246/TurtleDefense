@@ -12,27 +12,27 @@
 [sub_resource type="Resource" id="Resource_jgiwx"]
 script = ExtResource("3_ejrqd")
 trap = ExtResource("4_hhs2m")
-count = 1
+count = 0
 
 [sub_resource type="Resource" id="Resource_ya6ul"]
 script = ExtResource("3_ejrqd")
 trap = ExtResource("5_8uyoj")
-count = 0
+count = 2
 
 [sub_resource type="Resource" id="Resource_3cqh6"]
 script = ExtResource("3_ejrqd")
 trap = ExtResource("6_bef5q")
-count = 1
+count = 2
 
 [sub_resource type="Resource" id="Resource_olrnq"]
 script = ExtResource("3_ejrqd")
 trap = ExtResource("7_i4vx6")
-count = 1
+count = 0
 
 [sub_resource type="Resource" id="Resource_xm243"]
 script = ExtResource("3_ejrqd")
 trap = ExtResource("8_ewrgm")
-count = 0
+count = 6
 
 [resource]
 script = ExtResource("2_47f0r")

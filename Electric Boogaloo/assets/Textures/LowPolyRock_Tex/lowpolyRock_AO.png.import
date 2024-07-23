@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvuh76mkylg3d"
 path.s3tc="res://.godot/imported/lowpolyRock_AO.png-c69a4d5eecfe3ddd186215ecf33c68a8.s3tc.ctex"
+path.etc2="res://.godot/imported/lowpolyRock_AO.png-c69a4d5eecfe3ddd186215ecf33c68a8.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/Textures/LowPolyRock_Tex/lowpolyRock_AO.png"
-dest_files=["res://.godot/imported/lowpolyRock_AO.png-c69a4d5eecfe3ddd186215ecf33c68a8.s3tc.ctex"]
+dest_files=["res://.godot/imported/lowpolyRock_AO.png-c69a4d5eecfe3ddd186215ecf33c68a8.s3tc.ctex", "res://.godot/imported/lowpolyRock_AO.png-c69a4d5eecfe3ddd186215ecf33c68a8.etc2.ctex"]
 
 [params]
 

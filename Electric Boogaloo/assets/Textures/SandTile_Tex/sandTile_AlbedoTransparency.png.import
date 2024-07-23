@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d12d8hp04nhko"
 path.s3tc="res://.godot/imported/sandTile_AlbedoTransparency.png-c59c76a7cd8b1e41a9213d4204fbee10.s3tc.ctex"
+path.etc2="res://.godot/imported/sandTile_AlbedoTransparency.png-c59c76a7cd8b1e41a9213d4204fbee10.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/Textures/SandTile_Tex/sandTile_AlbedoTransparency.png"
-dest_files=["res://.godot/imported/sandTile_AlbedoTransparency.png-c59c76a7cd8b1e41a9213d4204fbee10.s3tc.ctex"]
+dest_files=["res://.godot/imported/sandTile_AlbedoTransparency.png-c59c76a7cd8b1e41a9213d4204fbee10.s3tc.ctex", "res://.godot/imported/sandTile_AlbedoTransparency.png-c59c76a7cd8b1e41a9213d4204fbee10.etc2.ctex"]
 
 [params]
 

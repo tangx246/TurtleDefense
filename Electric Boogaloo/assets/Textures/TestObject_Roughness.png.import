@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://v6f24j2ik0ak"
 path.s3tc="res://.godot/imported/TestObject_Roughness.png-d183622d9ffdf96d877db4b59f862d29.s3tc.ctex"
+path.etc2="res://.godot/imported/TestObject_Roughness.png-d183622d9ffdf96d877db4b59f862d29.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/Textures/TestObject_Roughness.png"
-dest_files=["res://.godot/imported/TestObject_Roughness.png-d183622d9ffdf96d877db4b59f862d29.s3tc.ctex"]
+dest_files=["res://.godot/imported/TestObject_Roughness.png-d183622d9ffdf96d877db4b59f862d29.s3tc.ctex", "res://.godot/imported/TestObject_Roughness.png-d183622d9ffdf96d877db4b59f862d29.etc2.ctex"]
 
 [params]
 

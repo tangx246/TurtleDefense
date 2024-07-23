@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvvcv15y3o884"
 path.s3tc="res://.godot/imported/TestObject_Emissive.png-ce5fd436f4f4ef03fe6acd91747d197b.s3tc.ctex"
+path.etc2="res://.godot/imported/TestObject_Emissive.png-ce5fd436f4f4ef03fe6acd91747d197b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/Textures/TestObject_Emissive.png"
-dest_files=["res://.godot/imported/TestObject_Emissive.png-ce5fd436f4f4ef03fe6acd91747d197b.s3tc.ctex"]
+dest_files=["res://.godot/imported/TestObject_Emissive.png-ce5fd436f4f4ef03fe6acd91747d197b.s3tc.ctex", "res://.godot/imported/TestObject_Emissive.png-ce5fd436f4f4ef03fe6acd91747d197b.etc2.ctex"]
 
 [params]
 

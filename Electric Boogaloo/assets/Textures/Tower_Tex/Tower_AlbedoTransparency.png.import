@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhu1ubje2w6vd"
 path.s3tc="res://.godot/imported/Tower_AlbedoTransparency.png-8fc992ce1711ec2647b2f31f139ad672.s3tc.ctex"
+path.etc2="res://.godot/imported/Tower_AlbedoTransparency.png-8fc992ce1711ec2647b2f31f139ad672.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/Textures/Tower_Tex/Tower_AlbedoTransparency.png"
-dest_files=["res://.godot/imported/Tower_AlbedoTransparency.png-8fc992ce1711ec2647b2f31f139ad672.s3tc.ctex"]
+dest_files=["res://.godot/imported/Tower_AlbedoTransparency.png-8fc992ce1711ec2647b2f31f139ad672.s3tc.ctex", "res://.godot/imported/Tower_AlbedoTransparency.png-8fc992ce1711ec2647b2f31f139ad672.etc2.ctex"]
 
 [params]
 

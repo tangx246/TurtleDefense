@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddapu26vcg6pn"
 path.s3tc="res://.godot/imported/sandTile_Normal.png-4c110880fa2fb69086ba502ff2cc7a63.s3tc.ctex"
+path.etc2="res://.godot/imported/sandTile_Normal.png-4c110880fa2fb69086ba502ff2cc7a63.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/Textures/SandTile_Tex/sandTile_Normal.png"
-dest_files=["res://.godot/imported/sandTile_Normal.png-4c110880fa2fb69086ba502ff2cc7a63.s3tc.ctex"]
+dest_files=["res://.godot/imported/sandTile_Normal.png-4c110880fa2fb69086ba502ff2cc7a63.s3tc.ctex", "res://.godot/imported/sandTile_Normal.png-4c110880fa2fb69086ba502ff2cc7a63.etc2.ctex"]
 
 [params]
 
@@ -20,7 +21,7 @@ compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=1
+compress/normal_map=2
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1

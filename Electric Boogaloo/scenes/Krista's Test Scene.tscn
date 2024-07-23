@@ -1132,4 +1132,4 @@ mesh = SubResource("TextMesh_5h5x0")
 skeleton = NodePath("../Pit")
 
 [node name="Egg9" parent="." instance=ExtResource("2_vb3h6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.94547, 7.07805e-08, 2.39612)
+transform = Transform3D(-0.5323, 0, -0.846556, 0, 1, 0, 0.846556, 0, -0.5323, 3.94547, 7.07805e-08, 2.39612)

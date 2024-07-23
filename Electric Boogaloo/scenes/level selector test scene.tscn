@@ -1,3 +1,87 @@
-[gd_scene format=3 uid="uid://b6fekcnerbsaw"]
+[gd_scene load_steps=5 format=3 uid="uid://b6fekcnerbsaw"]
+
+[ext_resource type="PackedScene" uid="uid://dhf18esgb7rm" path="res://assets/models/Turtle.glb" id="1_dwnrp"]
+[ext_resource type="AnimationLibrary" uid="uid://cbbv1k7w0vef1" path="res://assets/animations/Anim-Turtle-Walk.glb" id="2_kqc1r"]
+[ext_resource type="Environment" uid="uid://bc460gnah6ow4" path="res://assets/UI/TransparentLevelSelectorEnvironment.tres" id="2_yp0au"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_6gjuk"]
 
 [node name="LevelSelectorTestScene" type="Node3D"]
+
+[node name="MarchyTurtlePanel" type="Panel" parent="."]
+offset_right = 1281.0
+offset_bottom = 718.0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="MarchyTurtlePanel"]
+layout_mode = 0
+offset_left = 68.07
+offset_top = 71.39
+offset_right = 318.07
+offset_bottom = 321.39
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="MarchyTurtlePanel/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(250, 250)
+render_target_update_mode = 4
+
+[node name="Turtle2" parent="MarchyTurtlePanel/SubViewportContainer/SubViewport" instance=ExtResource("1_dwnrp")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MarchyTurtlePanel/SubViewportContainer/SubViewport/Turtle2"]
+libraries = {
+"Anim-Turtle-Walk": ExtResource("2_kqc1r")
+}
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="MarchyTurtlePanel/SubViewportContainer/SubViewport"]
+environment = ExtResource("2_yp0au")
+camera_attributes = SubResource("CameraAttributesPractical_6gjuk")
+
+[node name="Camera3D" type="Camera3D" parent="MarchyTurtlePanel/SubViewportContainer/SubViewport"]
+transform = Transform3D(-1, 1.96658e-08, -8.51821e-08, 0, 0.97437, 0.224951, 8.74228e-08, 0.224951, -0.97437, 0, 0.26, -0.765)
+current = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="MarchyTurtlePanel/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, -0.258819, 0.965926, 0, -0.965926, -0.258819, 0, 3, 0)
+sky_mode = 1
+
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="MarchyTurtlePanel"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 930.0
+offset_top = 237.0
+offset_right = -101.0
+offset_bottom = -231.0
+stretch = true
+
+[node name="SubViewport2" type="SubViewport" parent="MarchyTurtlePanel/SubViewportContainer2"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(250, 249)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="MarchyTurtlePanel/SubViewportContainer2/SubViewport2"]
+transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, 0, 0.765, 0)
+current = true
+
+[node name="SubViewportContainer3" type="SubViewportContainer" parent="MarchyTurtlePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 180.0
+offset_top = 401.76
+offset_right = -851.0
+offset_bottom = -66.2396
+stretch = true
+
+[node name="SubViewport2" type="SubViewport" parent="MarchyTurtlePanel/SubViewportContainer3"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(249, 250)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="MarchyTurtlePanel/SubViewportContainer3/SubViewport2"]
+transform = Transform3D(1, 0, 0, 0, 0.95882, 0.284015, 0, -0.284015, 0.95882, 0, 0.405, 0.63)
+current = true

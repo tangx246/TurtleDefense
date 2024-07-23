@@ -20,6 +20,7 @@ gameScene = ExtResource("3_25cao")
 
 [node name="Name" type="Button" parent="."]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(115, 0)
 layout_mode = 2
 text = "Level 0"
 

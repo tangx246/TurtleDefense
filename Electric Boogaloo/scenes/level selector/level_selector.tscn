@@ -38,99 +38,110 @@ grow_vertical = 2
 theme = ExtResource("1_l7et2")
 theme_override_styles/panel = SubResource("StyleBoxFlat_o53sg")
 
-[node name="Label" type="Label" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -50.0
-offset_right = 50.0
-offset_bottom = 23.0
-grow_horizontal = 2
-size_flags_vertical = 1
-text = "Select a level"
-
-[node name="LevelContainer" type="GridContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_top = -2.0
-offset_bottom = 2.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "Select a level:"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="LevelContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
 columns = 2
 script = ExtResource("1_ki30r")
 levels = ExtResource("2_o14oj")
 
-[node name="LevelDisplayer" parent="LevelContainer" instance=ExtResource("3_3g0r2")]
+[node name="LevelDisplayer" parent="MarginContainer/VBoxContainer/MarginContainer/LevelContainer" instance=ExtResource("3_3g0r2")]
 layout_mode = 2
 
-[node name="LevelDisplayer2" parent="LevelContainer" instance=ExtResource("3_3g0r2")]
+[node name="LevelDisplayer2" parent="MarginContainer/VBoxContainer/MarginContainer/LevelContainer" instance=ExtResource("3_3g0r2")]
 layout_mode = 2
 
-[node name="LevelDisplayer3" parent="LevelContainer" instance=ExtResource("3_3g0r2")]
+[node name="LevelDisplayer3" parent="MarginContainer/VBoxContainer/MarginContainer/LevelContainer" instance=ExtResource("3_3g0r2")]
 layout_mode = 2
 
-[node name="LevelDisplayer4" parent="LevelContainer" instance=ExtResource("3_3g0r2")]
+[node name="LevelDisplayer4" parent="MarginContainer/VBoxContainer/MarginContainer/LevelContainer" instance=ExtResource("3_3g0r2")]
 layout_mode = 2
 
-[node name="LevelDisplayer5" parent="LevelContainer" instance=ExtResource("3_3g0r2")]
+[node name="LevelDisplayer5" parent="MarginContainer/VBoxContainer/MarginContainer/LevelContainer" instance=ExtResource("3_3g0r2")]
 layout_mode = 2
 
-[node name="LevelDisplayer6" parent="LevelContainer" instance=ExtResource("3_3g0r2")]
+[node name="LevelDisplayer6" parent="MarginContainer/VBoxContainer/MarginContainer/LevelContainer" instance=ExtResource("3_3g0r2")]
 layout_mode = 2
 
-[node name="LevelDisplayer7" parent="LevelContainer" instance=ExtResource("3_3g0r2")]
+[node name="LevelDisplayer7" parent="MarginContainer/VBoxContainer/MarginContainer/LevelContainer" instance=ExtResource("3_3g0r2")]
 layout_mode = 2
 
-[node name="LevelDisplayer8" parent="LevelContainer" instance=ExtResource("3_3g0r2")]
+[node name="LevelDisplayer8" parent="MarginContainer/VBoxContainer/MarginContainer/LevelContainer" instance=ExtResource("3_3g0r2")]
 layout_mode = 2
 
-[node name="LevelDisplayer9" parent="LevelContainer" instance=ExtResource("3_3g0r2")]
+[node name="LevelDisplayer9" parent="MarginContainer/VBoxContainer/MarginContainer/LevelContainer" instance=ExtResource("3_3g0r2")]
 layout_mode = 2
 
-[node name="LevelDisplayer10" parent="LevelContainer" instance=ExtResource("3_3g0r2")]
+[node name="LevelDisplayer10" parent="MarginContainer/VBoxContainer/MarginContainer/LevelContainer" instance=ExtResource("3_3g0r2")]
 layout_mode = 2
 
-[node name="LevelDisplayer11" parent="LevelContainer" instance=ExtResource("3_3g0r2")]
+[node name="LevelDisplayer11" parent="MarginContainer/VBoxContainer/MarginContainer/LevelContainer" instance=ExtResource("3_3g0r2")]
 layout_mode = 2
 
-[node name="LevelDisplayer12" parent="LevelContainer" instance=ExtResource("3_3g0r2")]
+[node name="LevelDisplayer12" parent="MarginContainer/VBoxContainer/MarginContainer/LevelContainer" instance=ExtResource("3_3g0r2")]
 layout_mode = 2
 
-[node name="LevelDisplayer13" parent="LevelContainer" instance=ExtResource("3_3g0r2")]
+[node name="LevelDisplayer13" parent="MarginContainer/VBoxContainer/MarginContainer/LevelContainer" instance=ExtResource("3_3g0r2")]
 layout_mode = 2
 
-[node name="LevelDisplayer14" parent="LevelContainer" instance=ExtResource("3_3g0r2")]
+[node name="LevelDisplayer14" parent="MarginContainer/VBoxContainer/MarginContainer/LevelContainer" instance=ExtResource("3_3g0r2")]
 layout_mode = 2
 
-[node name="LevelDisplayer15" parent="LevelContainer" instance=ExtResource("3_3g0r2")]
+[node name="LevelDisplayer15" parent="MarginContainer/VBoxContainer/MarginContainer/LevelContainer" instance=ExtResource("3_3g0r2")]
 layout_mode = 2
 
-[node name="LevelDisplayer16" parent="LevelContainer" instance=ExtResource("3_3g0r2")]
+[node name="LevelDisplayer16" parent="MarginContainer/VBoxContainer/MarginContainer/LevelContainer" instance=ExtResource("3_3g0r2")]
 layout_mode = 2
 
-[node name="LevelDisplayer17" parent="LevelContainer" instance=ExtResource("3_3g0r2")]
+[node name="LevelDisplayer17" parent="MarginContainer/VBoxContainer/MarginContainer/LevelContainer" instance=ExtResource("3_3g0r2")]
 layout_mode = 2
 
-[node name="LevelDisplayer18" parent="LevelContainer" instance=ExtResource("3_3g0r2")]
+[node name="LevelDisplayer18" parent="MarginContainer/VBoxContainer/MarginContainer/LevelContainer" instance=ExtResource("3_3g0r2")]
 layout_mode = 2
+
+[node name="Volume Container" parent="MarginContainer" instance=ExtResource("5_iq1ft")]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+alignment = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_ag3lw")
 autoplay = true
-
-[node name="Volume Container" parent="." instance=ExtResource("5_iq1ft")]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -168.0
-offset_right = 0.0
-grow_horizontal = 0
 
 [node name="Shader Precompilation" type="Node3D" parent="."]
 

@@ -189,6 +189,7 @@ unique_name_in_owner = true
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("2_2u724")
+mouse_pressed = false
 end_placing_once_placed = true
 raycast_mask = 2
 

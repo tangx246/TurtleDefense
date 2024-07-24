@@ -38,4 +38,4 @@ count = 0
 script = ExtResource("2_i5gba")
 environment = ExtResource("1_7u4m2")
 trapCounts = Array[ExtResource("3_aqpnn")]([SubResource("Resource_jgiwx"), SubResource("Resource_ya6ul"), SubResource("Resource_3cqh6"), SubResource("Resource_olrnq"), SubResource("Resource_xm243")])
-helpTooltip = "hint: You just need to make sure each turtle ends up in a lane that kills them."
+helpTooltip = "hint:  Turtles get stunned after a pushbox his them. Oil also helps slow them down."

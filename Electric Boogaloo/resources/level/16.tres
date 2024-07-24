@@ -38,4 +38,4 @@ count = 6
 script = ExtResource("2_47f0r")
 environment = ExtResource("1_8awux")
 trapCounts = Array[ExtResource("3_ejrqd")]([SubResource("Resource_jgiwx"), SubResource("Resource_ya6ul"), SubResource("Resource_3cqh6"), SubResource("Resource_olrnq"), SubResource("Resource_xm243")])
-helpTooltip = "hint: You just need to make sure each turtle ends up in a lane that kills them."
+helpTooltip = "hint: blocking off shoreline exits will change the turtles path"

@@ -38,5 +38,4 @@ count = 0
 script = ExtResource("2_g2vk1")
 environment = ExtResource("1_8o07c")
 trapCounts = Array[ExtResource("3_cpulu")]([SubResource("Resource_jgiwx"), SubResource("Resource_ya6ul"), SubResource("Resource_3cqh6"), SubResource("Resource_olrnq"), SubResource("Resource_xm243")])
-helpTooltip = "hint:Turtles will path towards the nearest shoreline
-"
+helpTooltip = "Turtles will path towards the nearest shoreline"

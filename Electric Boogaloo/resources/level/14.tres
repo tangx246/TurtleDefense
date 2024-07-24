@@ -38,4 +38,4 @@ count = 5
 script = ExtResource("2_xs7d5")
 environment = ExtResource("1_6dfuu")
 trapCounts = Array[ExtResource("3_sy0mw")]([SubResource("Resource_jgiwx"), SubResource("Resource_ya6ul"), SubResource("Resource_3cqh6"), SubResource("Resource_olrnq"), SubResource("Resource_xm243")])
-helpTooltip = "hint: Narrow their assualt lanes and focus fire"
+helpTooltip = "Narrow their assault lanes and focus fire"

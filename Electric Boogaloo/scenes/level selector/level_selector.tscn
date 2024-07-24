@@ -245,7 +245,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.96777)
 [node name="Turtle2" parent="Shader Precompilation" instance=ExtResource("6_qbwya")]
 
 [node name="EggBreaking" parent="Shader Precompilation" instance=ExtResource("7_i1l65")]
-emitting = true
 
 [node name="PushBoxPreviewModel" parent="Shader Precompilation" instance=ExtResource("8_wgfjo")]
 

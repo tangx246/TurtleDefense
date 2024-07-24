@@ -38,4 +38,4 @@ count = 0
 script = ExtResource("2_fob5i")
 environment = ExtResource("1_n7vme")
 trapCounts = Array[ExtResource("3_wcnyu")]([SubResource("Resource_jgiwx"), SubResource("Resource_ya6ul"), SubResource("Resource_3cqh6"), SubResource("Resource_olrnq"), SubResource("Resource_xm243")])
-helpTooltip = "hint: Guide your turtle down the.... correct path"
+helpTooltip = "Guide your turtle down the.... Correct path"

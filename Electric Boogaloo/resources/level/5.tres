@@ -38,4 +38,4 @@ count = 0
 script = ExtResource("2_30saw")
 environment = ExtResource("1_her6v")
 trapCounts = Array[ExtResource("3_aq8nk")]([SubResource("Resource_jgiwx"), SubResource("Resource_ya6ul"), SubResource("Resource_3cqh6"), SubResource("Resource_olrnq"), SubResource("Resource_xm243")])
-helpTooltip = "hint: funnel the turtles into one killzone"
+helpTooltip = "Funnel the turtles into one killzone"

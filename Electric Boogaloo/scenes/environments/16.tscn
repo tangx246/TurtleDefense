@@ -148,16 +148,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.76005, 0.0500012, 12.0769)
 transform = Transform3D(12, 0, 0, 0, 1, 0, 0, 0, 1, -5.83369, 0.05, -4.83068)
 
 [node name="ShoreLine2" parent="." instance=ExtResource("2_88w1w")]
-transform = Transform3D(12, 0, 0, 0, 1, 0, 0, 0, 1, -15.3468, 1.0669, -5.57811)
+transform = Transform3D(12, 0, 0, 0, 1, 0, 0, 0, 1, -15.3468, 1.0669, -4.18802)
 
 [node name="ShoreLine3" parent="." instance=ExtResource("2_88w1w")]
-transform = Transform3D(12, 0, 0, 0, 1, 0, 0, 0, 1, -20.6326, 1.0669, -5.57811)
+transform = Transform3D(12, 0, 0, 0, 1, 0, 0, 0, 1, -20.6326, 1.0669, -4.18802)
 
 [node name="ShoreLine4" parent="." instance=ExtResource("2_88w1w")]
-transform = Transform3D(12, 0, 0, 0, 1, 0, 0, 0, 1, 1.81958, 1.0669, -5.57811)
+transform = Transform3D(12, 0, 0, 0, 1, 0, 0, 0, 1, 1.81958, 1.0669, -4.18802)
 
 [node name="ShoreLine5" parent="." instance=ExtResource("2_88w1w")]
-transform = Transform3D(12, 0, 0, 0, 1, 0, 0, 0, 1, 10.9097, 1.0669, -5.57811)
+transform = Transform3D(12, 0, 0, 0, 1, 0, 0, 0, 1, 10.9097, 1.0669, -4.18802)
 
 [node name="Environment" type="Node3D" parent="."]
 

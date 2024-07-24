@@ -95,6 +95,8 @@ offset_left = 847.135
 offset_top = 206.995
 offset_right = -82.8643
 offset_bottom = -163.005
+grow_horizontal = 2
+grow_vertical = 2
 stretch = true
 
 [node name="SubViewport2" type="SubViewport" parent="MarchyTurtlePanel/SubViewportContainer2"]
@@ -243,6 +245,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.96777)
 [node name="Turtle2" parent="Shader Precompilation" instance=ExtResource("6_qbwya")]
 
 [node name="EggBreaking" parent="Shader Precompilation" instance=ExtResource("7_i1l65")]
+emitting = true
 
 [node name="PushBoxPreviewModel" parent="Shader Precompilation" instance=ExtResource("8_wgfjo")]
 

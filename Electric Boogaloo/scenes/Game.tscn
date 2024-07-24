@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://l0nwp737je10"]
+[gd_scene load_steps=26 format=3 uid="uid://l0nwp737je10"]
 
 [ext_resource type="Script" path="res://scenes/LevelLoader.gd" id="1_5431n"]
 [ext_resource type="Script" path="res://scenes/Environment.gd" id="1_i6w6l"]
@@ -8,6 +8,7 @@
 [ext_resource type="Resource" uid="uid://d2ch1tgq77t7f" path="res://resources/PlacedItem/traps/rock.tres" id="4_3taqo"]
 [ext_resource type="Resource" uid="uid://c2kyq4q1txs6p" path="res://resources/PlacedItem/traps/pit.tres" id="4_bf2b3"]
 [ext_resource type="Theme" uid="uid://c8n5ojgmw4lji" path="res://assets/UI/Themes/Menu.tres" id="4_fqmjj"]
+[ext_resource type="Script" path="res://addons/input_action_button/input_action_button.gd" id="4_up6ye"]
 [ext_resource type="Texture2D" uid="uid://dx818c1s1a2q7" path="res://assets/UI/TrapIcons/SpikeTrapIcon.png" id="5_lnukp"]
 [ext_resource type="Resource" uid="uid://bedbcfpmdf7n1" path="res://resources/PlacedItem/traps/oil spill.tres" id="5_s5hg1"]
 [ext_resource type="Resource" uid="uid://brlod6x1pbj6p" path="res://resources/PlacedItem/traps/pushbox.tres" id="6_iv2m8"]
@@ -101,21 +102,32 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="Help" type="Panel" parent="UI/LeftSideMarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/LeftSideMarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Help" type="Panel" parent="UI/LeftSideMarginContainer/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="UI/LeftSideMarginContainer/VBoxContainer/Help"]
+[node name="CenterContainer" type="CenterContainer" parent="UI/LeftSideMarginContainer/VBoxContainer/HBoxContainer/Help"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Label" type="Label" parent="UI/LeftSideMarginContainer/VBoxContainer/Help/CenterContainer"]
+[node name="Label" type="Label" parent="UI/LeftSideMarginContainer/VBoxContainer/HBoxContainer/Help/CenterContainer"]
 layout_mode = 2
 text = "?"
+
+[node name="Rotate Trap" type="Button" parent="UI/LeftSideMarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_vertical = 4
+text = "↺"
+script = ExtResource("4_up6ye")
+action = &"Rotate Counterclockwise"
 
 [node name="TrapButton" parent="UI/LeftSideMarginContainer/VBoxContainer" node_paths=PackedStringArray("topdownItemPlacer", "click") instance=ExtResource("3_mwsef")]
 texture_filter = 4

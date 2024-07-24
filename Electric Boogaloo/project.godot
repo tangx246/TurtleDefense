@@ -34,7 +34,7 @@ project/assembly_name="Turtle Defense"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/nav_agent_height_adjuster/plugin.cfg", "res://addons/player_prefs/plugin.cfg", "res://addons/topdown_item_placer/plugin.cfg")
+enabled=PackedStringArray("res://addons/input_action_button/plugin.cfg", "res://addons/nav_agent_height_adjuster/plugin.cfg", "res://addons/player_prefs/plugin.cfg", "res://addons/topdown_item_placer/plugin.cfg")
 
 [gui]
 

@@ -25,6 +25,7 @@ PlayerPrefs="*res://addons/player_prefs/player_prefs.gd"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/stretch/mode="canvas_items"
 
 [dotnet]
 

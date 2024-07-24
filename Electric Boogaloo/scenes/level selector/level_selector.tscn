@@ -53,7 +53,7 @@ offset_bottom = 670.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_eqjf3")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="MarchyTurtlePanel"]
-layout_mode = 0
+layout_mode = 1
 offset_left = 68.07
 offset_top = 71.39
 offset_right = 318.07
@@ -87,7 +87,8 @@ transform = Transform3D(1, 0, 0, 0, -0.258819, 0.965926, 0, -0.965926, -0.258819
 sky_mode = 1
 
 [node name="SubViewportContainer2" type="SubViewportContainer" parent="MarchyTurtlePanel"]
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 847.135
